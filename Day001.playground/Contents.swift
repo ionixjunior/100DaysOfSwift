@@ -32,3 +32,6 @@ var pi = 3.14
 
 // boolean
 var isValid = true
+
+// interpolation
+var johnsDescription = "My name is John, I have \(numberOfMessages) unread messages, and I know the PI starts with \(pi)."
