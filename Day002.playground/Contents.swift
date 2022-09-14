@@ -32,3 +32,19 @@ let numberOfCards: [String: Int] = [
 ]
 numberOfCards["Paul"]
 numberOfCards["Pedro"]
+
+// empty collections
+var numberOfWins = [String: Int]()
+numberOfWins["Samantha"] = 10
+numberOfWins["Paul"] = 3
+
+var words = Set<String>()
+words.insert("good")
+words.insert("bad")
+words
+
+var scores = Dictionary<String, Int>()
+scores["Samantha"] = 332
+
+var results = Array<Double>()
+results.append(10.0)
