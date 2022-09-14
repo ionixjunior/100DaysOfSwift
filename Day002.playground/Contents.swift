@@ -48,3 +48,14 @@ scores["Samantha"] = 332
 
 var results = Array<Double>()
 results.append(10.0)
+
+// enumerations
+enum OSDevices {
+    case Android
+    case iOS
+    case UWP
+}
+OSDevices.Android
+OSDevices.iOS
+OSDevices.UWP
+
