@@ -18,3 +18,17 @@ name.0
 name.1
 name.first
 name.last
+
+// dictionaries
+let students = [
+    "Paul": "B",
+    "Samantha": "A+"
+]
+students["Samantha"]
+
+let numberOfCards: [String: Int] = [
+    "Paul": 10,
+    "Samantha": 14
+]
+numberOfCards["Paul"]
+numberOfCards["Pedro"]
