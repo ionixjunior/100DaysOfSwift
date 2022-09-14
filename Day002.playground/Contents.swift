@@ -59,3 +59,10 @@ OSDevices.Android
 OSDevices.iOS
 OSDevices.UWP
 
+// enum associated values
+enum OSDevicesData {
+    case Android(version: Double, manufactor: String)
+    case iOS(version: Double)
+}
+OSDevicesData.Android(version: 13.0, manufactor: "Samsung")
+OSDevicesData.iOS(version: 16.0)
