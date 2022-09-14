@@ -8,3 +8,6 @@ let cars = [ferrari, mclaren, mercedes]
 cars[0]
 cars[1]
 let bicycles: [String] = ["Caloi", "Sundonw", "Houston"]
+
+// sets
+let tires = Set(["Goodyer", "Michelin", "Goodyer", "GOODYER", "Bridgestone"])
