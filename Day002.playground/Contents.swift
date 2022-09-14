@@ -64,8 +64,16 @@ enum OSDevicesData {
     case Android(version: Double, manufactor: String)
     case iOS(version: Double)
 }
-OSDevicesData.Android(version: 13.0, manufactor: "Samsung")
-OSDevicesData.iOS(version: 16.0)
+
+let android = OSDevicesData.Android(version: 13.0, manufactor: "Samsung")
+let device = OSDevicesData.iOS(version: 16.0)
+
+switch device {
+case .iOS(version: let version):
+    print("iOS version \(version)")
+case .Android(version: let version, manufactor: let manufactor):
+    print("Android version \(version) and manufactor \(manufactor)")
+}
 
 // enum raw values
 enum SurveyResult: Int {
