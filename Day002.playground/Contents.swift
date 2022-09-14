@@ -66,3 +66,13 @@ enum OSDevicesData {
 }
 OSDevicesData.Android(version: 13.0, manufactor: "Samsung")
 OSDevicesData.iOS(version: 16.0)
+
+// enum raw values
+enum SurveyResult: Int {
+    case veryBad = 1
+    case bad
+    case neutral
+    case good
+    case veryGood
+}
+SurveyResult(rawValue: 4)
