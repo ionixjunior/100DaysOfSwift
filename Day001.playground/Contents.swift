@@ -26,3 +26,9 @@ a very "large"\
 content without line breaks\
 when I break the line into editor.
 """
+
+// double
+var pi = 3.14
+
+// boolean
+var isValid = true
