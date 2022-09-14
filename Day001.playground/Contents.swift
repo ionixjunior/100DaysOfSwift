@@ -38,3 +38,11 @@ var johnsDescription = "My name is John, I have \(numberOfMessages) unread messa
 
 // constant
 let mainColorOfDarkTheme = "black"
+
+// type annotations
+var name: String = "John"
+var nickname: String
+nickname = "john30"
+var age: Int = 30
+var temperature: Double = 19
+var isMarried: Bool = true
