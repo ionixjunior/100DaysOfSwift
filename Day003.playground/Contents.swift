@@ -73,3 +73,17 @@ case "iOS":
 default:
     print("The device is not an iOS.")
 }
+
+// range operators
+let age = 35
+switch age {
+case 1..<21:
+    print("You have less than 21 years old.")
+default:
+    print("You have 21 years old or more.")
+}
+let text = ["A", "B", "C", "D", "E", "F"]
+text[1...3]
+text[1..<3]
+text[2...]
+text[...2]
