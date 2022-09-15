@@ -60,3 +60,16 @@ if numberOfPointsPlayerA != 8 || numberOfPointsPlayerA != 16 {
 
 // ternary operator
 numberOfPointsPlayerA == 1 ? "\(numberOfPointsPlayerA) point" : "\(numberOfPointsPlayerA) points"
+
+// switch
+enum Devices: String {
+    case Android
+    case iOS
+}
+switch Devices.iOS.rawValue {
+case "iOS":
+    print("The device is an iOS.")
+    fallthrough
+default:
+    print("The device is not an iOS.")
+}
