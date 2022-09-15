@@ -57,3 +57,6 @@ if numberOfPointsPlayerA >= 8 && numberOfPointsPlayerA <= 16 {
 if numberOfPointsPlayerA != 8 || numberOfPointsPlayerA != 16 {
     print("Number of points of Player A is not 8 or 16")
 }
+
+// ternary operator
+numberOfPointsPlayerA == 1 ? "\(numberOfPointsPlayerA) point" : "\(numberOfPointsPlayerA) points"
