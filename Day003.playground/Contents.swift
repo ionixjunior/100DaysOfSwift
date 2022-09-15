@@ -12,3 +12,10 @@ let daysOfWeek = 7
 let weeksOfYear = daysOfYear / daysOfWeek
 let isMultiple = 30.isMultiple(of: 4)
 
+// operator overloading
+let firstName = "John"
+let lastName = "Smith"
+let fullName = firstName + " " + lastName
+let mainFruits = ["Apple", "Banana"]
+let otherFruits = ["Avocado"]
+let allFruits = mainFruits + otherFruits
