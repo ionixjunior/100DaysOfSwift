@@ -41,3 +41,11 @@ numberOfPointsPlayerA < numberOfPointsPlayerB
 "Swift" != "tfiwS"
 "swift" <= "SWIFT"
 
+// conditions
+if numberOfPointsPlayerA > numberOfPointsPlayerB {
+    print("Player A wins")
+} else if numberOfPointsPlayerA < numberOfPointsPlayerB {
+    print("Player B wins")
+} else {
+    print("All the players win")
+}
