@@ -49,3 +49,11 @@ if numberOfPointsPlayerA > numberOfPointsPlayerB {
 } else {
     print("All the players win")
 }
+
+// combining conditions
+if numberOfPointsPlayerA >= 8 && numberOfPointsPlayerA <= 16 {
+    print("Number of points of Player A is between 8 and 16")
+}
+if numberOfPointsPlayerA != 8 || numberOfPointsPlayerA != 16 {
+    print("Number of points of Player A is not 8 or 16")
+}
