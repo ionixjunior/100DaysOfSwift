@@ -19,3 +19,13 @@ let fullName = firstName + " " + lastName
 let mainFruits = ["Apple", "Banana"]
 let otherFruits = ["Avocado"]
 let allFruits = mainFruits + otherFruits
+
+// compound assignment operators
+var score = 5
+score += 10
+score -= 4
+score *= 2
+score /= 11
+var description = "This description is not "
+description += "a loren ipsun."
+
