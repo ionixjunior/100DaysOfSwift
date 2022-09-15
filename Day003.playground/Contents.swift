@@ -29,3 +29,15 @@ score /= 11
 var description = "This description is not "
 description += "a loren ipsun."
 
+// comparison operators
+let numberOfPointsPlayerA = 10
+let numberOfPointsPlayerB = 15
+numberOfPointsPlayerA == numberOfPointsPlayerB
+numberOfPointsPlayerA != numberOfPointsPlayerB
+numberOfPointsPlayerA >= numberOfPointsPlayerB
+numberOfPointsPlayerA < numberOfPointsPlayerB
+"Swift" == "swift"
+"Swift" == "Swift"
+"Swift" != "tfiwS"
+"swift" <= "SWIFT"
+
