@@ -11,3 +11,9 @@ for _ in numbers {
     print("More one number")
 }
 
+// while loops
+var countdown = 5
+while countdown > 0 {
+    print(countdown)
+    countdown -= 1
+}
