@@ -17,3 +17,18 @@ while countdown > 0 {
     print(countdown)
     countdown -= 1
 }
+
+// repeat loops
+var total = 1
+repeat {
+    print("Total: \(total)")
+    total += 1
+} while total <= 5
+
+repeat {
+    print("This print will be executed once")
+} while false
+
+while false {
+    print("This print will never be executed")
+}
