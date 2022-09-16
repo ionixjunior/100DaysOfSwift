@@ -32,3 +32,16 @@ repeat {
 while false {
     print("This print will never be executed")
 }
+
+// exiting loops
+var number = 1
+while number <= 10 {
+    print(number)
+    
+    if number == 5 {
+        print("No more numbers")
+        break
+    }
+    
+    number += 1
+}
