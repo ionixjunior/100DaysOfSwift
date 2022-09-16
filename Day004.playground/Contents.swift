@@ -65,3 +65,15 @@ for i in 1...5 {
     
     print(i)
 }
+
+// infinite loops
+var counter = 0
+while true {
+    print(counter)
+    
+    if counter == 8 {
+        break
+    }
+    
+    counter += 1
+}
