@@ -45,3 +45,14 @@ while number <= 10 {
     
     number += 1
 }
+
+// exiting multiple loops
+outerLoop: for i in 1...5 {
+    for j in 1...5 {
+        print("i = \(i)  - j = \(j)")
+        
+        if j == 3 {
+            break outerLoop
+        }
+    }
+}
