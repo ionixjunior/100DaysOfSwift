@@ -46,3 +46,17 @@ func printUsername(_ first: String, _ last: String) {
     print("\(first) \(last)")
 }
 printUsername("John", "Smith")
+
+
+// default parameters
+func sum(_ value1: Int, _ value2: Int, multiply: Bool = false) -> Int {
+    let result = value1 + value2
+    
+    if multiply {
+        return result * result
+    }
+    
+    return result
+}
+sum(1, 3)
+sum(1, 3, multiply: true)
