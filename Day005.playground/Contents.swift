@@ -95,3 +95,10 @@ do {
 }
 
 
+// inout parameters
+func increment(value: inout Int) {
+    value += 1
+}
+var value = 9
+increment(value: &value)
+print(value)
