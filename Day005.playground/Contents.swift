@@ -60,3 +60,12 @@ func sum(_ value1: Int, _ value2: Int, multiply: Bool = false) -> Int {
 }
 sum(1, 3)
 sum(1, 3, multiply: true)
+
+
+// variadic functions
+func printNumbers(numbers: Int...) {
+    for number in numbers {
+        print(number)
+    }
+}
+printNumbers(numbers: 1, 2, 4, 8)
