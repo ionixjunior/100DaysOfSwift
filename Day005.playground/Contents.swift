@@ -39,3 +39,10 @@ func sayHello(to name: String) {
     print("Hello, \(name)!")
 }
 sayHello(to: "John")
+
+
+// omitting parameter labels
+func printUsername(_ first: String, _ last: String) {
+    print("\(first) \(last)")
+}
+printUsername("John", "Smith")
