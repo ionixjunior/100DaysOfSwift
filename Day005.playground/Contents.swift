@@ -69,3 +69,29 @@ func printNumbers(numbers: Int...) {
     }
 }
 printNumbers(numbers: 1, 2, 4, 8)
+
+
+// writing and running throwing functions
+enum ErrorAccess: Error {
+    case denied
+}
+func getAccess(to: String) throws -> Bool {
+    if to == "John" {
+        throw ErrorAccess.denied
+    }
+    
+    if to == "Samantha" {
+        return true
+    }
+    
+    return false
+}
+do {
+    try getAccess(to: "Samantha")
+    try getAccess(to: "John")
+    try getAccess(to: "Jorge")
+} catch {
+    print("Error: \(error)")
+}
+
+
