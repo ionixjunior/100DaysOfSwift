@@ -34,4 +34,8 @@ let username = getUsername()
 print("\(username.first) \(username.last)")
 
 
-
+// parameter labels
+func sayHello(to name: String) {
+    print("Hello, \(name)!")
+}
+sayHello(to: "John")
