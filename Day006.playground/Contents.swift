@@ -12,3 +12,10 @@ let showNameAndNumberOfMessages = { (name: String, number: Int) in
     print("Hello \(name)! You have \(number) new messages!")
 }
 showNameAndNumberOfMessages("John", 5)
+
+
+// returning values from a closure
+let getMessageFrom = { (name: String) -> String in
+    return "Hello, \(name)! You have 4 new messages!"
+}
+getMessageFrom("Samantha")
