@@ -19,3 +19,16 @@ let getMessageFrom = { (name: String) -> String in
     return "Hello, \(name)! You have 4 new messages!"
 }
 getMessageFrom("Samantha")
+
+
+// closures as parameters
+let showSomeMessage = {
+    print("Some message here")
+}
+
+func greetings(action: () -> Void) {
+    print("Hello!")
+    action()
+    print("End of greetings func")
+}
+greetings(action: showSomeMessage)
