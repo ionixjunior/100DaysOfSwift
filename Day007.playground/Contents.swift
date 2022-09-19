@@ -19,3 +19,14 @@ func getNumberOfMessages(action: (Int) -> String) {
 getNumberOfMessages { (number: Int) -> String in
     return "You have \(number) messages."
 }
+
+
+// shorthand parameter names
+getNumberOfMessages { number in
+    "You have \(number) messages."
+}
+
+getNumberOfMessages {
+    "You have \($0) messages."
+}
+
