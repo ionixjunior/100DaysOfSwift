@@ -30,3 +30,17 @@ getNumberOfMessages {
     "You have \($0) messages."
 }
 
+
+// closures with multiple parameters
+func inboxSummary(action: (String, Int) -> String) {
+    let result = action("John", 20)
+    print(result)
+}
+
+inboxSummary { (name: String, number: Int) in
+    "Hello, \(name)! You have \(number) messages."
+}
+
+inboxSummary {
+    "Hello, \($0)! You have \($1) messages."
+}
