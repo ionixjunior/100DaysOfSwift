@@ -56,3 +56,20 @@ func someAction() -> (String) -> Void {
 let action = someAction()
 action("run")
 someAction()("drive")
+
+
+// capturing values
+func checkInbox() -> () -> Void {
+    var counter = 1
+    
+    return {
+        print("You already checked your inbox \(counter) times")
+        counter += 1
+    }
+}
+
+var inbox = checkInbox()
+inbox()
+inbox()
+inbox()
+inbox()
