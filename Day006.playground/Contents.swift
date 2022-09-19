@@ -32,3 +32,15 @@ func greetings(action: () -> Void) {
     print("End of greetings func")
 }
 greetings(action: showSomeMessage)
+
+
+// trailing closure syntax
+func welcome(action: () -> Void) {
+    print("Welcome!")
+    action()
+    print("Enjoy!")
+}
+
+welcome {
+    print("Today is the first day!")
+}
