@@ -44,3 +44,15 @@ inboxSummary { (name: String, number: Int) in
 inboxSummary {
     "Hello, \($0)! You have \($1) messages."
 }
+
+
+// returning closures from functions
+func someAction() -> (String) -> Void {
+    return {
+        print("The action is \($0)")
+    }
+}
+
+let action = someAction()
+action("run")
+someAction()("drive")
