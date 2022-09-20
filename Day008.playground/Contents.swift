@@ -13,3 +13,22 @@ struct Person {
 
 let johnSmith = Person(first: "John", last: "Smith")
 print(johnSmith.fullname)
+
+
+// property observers
+struct Progress {
+    var amount: Int {
+        willSet {
+            print("The amount will change...")
+        }
+        didSet {
+            print("The amount was changed to \(amount)%")
+        }
+    }
+}
+
+var progress = Progress(amount: 0)
+progress.amount = 10
+progress.amount = 30
+progress.amount = 70
+progress.amount = 100
