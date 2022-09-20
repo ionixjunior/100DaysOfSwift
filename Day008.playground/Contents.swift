@@ -56,3 +56,11 @@ text.count
 text.sorted()
 text.contains("Samantha")
 text.contains("John")
+
+
+// properties and methods of arrays
+var colors = ["Red"]
+colors.count
+colors.append("Green")
+colors.firstIndex(of: "Red")
+colors.sorted()
