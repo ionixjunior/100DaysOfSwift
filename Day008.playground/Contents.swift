@@ -9,10 +9,15 @@ struct Person {
     var fullname: String {
         return "\(first) \(last)"
     }
+    
+    func numberOfMessages() -> String {
+        return "You have 3 new messages!"
+    }
 }
 
 let johnSmith = Person(first: "John", last: "Smith")
 print(johnSmith.fullname)
+print(johnSmith.numberOfMessages())
 
 
 // property observers
