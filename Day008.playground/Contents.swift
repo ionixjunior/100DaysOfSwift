@@ -43,3 +43,16 @@ progress.amount = 10
 progress.amount = 30
 progress.amount = 70
 progress.amount = 100
+
+
+// properties and methods of strings
+let text = "My name is John!"
+text.lowercased()
+text.uppercased()
+text.hasPrefix("Hello")
+text.hasPrefix("My")
+text.hasPrefix("my")
+text.count
+text.sorted()
+text.contains("Samantha")
+text.contains("John")
