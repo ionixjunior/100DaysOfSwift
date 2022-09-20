@@ -13,11 +13,17 @@ struct Person {
     func numberOfMessages() -> String {
         return "You have 3 new messages!"
     }
+    
+    mutating func toMarry(last newLastname: String) {
+        last = newLastname
+    }
 }
 
-let johnSmith = Person(first: "John", last: "Smith")
+var johnSmith = Person(first: "John", last: "Smith")
 print(johnSmith.fullname)
 print(johnSmith.numberOfMessages())
+johnSmith.toMarry(last: "Adams")
+print(johnSmith.fullname)
 
 
 // property observers
