@@ -7,7 +7,7 @@ struct User {
 
 extension User {
     init() {
-        username = "Anonymous"
+        self.username = "Anonymous"
     }
 }
 
@@ -17,5 +17,4 @@ laura.username
 var samantha = User()
 samantha.username = "Samantha"
 samantha.username
-
 
