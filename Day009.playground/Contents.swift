@@ -4,6 +4,7 @@ import UIKit
 struct UserType {
 }
 struct User {
+    static var numberOfUsers = 0
     var username: String
     lazy var type = UserType()
 }
@@ -11,6 +12,7 @@ struct User {
 extension User {
     init() {
         self.username = "Anonymous"
+        User.numberOfUsers += 1
     }
 }
 
@@ -20,8 +22,13 @@ laura
 laura.type
 laura
 
+User.numberOfUsers
 var samantha = User()
 samantha.username = "Samantha"
 samantha.username
+
+User.numberOfUsers
+var anonimous = User()
+User.numberOfUsers
 
 
