@@ -12,3 +12,13 @@ class Dog {
 }
 
 var dog = Dog(name: "Teco", breed: "Yorkshire")
+
+
+// class inheritance
+class Yorkshire: Dog {
+    init(name: String) {
+        super.init(name: name, breed: "Yorkshire")
+    }
+}
+
+var teco = Yorkshire(name: "Teco")
