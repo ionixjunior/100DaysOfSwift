@@ -13,6 +13,10 @@ class Dog {
     func makeNoise() {
         print("Au!")
     }
+    
+    deinit {
+        print("deinit")
+    }
 }
 
 var dog = Dog(name: "Teco", breed: "Yorkshire")
@@ -42,3 +46,8 @@ tico.name = "Tico"
 tico.name
 teco.name
 
+
+// deinit call sample
+for _ in 1...3 {
+    _ = Yorkshire(name: "Teco")
+}
