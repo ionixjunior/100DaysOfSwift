@@ -20,7 +20,7 @@ dog.makeNoise()
 
 
 // class inheritance
-class Yorkshire: Dog {
+final class Yorkshire: Dog {
     init(name: String) {
         super.init(name: name, breed: "Yorkshire")
     }
@@ -32,3 +32,7 @@ class Yorkshire: Dog {
 
 var teco = Yorkshire(name: "Teco")
 teco.makeNoise()
+
+//class IsNotPossibleToInheritBecauseYorkshireIsFinal: Yorkshire {}
+
+
