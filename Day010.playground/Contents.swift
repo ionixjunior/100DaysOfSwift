@@ -36,3 +36,9 @@ teco.makeNoise()
 //class IsNotPossibleToInheritBecauseYorkshireIsFinal: Yorkshire {}
 
 
+// copying objects
+var tico = teco
+tico.name = "Tico"
+tico.name
+teco.name
+
