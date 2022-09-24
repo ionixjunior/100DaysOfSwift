@@ -43,3 +43,8 @@ func getUsernameById(_ id: Int) -> String? {
 }
 
 getUsernameById(10) ?? "anonymous"
+
+
+// optional chaining
+let names = [1: "Samantha", 2: "Jorge"]
+let someName = names[10]?.uppercased()
