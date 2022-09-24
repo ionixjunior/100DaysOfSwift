@@ -2,6 +2,7 @@ import UIKit
 
 protocol Identifiable {
     var id: Int { get set }
+    func identify() -> String
 }
 
 protocol FirstName {
@@ -16,6 +17,13 @@ protocol Fullname: FirstName, LastName {
     func getFullname() -> String
 }
 
+// a way to provide a default implementation to a protocol (protocol-oriented programming)
+extension Identifiable {
+    func identify() -> String {
+        "The ID is \(id)"
+    }
+}
+
 struct User: Identifiable, Fullname {
     var id: Int
     var first: String
@@ -27,7 +35,7 @@ struct User: Identifiable, Fullname {
 }
 
 func displayID(_ identifiable: Identifiable) {
-    print("The ID is \(identifiable.id)")
+    print(identifiable.identify())
 }
 
 func displayFullname(_ fullname: Fullname) {
