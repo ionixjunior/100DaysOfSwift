@@ -35,3 +35,11 @@ unwrapWithGuard(value: name)
 var city: String? = "London"
 print(city)
 print(city!)
+
+
+// nil coalescing
+func getUsernameById(_ id: Int) -> String? {
+    id == 1 ? "samantha" : nil
+}
+
+getUsernameById(10) ?? "anonymous"
