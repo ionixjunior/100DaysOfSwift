@@ -14,9 +14,20 @@ func unwrap(value: String?) {
     }
 }
 
+func unwrapWithGuard(value: String?) {
+    guard let unwrapped = value else {
+        print("The value is nil")
+        return
+    }
+    
+    print("The value is \(unwrapped)")
+}
+
 unwrap(value: name)
+unwrapWithGuard(value: name)
 name = "Samantha"
 age = 35
 unwrap(value: name)
+unwrapWithGuard(value: name)
 
 
