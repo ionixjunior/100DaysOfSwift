@@ -31,3 +31,7 @@ unwrap(value: name)
 unwrapWithGuard(value: name)
 
 
+// force unwrapping optionals
+var city: String? = "London"
+print(city)
+print(city!)
