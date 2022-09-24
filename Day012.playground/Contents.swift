@@ -48,3 +48,23 @@ getUsernameById(10) ?? "anonymous"
 // optional chaining
 let names = [1: "Samantha", 2: "Jorge"]
 let someName = names[10]?.uppercased()
+
+
+// optional try
+enum PasswordError: Error {
+    case empty
+}
+
+func checkPassword(password: String) throws -> Bool {
+    if password.isEmpty {
+        throw PasswordError.empty
+    }
+    
+    return true
+}
+
+if let resultCheckPassword = try? checkPassword(password: "") {
+    print("Password check result: \(resultCheckPassword)")
+} else {
+    print("There is a problem with the password")
+}
