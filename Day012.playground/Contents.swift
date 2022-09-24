@@ -68,3 +68,22 @@ if let resultCheckPassword = try? checkPassword(password: "") {
 } else {
     print("There is a problem with the password")
 }
+
+
+// failable initializers
+struct User {
+    var username: String
+    var password: String
+    
+    init?(username: String, password: String) {
+        guard username.isEmpty == false else { return nil }
+        guard password.count >= 6 else { return nil }
+        
+        self.username = username
+        self.password = password
+    }
+}
+
+let user1 = User(username: "", password: "")
+let user2 = User(username: "samantha", password: "123")
+let user3 = User(username: "samantha", password: "123456")
