@@ -48,3 +48,21 @@ extension Double {
 
 let price = 10.0
 price.humanize(symbol: "$")
+
+
+// protocol extensions
+let languages = ["Java", "C#", "Kotlin", "Swift"]
+let role = Set(["Mobile Developer", "Frontend Developer", "Backend Developer"])
+
+extension Collection {
+    func summarize() {
+        print("There are \(self.count) items")
+        
+        for item in self {
+            print(item)
+        }
+    }
+}
+
+languages.summarize()
+role.summarize()
