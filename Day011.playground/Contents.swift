@@ -37,3 +37,14 @@ func displayFullname(_ fullname: Fullname) {
 let user = User(id: 1, first: "Samantha", last: "Miller")
 displayID(user)
 displayFullname(user)
+
+
+// extensions
+extension Double {
+    func humanize(symbol: String) -> String {
+        "\(symbol)\(self)"
+    }
+}
+
+let price = 10.0
+price.humanize(symbol: "$")
