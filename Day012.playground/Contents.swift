@@ -87,3 +87,20 @@ struct User {
 let user1 = User(username: "", password: "")
 let user2 = User(username: "samantha", password: "123")
 let user3 = User(username: "samantha", password: "123456")
+
+
+// typecasting
+class Animal {}
+class Fish: Animal {}
+class Dog: Animal {
+    func makeNoise() {
+        print("Au au au!")
+    }
+}
+
+let animals = [Dog(), Fish(), Fish(), Dog()]
+for animal in animals {
+    if let dog = animal as? Dog {
+        dog.makeNoise()
+    }
+}
