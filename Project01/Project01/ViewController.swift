@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
     private var pictures = [String]()
 
     override func viewDidLoad() {
