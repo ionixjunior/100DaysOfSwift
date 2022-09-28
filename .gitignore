@@ -1,3 +1,7 @@
 .DS_Store
 Day*.playground/playground.xcworkspace/
 Day*.playground/xcuserdata/
+Project*/*.xcodeproj/*
+!Project*/*.xcodeproj/project.pbxproj
+!Project*/*.xcodeproj/*.xcworkspace/xcshareddata/
+!Project*/*.xcodeproj/*.xcworkspace/contents.xcworkspacedata
