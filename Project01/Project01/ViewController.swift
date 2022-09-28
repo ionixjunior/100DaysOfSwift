@@ -30,12 +30,20 @@ class ViewController: UITableViewController {
     
     private func updateCell(_ cell: UITableViewCell, text: String) -> UITableViewCell {
         if #available(iOS 14.0, *) {
-            var content = cell.defaultContentConfiguration()
-            content.text = text
-            cell.contentConfiguration = content
-            return cell
+            return updateCellUsingContentConfiguration(cell, text: text)
         }
         
+        return updateCellUsingLegacyWay(cell, text: text)
+    }
+    
+    private func updateCellUsingContentConfiguration(_ cell: UITableViewCell, text: String) -> UITableViewCell {
+        var content = cell.defaultContentConfiguration()
+        content.text = text
+        cell.contentConfiguration = content
+        return cell
+    }
+    
+    private func updateCellUsingLegacyWay(_ cell: UITableViewCell, text: String) -> UITableViewCell {
         cell.textLabel?.text = text
         return cell
     }
