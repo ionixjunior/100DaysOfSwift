@@ -5,6 +5,7 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
         
         let fileManager = FileManager.default
         let resourcePath = Bundle.main.resourcePath!
