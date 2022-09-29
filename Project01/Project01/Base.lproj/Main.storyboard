@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="828.98550724637687" y="63.616071428571423"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="WY7-QA-Wp1">
             <objects>
-                <viewController storyboardIdentifier="Detail" id="Lbt-aD-a5a" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Detail" id="Lbt-aD-a5a" customClass="DetailViewController" customModule="Project01" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MNH-Pa-xzK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
