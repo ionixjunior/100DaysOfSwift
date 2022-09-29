@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pictures-->
+        <!--Storm Viewer-->
         <scene sceneID="3Ci-RW-WRg">
             <objects>
                 <tableViewController id="WwH-bT-tXx" customClass="ViewController" customModule="Project01" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                             <outlet property="delegate" destination="WwH-bT-tXx" id="riC-x8-JTD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Pictures" id="j6m-x7-SYw"/>
+                    <navigationItem key="navigationItem" title="Storm Viewer" id="j6m-x7-SYw"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g78-o5-hgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
