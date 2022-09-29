@@ -6,6 +6,7 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.backgroundColor = UIColor.systemBackground
         
         let fileManager = FileManager.default
         let resourcePath = Bundle.main.resourcePath!
