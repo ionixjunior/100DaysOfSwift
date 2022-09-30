@@ -39,12 +39,14 @@ class ViewController: UITableViewController {
     private func updateCellUsingContentConfiguration(_ cell: UITableViewCell, text: String) -> UITableViewCell {
         var content = cell.defaultContentConfiguration()
         content.text = text
+        content.textProperties.font = UIFont.preferredFont(forTextStyle: .title1)
         cell.contentConfiguration = content
         return cell
     }
     
     private func updateCellUsingLegacyWay(_ cell: UITableViewCell, text: String) -> UITableViewCell {
         cell.textLabel?.text = text
+        cell.textLabel?.font = UIFont.preferredFont(forTextStyle: .title1)
         return cell
     }
     
