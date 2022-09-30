@@ -12,7 +12,7 @@ class ViewController: UITableViewController {
         let resourcePath = Bundle.main.resourcePath!
         let items = try! fileManager.contentsOfDirectory(atPath: resourcePath)
         
-        for item in items {
+        for item in items.sorted() {
             if item.hasPrefix("nssl") {
                 pictures.append(item)
             }
