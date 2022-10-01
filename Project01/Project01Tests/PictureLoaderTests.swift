@@ -12,4 +12,11 @@ class PictureLoaderTests: XCTestCase {
         XCTAssertNotEqual("item1", pictures[1].name)
         XCTAssertNotEqual("item2", pictures[1].name)
     }
+    
+    func testSortByName() throws {
+        let pictures = PictureLoader.loadPicturesFrom(content: content)
+        
+        XCTAssertEqual("nssl1", pictures[0].name)
+        XCTAssertEqual("nssl2", pictures[1].name)
+    }
 }
