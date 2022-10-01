@@ -1,7 +1,7 @@
 import UIKit
 
 class ViewController: UITableViewController {
-    private var pictures = [String]()
+    private var pictures = [Picture]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -10,13 +10,8 @@ class ViewController: UITableViewController {
         
         let fileManager = FileManager.default
         let resourcePath = Bundle.main.resourcePath!
-        let items = try! fileManager.contentsOfDirectory(atPath: resourcePath)
-        
-        for item in items.sorted() {
-            if item.hasPrefix("nssl") {
-                pictures.append(item)
-            }
-        }
+        let content = try! fileManager.contentsOfDirectory(atPath: resourcePath)
+        pictures = PictureLoader.loadPicturesFrom(content: content)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,7 +20,7 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
-        return updateCell(cell, text: pictures[indexPath.row])
+        return updateCell(cell, text: pictures[indexPath.row].name)
     }
     
     private func updateCell(_ cell: UITableViewCell, text: String) -> UITableViewCell {
@@ -52,7 +47,7 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
-            vc.selectedImage = pictures[indexPath.row]
+            vc.selectedImage = pictures[indexPath.row].name
             navigationController?.pushViewController(vc, animated: true)
         }
     }
