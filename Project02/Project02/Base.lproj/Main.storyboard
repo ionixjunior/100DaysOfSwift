@@ -15,8 +15,33 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBH-9j-TMB">
+                                <rect key="frame" x="158" y="100" width="200" height="100"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDv-5g-VZa">
+                                <rect key="frame" x="158" y="230" width="200" height="100"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqR-y6-UDE">
+                                <rect key="frame" x="158" y="360" width="200" height="100"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cqR-y6-UDE" firstAttribute="top" secondItem="oDv-5g-VZa" secondAttribute="bottom" constant="30" id="4MQ-Cz-Y7W"/>
+                            <constraint firstItem="oDv-5g-VZa" firstAttribute="centerX" secondItem="SBH-9j-TMB" secondAttribute="centerX" id="C3O-tP-jCx"/>
+                            <constraint firstItem="cqR-y6-UDE" firstAttribute="centerX" secondItem="oDv-5g-VZa" secondAttribute="centerX" id="NkH-kc-eVd"/>
+                            <constraint firstItem="oDv-5g-VZa" firstAttribute="top" secondItem="SBH-9j-TMB" secondAttribute="bottom" constant="30" id="ZFV-CM-s6H"/>
+                            <constraint firstItem="SBH-9j-TMB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="ffH-na-76v"/>
+                            <constraint firstItem="SBH-9j-TMB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pu4-Tq-Tvw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4QH-fE-jZ0"/>
                 </viewController>
