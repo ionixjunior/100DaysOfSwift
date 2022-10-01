@@ -14,9 +14,7 @@
 		7AA8D47328E45A2A00E0D15B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA8D47128E45A2A00E0D15B /* Main.storyboard */; };
 		7AA8D47528E45A2D00E0D15B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AA8D47428E45A2D00E0D15B /* Assets.xcassets */; };
 		7AA8D47828E45A2D00E0D15B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA8D47628E45A2D00E0D15B /* LaunchScreen.storyboard */; };
-		7AA8D48328E45A2D00E0D15B /* Project01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8D48228E45A2D00E0D15B /* Project01Tests.swift */; };
 		7AA8D48D28E45A2D00E0D15B /* Project01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8D48C28E45A2D00E0D15B /* Project01UITests.swift */; };
-		7AA8D48F28E45A2D00E0D15B /* Project01UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8D48E28E45A2D00E0D15B /* Project01UITestsLaunchTests.swift */; };
 		7AA8D4A628E45CB500E0D15B /* nssl0049.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7AA8D49C28E45CB500E0D15B /* nssl0049.jpg */; };
 		7AA8D4A728E45CB500E0D15B /* nssl0046.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7AA8D49D28E45CB500E0D15B /* nssl0046.jpg */; };
 		7AA8D4A828E45CB500E0D15B /* nssl0091.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7AA8D49E28E45CB500E0D15B /* nssl0091.jpg */; };
@@ -60,10 +58,8 @@
 		7AA8D47728E45A2D00E0D15B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AA8D47928E45A2D00E0D15B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AA8D47E28E45A2D00E0D15B /* Project01Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project01Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7AA8D48228E45A2D00E0D15B /* Project01Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project01Tests.swift; sourceTree = "<group>"; };
 		7AA8D48828E45A2D00E0D15B /* Project01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project01UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA8D48C28E45A2D00E0D15B /* Project01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project01UITests.swift; sourceTree = "<group>"; };
-		7AA8D48E28E45A2D00E0D15B /* Project01UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project01UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7AA8D49C28E45CB500E0D15B /* nssl0049.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0049.jpg; sourceTree = "<group>"; };
 		7AA8D49D28E45CB500E0D15B /* nssl0046.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0046.jpg; sourceTree = "<group>"; };
 		7AA8D49E28E45CB500E0D15B /* nssl0091.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0091.jpg; sourceTree = "<group>"; };
@@ -145,7 +141,6 @@
 		7AA8D48128E45A2D00E0D15B /* Project01Tests */ = {
 			isa = PBXGroup;
 			children = (
-				7AA8D48228E45A2D00E0D15B /* Project01Tests.swift */,
 				7AC8C5B628E7B6C7000B4683 /* PictureLoaderTests.swift */,
 			);
 			path = Project01Tests;
@@ -155,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				7AA8D48C28E45A2D00E0D15B /* Project01UITests.swift */,
-				7AA8D48E28E45A2D00E0D15B /* Project01UITestsLaunchTests.swift */,
 			);
 			path = Project01UITests;
 			sourceTree = "<group>";
@@ -331,7 +325,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AA8D48328E45A2D00E0D15B /* Project01Tests.swift in Sources */,
 				7AC8C5B728E7B6C7000B4683 /* PictureLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,7 +334,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AA8D48D28E45A2D00E0D15B /* Project01UITests.swift in Sources */,
-				7AA8D48F28E45A2D00E0D15B /* Project01UITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

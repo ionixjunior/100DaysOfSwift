@@ -1,10 +1,3 @@
-//
-//  Project01UITests.swift
-//  Project01UITests
-//
-//  Created by Ione Souza Junior on 28/09/22.
-//
-
 import XCTest
 
 class Project01UITests: XCTestCase {
@@ -27,14 +20,5 @@ class Project01UITests: XCTestCase {
         app.launch()
         app.staticTexts["nssl0091.jpg"].tap()
         XCTAssertTrue(app.staticTexts["Picture 10 of 10"].exists)
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
     }
 }
