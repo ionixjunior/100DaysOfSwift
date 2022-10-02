@@ -22,7 +22,6 @@ class ViewController: UIViewController {
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         addButtonBorder()
         askQuestion()
-        showCorrectAnswer()
     }
     
     func addButtonBorder() {
@@ -36,13 +35,10 @@ class ViewController: UIViewController {
     
     func askQuestion() {
         countries.shuffle()
+        correctAnswer = Int.random(in: 0...2)
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
-    }
-    
-    func showCorrectAnswer() {
-        correctAnswer = Int.random(in: 0...2)
         title = countries[correctAnswer].uppercased()
     }
 }
