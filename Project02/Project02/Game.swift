@@ -1,10 +1,23 @@
 class Game {
-    var score = 0
-    var correctAnswer = 0
-    var answeredQuestions = 0
-    var options = [String]()
+    private var _score: Int!
+    private var _answeredQuestions: Int!
+    private var _correctAnswer = 0
+    private var _options = [String]()
     
     init(options: [String]) {
-        self.options = options
+        _options = options
+    }
+    
+    var score: Int {
+        _score
+    }
+    
+    var answeredQuestions: Int {
+        _answeredQuestions
+    }
+    
+    func start() {
+        _score = 0
+        _answeredQuestions = 0
     }
 }
