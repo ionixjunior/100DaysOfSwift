@@ -16,6 +16,8 @@
 		7A1AC23C28E8C910009D9F02 /* Project02Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1AC23B28E8C910009D9F02 /* Project02Tests.swift */; };
 		7A1AC24628E8C910009D9F02 /* Project02UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1AC24528E8C910009D9F02 /* Project02UITests.swift */; };
 		7A1AC24828E8C910009D9F02 /* Project02UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1AC24728E8C910009D9F02 /* Project02UITestsLaunchTests.swift */; };
+		7A89E04628EBA87500B2D4A1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A89E04528EBA87500B2D4A1 /* Game.swift */; };
+		7A89E04828EBA91C00B2D4A1 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A89E04728EBA91C00B2D4A1 /* GameTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		7A1AC24128E8C910009D9F02 /* Project02UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project02UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1AC24528E8C910009D9F02 /* Project02UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project02UITests.swift; sourceTree = "<group>"; };
 		7A1AC24728E8C910009D9F02 /* Project02UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project02UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7A89E04528EBA87500B2D4A1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		7A89E04728EBA91C00B2D4A1 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				7A1AC22D28E8C90F009D9F02 /* Assets.xcassets */,
 				7A1AC22F28E8C90F009D9F02 /* LaunchScreen.storyboard */,
 				7A1AC23228E8C90F009D9F02 /* Info.plist */,
+				7A89E04528EBA87500B2D4A1 /* Game.swift */,
 			);
 			path = Project02;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				7A1AC23B28E8C910009D9F02 /* Project02Tests.swift */,
+				7A89E04728EBA91C00B2D4A1 /* GameTests.swift */,
 			);
 			path = Project02Tests;
 			sourceTree = "<group>";
@@ -261,6 +267,7 @@
 				7A1AC22928E8C90C009D9F02 /* ViewController.swift in Sources */,
 				7A1AC22528E8C90C009D9F02 /* AppDelegate.swift in Sources */,
 				7A1AC22728E8C90C009D9F02 /* SceneDelegate.swift in Sources */,
+				7A89E04628EBA87500B2D4A1 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A1AC23C28E8C910009D9F02 /* Project02Tests.swift in Sources */,
+				7A89E04828EBA91C00B2D4A1 /* GameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
