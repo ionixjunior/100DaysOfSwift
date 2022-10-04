@@ -12,6 +12,20 @@ class ViewController: UITableViewController {
         let resourcePath = Bundle.main.resourcePath!
         let content = try! fileManager.contentsOfDirectory(atPath: resourcePath)
         pictures = PictureLoader.loadPicturesFrom(content: content)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(recommendTapped))
+    }
+    
+    @objc func recommendTapped() {
+        let viewController = UIActivityViewController(activityItems: ["I liked this app and I believe that you will like too! Please, check this out!"], applicationActivities: [])
+        
+        if #available(iOS 16.0, *) {
+            viewController.popoverPresentationController?.sourceItem = navigationItem.rightBarButtonItem
+        } else {
+            viewController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        }
+        
+        present(viewController, animated: true)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
