@@ -84,4 +84,14 @@ final class GameTests: XCTestCase {
         
         XCTAssertFalse(result)
     }
+    
+    func testNextQuestionShouldGetThreeOptions() throws {
+        _ = game.start()
+        
+        let result = game.nextQuestion()
+        
+        XCTAssertTrue(options.contains(result.option1))
+        XCTAssertTrue(options.contains(result.option2))
+        XCTAssertTrue(options.contains(result.option3))
+    }
 }

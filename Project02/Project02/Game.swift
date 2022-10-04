@@ -44,4 +44,10 @@ class Game {
     func isOver() -> Bool {
         _answeredQuestions == questionLimit ? false : true
     }
+    
+    func nextQuestion() -> (option1: String, option2: String, option3: String) {
+        _options.shuffle()
+        _correctAnswer = Int.random(in: 0...2)
+        return (option1: _options[0], option2: _options[1], option3: _options[2])
+    }
 }
