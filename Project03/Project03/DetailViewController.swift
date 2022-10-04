@@ -19,7 +19,9 @@ class DetailViewController: UIViewController {
     }
     
     @objc func shareTapped() {
-        
+        let viewController = UIActivityViewController(activityItems: [], applicationActivities: [])
+        viewController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(viewController, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
