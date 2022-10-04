@@ -3,6 +3,7 @@ class Game {
     private var _answeredQuestions: Int!
     private var _correctAnswer: Int!
     private var _options = [String]()
+    let questionLimit = 10
     
     init(options: [String]) {
         _options = options
@@ -29,6 +30,8 @@ class Game {
     }
     
     func answer(_ answer: Int) -> Bool {
+        _answeredQuestions += 1
+        
         if answer == _correctAnswer {
             _score += 1
             return true
@@ -36,5 +39,9 @@ class Game {
         
         _score -= 1
         return false
+    }
+    
+    func hasMoreQuestions() -> Bool {
+        _answeredQuestions == questionLimit ? false : true
     }
 }

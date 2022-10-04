@@ -64,4 +64,24 @@ final class GameTests: XCTestCase {
         
         XCTAssert(game.score == -1)
     }
+    
+    func testHasMoreQuestionsShouldBeTrueWhenLimitIsNotReached() throws {
+        _ = game.start()
+        
+        let result = game.hasMoreQuestions()
+        
+        XCTAssertTrue(result)
+    }
+    
+    func testHasMoreQuestionsShouldBeFalseWhenLimitIsReached() throws {
+        _ = game.start()
+        let anyAnswer = 0
+        for _ in 1...10 {
+            _ = game.answer(anyAnswer)
+        }
+        
+        let result = game.hasMoreQuestions()
+        
+        XCTAssertFalse(result)
+    }
 }
