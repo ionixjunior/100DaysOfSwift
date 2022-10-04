@@ -9,19 +9,28 @@ final class GameTests: XCTestCase {
         game = Game(options: options)
     }
     
-    func testStartShouldGetScore() throws {
+    func testStartShouldGetInitialScore() throws {
         _ = game.start()
         
         XCTAssertEqual(0, game.score)
     }
     
-    func testStartShouldGetAnsweredQuestions() throws {
+    func testStartShouldGetAnsweredQuestionsEqualsZeroWhenGameStarts() throws {
         _ = game.start()
         
         XCTAssertEqual(0, game.answeredQuestions)
     }
     
-    func testStartShouldGetThreeOptions() throws {
+    func testStartShouldGetAnsweredQuestionsEquals1WhenAnswerAQuestion() throws {
+        _ = game.start()
+        let answer = 0
+        
+        _ = game.answer(answer)
+        
+        XCTAssertEqual(1, game.answeredQuestions)
+    }
+    
+    func testStartShouldGetThreeOptionsWhenGameStarts() throws {
         let result = game.start()
         
         XCTAssertTrue(options.contains(result.option1))
@@ -29,7 +38,7 @@ final class GameTests: XCTestCase {
         XCTAssertTrue(options.contains(result.option3))
     }
     
-    func testAnswerShouldBeTrue() throws {
+    func testAnswerShouldBeTrueWhenAnswerIsCorrect() throws {
         _ = game.start()
         let correctAnswer = game.correctAnswer
         
@@ -38,7 +47,7 @@ final class GameTests: XCTestCase {
         XCTAssertTrue(result)
     }
     
-    func testAnswerShouldBeFalse() throws {
+    func testAnswerShouldBeFalseWhenAnswerIsWrong() throws {
         _ = game.start()
         let wrongAnswer = 100
         
@@ -47,7 +56,7 @@ final class GameTests: XCTestCase {
         XCTAssertFalse(result)
     }
     
-    func testAnswerCorrectlyShouldIncrementScore() throws {
+    func testCorrectAnswerShouldIncrementScoreWhenAnswerIsCorrect() throws {
         _ = game.start()
         let correctAnswer = game.correctAnswer
         
@@ -56,7 +65,7 @@ final class GameTests: XCTestCase {
         XCTAssert(game.score == 1)
     }
     
-    func testAnswerCorrectShouldDecrementScore() throws {
+    func testCorrectAnswerShouldDecrementScoreWhenAnswerIsWrong() throws {
         _ = game.start()
         let wrongAnswer = 100
         
@@ -65,15 +74,15 @@ final class GameTests: XCTestCase {
         XCTAssert(game.score == -1)
     }
     
-    func testHasMoreQuestionsShouldBeTrueWhenLimitIsNotReached() throws {
+    func testIsOverShouldBeFalseWhenLimitIsNotReached() throws {
         _ = game.start()
         
         let result = game.isOver()
         
-        XCTAssertTrue(result)
+        XCTAssertFalse(result)
     }
     
-    func testHasMoreQuestionsShouldBeFalseWhenLimitIsReached() throws {
+    func testIsOverShouldBeTrueWhenLimitIsReached() throws {
         _ = game.start()
         let anyAnswer = 0
         for _ in 1...10 {
@@ -82,7 +91,7 @@ final class GameTests: XCTestCase {
         
         let result = game.isOver()
         
-        XCTAssertFalse(result)
+        XCTAssertTrue(result)
     }
     
     func testNextQuestionShouldGetThreeOptions() throws {

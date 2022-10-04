@@ -40,7 +40,7 @@ class Game {
     }
     
     func isOver() -> Bool {
-        _answeredQuestions == questionLimit ? false : true
+        _answeredQuestions == questionLimit ? true : false
     }
     
     func nextQuestion() -> (option1: String, option2: String, option3: String) {
