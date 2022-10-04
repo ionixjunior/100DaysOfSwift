@@ -22,7 +22,13 @@ class DetailViewController: UIViewController {
         guard let image = imageView.image?.jpegData(compressionQuality: 1) else { return }
         
         let viewController = UIActivityViewController(activityItems: [selectedImage ?? "Picture", image], applicationActivities: [])
-        viewController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        
+        if #available(iOS 16.0, *) {
+            viewController.popoverPresentationController?.sourceItem = navigationItem.rightBarButtonItem
+        } else {
+            viewController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        }
+        
         present(viewController, animated: true)
     }
     
