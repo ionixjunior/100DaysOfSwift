@@ -68,7 +68,7 @@ final class GameTests: XCTestCase {
     func testHasMoreQuestionsShouldBeTrueWhenLimitIsNotReached() throws {
         _ = game.start()
         
-        let result = game.hasMoreQuestions()
+        let result = game.isOver()
         
         XCTAssertTrue(result)
     }
@@ -80,7 +80,7 @@ final class GameTests: XCTestCase {
             _ = game.answer(anyAnswer)
         }
         
-        let result = game.hasMoreQuestions()
+        let result = game.isOver()
         
         XCTAssertFalse(result)
     }

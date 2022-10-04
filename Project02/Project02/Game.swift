@@ -41,7 +41,7 @@ class Game {
         return false
     }
     
-    func hasMoreQuestions() -> Bool {
+    func isOver() -> Bool {
         _answeredQuestions == questionLimit ? false : true
     }
 }
