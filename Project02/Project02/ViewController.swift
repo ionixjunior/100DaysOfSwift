@@ -21,6 +21,14 @@ class ViewController: UIViewController {
         game = Game(options: ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"])
         let options = game.start()
         showQuestion(options: options)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score", style: .plain, target: self, action: #selector(showScore))
+    }
+    
+    @objc func showScore() {
+        let viewController = UIAlertController(title: "Game score", message: "Your score is \(game.score).", preferredStyle: .alert)
+        viewController.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(viewController, animated: true)
     }
     
     func addButtonBorder() {
