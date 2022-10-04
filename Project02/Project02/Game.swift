@@ -29,6 +29,12 @@ class Game {
     }
     
     func answer(_ answer: Int) -> Bool {
-        answer == _correctAnswer ? true : false
+        if answer == _correctAnswer {
+            _score += 1
+            return true
+        }
+        
+        _score -= 1
+        return false
     }
 }

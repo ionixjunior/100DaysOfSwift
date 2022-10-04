@@ -46,4 +46,22 @@ final class GameTests: XCTestCase {
         
         XCTAssertFalse(result)
     }
+    
+    func testAnswerCorrectlyShouldIncrementScore() throws {
+        _ = game.start()
+        let correctAnswer = game.correctAnswer
+        
+        _ = game.answer(correctAnswer)
+        
+        XCTAssert(game.score == 1)
+    }
+    
+    func testAnswerCorrectShouldDecrementScore() throws {
+        _ = game.start()
+        let wrongAnswer = 100
+        
+        _ = game.answer(wrongAnswer)
+        
+        XCTAssert(game.score == -1)
+    }
 }
