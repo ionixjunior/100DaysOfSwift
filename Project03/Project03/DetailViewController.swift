@@ -13,7 +13,13 @@ class DetailViewController: UIViewController {
         
         if let imageToLoad = selectedImage {
             imageView.image = UIImage(named: imageToLoad)
+            
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
         }
+    }
+    
+    @objc func shareTapped() {
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
