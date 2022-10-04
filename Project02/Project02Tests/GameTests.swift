@@ -94,4 +94,12 @@ final class GameTests: XCTestCase {
         XCTAssertTrue(options.contains(result.option2))
         XCTAssertTrue(options.contains(result.option3))
     }
+    
+    func testOptionNameShouldGetUppercasedName() throws {
+        let id = 0
+        
+        let result = game.getOptionNameBy(id: id)
+        
+        XCTAssertEqual(options[0].uppercased(), result)
+    }
 }

@@ -48,4 +48,8 @@ class Game {
         _correctAnswer = Int.random(in: 0...2)
         return (option1: _options[0], option2: _options[1], option3: _options[2])
     }
+    
+    func getOptionNameBy(id: Int) -> String {
+        _options[id].uppercased()
+    }
 }
