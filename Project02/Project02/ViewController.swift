@@ -12,17 +12,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
     
-    var countries = [String]()
-    var score = 0
-    var correctAnswer = 0
-    var answeredQuestions = 0
+    var game: Game!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         addButtonBorder()
-        askQuestion()
+        game = Game(options: ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"])
+        let options = game.start()
+        showQuestion(options: options)
     }
     
     func addButtonBorder() {
@@ -34,50 +32,45 @@ class ViewController: UIViewController {
         button3.layer.borderColor = UIColor.lightGray.cgColor
     }
     
-    func askQuestion(action: UIAlertAction! = nil) {
-        countries.shuffle()
-        correctAnswer = Int.random(in: 0...2)
-        button1.setImage(UIImage(named: countries[0]), for: .normal)
-        button2.setImage(UIImage(named: countries[1]), for: .normal)
-        button3.setImage(UIImage(named: countries[2]), for: .normal)
-        title = "\(countries[correctAnswer].uppercased()) - Score: \(score)"
+    func showQuestion(options: (option1: String, option2: String, option3: String)) {
+        button1.setImage(UIImage(named: options.option1), for: .normal)
+        button2.setImage(UIImage(named: options.option2), for: .normal)
+        button3.setImage(UIImage(named: options.option3), for: .normal)
+        title = "\(game.getOptionNameBy(id: game.correctAnswer)) - Score: \(game.score)"
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         var title: String
         var message = ""
         
-        if sender.tag == correctAnswer {
+        if game.answer(sender.tag) {
             title = "Correct"
-            score += 1
         } else {
             title = "Wrong"
-            message += "That's the flag of \(countries[sender.tag].uppercased()).\n"
-            score -= 1
+            message += "That's the flag of \(game.getOptionNameBy(id: sender.tag)).\n"
         }
         
-        message += "Your score is \(score)."
+        message += "Your score is \(game.score)."
         
-        answeredQuestions += 1
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: checkForTheNextQuestion))
         present(alert, animated: true)
     }
     
-    func checkForTheNextQuestion(action: UIAlertAction! = nil) {
-        if answeredQuestions == 10 {
-            let alert = UIAlertController(title: "Game over", message: "Your final score is \(score).", preferredStyle: .alert)
+    func checkForTheNextQuestion(action: UIAlertAction) {
+        if game.isOver() {
+            let alert = UIAlertController(title: "Game over", message: "Your final score is \(game.score).", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Restart", style: .default, handler: restart))
             present(alert, animated: true)
         } else {
-            askQuestion()
+            let options = game.nextQuestion()
+            showQuestion(options: options)
         }
     }
     
-    func restart(action: UIAlertAction! = nil) {
-        answeredQuestions = 0
-        score = 0
-        askQuestion()
+    func restart(action: UIAlertAction) {
+        let options = game.start()
+        showQuestion(options: options)
     }
 }
 
