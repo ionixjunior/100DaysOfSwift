@@ -1,5 +1,5 @@
 import XCTest
-@testable import Project01
+@testable import Project03
 
 class PictureLoaderTests: XCTestCase {
     let content: [String] = ["item1", "item2", "nssl2", "nssl1"]
