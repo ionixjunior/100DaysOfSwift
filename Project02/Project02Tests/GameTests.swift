@@ -28,4 +28,22 @@ final class GameTests: XCTestCase {
         XCTAssertTrue(options.contains(result.option2))
         XCTAssertTrue(options.contains(result.option3))
     }
+    
+    func testAnswerShouldBeTrue() throws {
+        _ = game.start()
+        let correctAnswer = game.correctAnswer
+        
+        let result = game.answer(correctAnswer)
+        
+        XCTAssertTrue(result)
+    }
+    
+    func testAnswerShouldBeFalse() throws {
+        _ = game.start()
+        let wrongAnswer = 100
+        
+        let result = game.answer(wrongAnswer)
+        
+        XCTAssertFalse(result)
+    }
 }
