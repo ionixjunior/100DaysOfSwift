@@ -25,5 +25,9 @@ class ViewController: UITableViewController {
             Country(name: "US", flag: "us")
         ]
     }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        countries.count
+    }
 }
 
