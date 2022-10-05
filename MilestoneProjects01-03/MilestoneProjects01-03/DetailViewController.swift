@@ -11,5 +11,11 @@ class DetailViewController: UIViewController {
         
         title = name
         image.image = UIImage(named: flag)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
+    }
+    
+    @objc func shareTapped() {
+        
     }
 }
