@@ -5,3 +5,7 @@ Project*/*.xcodeproj/*
 !Project*/*.xcodeproj/project.pbxproj
 !Project*/*.xcodeproj/*.xcworkspace/xcshareddata/
 !Project*/*.xcodeproj/*.xcworkspace/contents.xcworkspacedata
+MilestoneProjects*/*.xcodeproj/*
+!MilestoneProjects*/*.xcodeproj/project.pbxproj
+!MilestoneProjects*/*.xcodeproj/*.xcworkspace/xcshareddata/
+!MilestoneProjects*/*.xcodeproj/*.xcworkspace/contents.xcworkspacedata
