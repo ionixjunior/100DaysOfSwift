@@ -35,7 +35,7 @@ class ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Country")!
         let country = countries[indexPath.row]
         
-        if #available(iOS 16.0, *) {
+        if #available(iOS 14.0, *) {
             var content = cell.defaultContentConfiguration()
             content.text = country.name
             content.image = UIImage(named: country.flag)
