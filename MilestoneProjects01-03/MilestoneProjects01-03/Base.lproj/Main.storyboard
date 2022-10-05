@@ -53,7 +53,7 @@
         <!--Detail View Controller-->
         <scene sceneID="GVs-b3-8TJ">
             <objects>
-                <viewController id="5N2-Dy-wQy" customClass="DetailViewController" customModule="MilestoneProjects01_03" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Detail" id="5N2-Dy-wQy" customClass="DetailViewController" customModule="MilestoneProjects01_03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x8L-tz-dVv">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
