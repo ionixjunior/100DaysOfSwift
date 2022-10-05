@@ -29,5 +29,22 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         countries.count
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Country")!
+        let country = countries[indexPath.row]
+        
+        if #available(iOS 16.0, *) {
+            var content = cell.defaultContentConfiguration()
+            content.text = country.name
+            content.image = UIImage(named: country.flag)
+            cell.contentConfiguration = content
+        } else {
+            cell.textLabel?.text = country.name
+            cell.imageView?.image = UIImage(named: country.flag)
+        }
+        
+        return cell
+    }
 }
 
