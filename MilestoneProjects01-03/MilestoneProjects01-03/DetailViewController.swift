@@ -10,5 +10,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         title = name
+        image.image = UIImage(named: flag)
     }
 }
