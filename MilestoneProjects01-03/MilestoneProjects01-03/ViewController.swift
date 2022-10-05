@@ -50,6 +50,9 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let viewController = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            let country = countries[indexPath.row]
+            viewController.name = country.name
+            viewController.flag = country.flag
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
