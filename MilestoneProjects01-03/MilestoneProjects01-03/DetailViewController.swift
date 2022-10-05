@@ -18,6 +18,13 @@ class DetailViewController: UIViewController {
     @objc func shareTapped() {
         if let name = name, let image = image {
             let viewController = UIActivityViewController(activityItems: [name, image], applicationActivities: [])
+            
+            if #available(iOS 16.0, *) {
+                viewController.popoverPresentationController?.sourceItem = navigationItem.rightBarButtonItem
+            } else {
+                viewController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+            }
+            
             present(viewController, animated: true)
         }
     }
