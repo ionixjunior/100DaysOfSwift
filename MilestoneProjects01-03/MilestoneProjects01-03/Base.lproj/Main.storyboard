@@ -71,6 +71,9 @@
                             <constraint firstItem="ZMK-TH-2tA" firstAttribute="top" secondItem="Z27-q1-atg" secondAttribute="top" id="u7F-DJ-VgN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="ZMK-TH-2tA" id="I3A-M5-Vbu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzF-AM-2Ry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
