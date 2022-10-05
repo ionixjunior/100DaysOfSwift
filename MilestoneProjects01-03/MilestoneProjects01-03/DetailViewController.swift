@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     }
     
     @objc func shareTapped() {
-        if let name = name, let image = image {
+        if let name = name, let image = image.image?.jpegData(compressionQuality: 1.0) {
             let viewController = UIActivityViewController(activityItems: [name, image], applicationActivities: [])
             
             if #available(iOS 16.0, *) {
