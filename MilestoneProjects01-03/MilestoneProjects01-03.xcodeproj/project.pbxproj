@@ -16,6 +16,7 @@
 		7A52F2B928EE2C97001AC4BB /* MilestoneProjects01_03Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A52F2B828EE2C97001AC4BB /* MilestoneProjects01_03Tests.swift */; };
 		7A52F2C328EE2C97001AC4BB /* MilestoneProjects01_03UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A52F2C228EE2C97001AC4BB /* MilestoneProjects01_03UITests.swift */; };
 		7A52F2C528EE2C97001AC4BB /* MilestoneProjects01_03UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A52F2C428EE2C97001AC4BB /* MilestoneProjects01_03UITestsLaunchTests.swift */; };
+		7A52F2D228EE30CA001AC4BB /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A52F2D128EE30CA001AC4BB /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7A52F2BE28EE2C97001AC4BB /* MilestoneProjects01-03UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MilestoneProjects01-03UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A52F2C228EE2C97001AC4BB /* MilestoneProjects01_03UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects01_03UITests.swift; sourceTree = "<group>"; };
 		7A52F2C428EE2C97001AC4BB /* MilestoneProjects01_03UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects01_03UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7A52F2D128EE30CA001AC4BB /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				7A52F2AA28EE2C97001AC4BB /* Assets.xcassets */,
 				7A52F2AC28EE2C97001AC4BB /* LaunchScreen.storyboard */,
 				7A52F2AF28EE2C97001AC4BB /* Info.plist */,
+				7A52F2D128EE30CA001AC4BB /* Country.swift */,
 			);
 			path = "MilestoneProjects01-03";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A52F2D228EE30CA001AC4BB /* Country.swift in Sources */,
 				7A52F2A628EE2C94001AC4BB /* ViewController.swift in Sources */,
 				7A52F2A228EE2C94001AC4BB /* AppDelegate.swift in Sources */,
 				7A52F2A428EE2C94001AC4BB /* SceneDelegate.swift in Sources */,
