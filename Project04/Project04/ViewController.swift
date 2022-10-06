@@ -30,7 +30,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
     }
     
     func pageTapped(action: UIAlertAction) {
+        guard let actionTitle = action.title else { return }
+        guard let url = URL(string: "https://\(actionTitle)") else { return }
         
+        webView.load(URLRequest(url: url))
     }
 }
 
