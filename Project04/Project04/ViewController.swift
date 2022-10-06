@@ -26,6 +26,13 @@ class ViewController: UIViewController, WKNavigationDelegate {
         alertController.addAction(UIAlertAction(title: "apple.com", style: .default, handler: pageTapped))
         alertController.addAction(UIAlertAction(title: "hackingwithswift.com", style: .default, handler: pageTapped))
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        if #available(iOS 16.0, *) {
+            alertController.popoverPresentationController?.sourceItem = navigationItem.rightBarButtonItem
+        } else {
+            alertController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        }
+        
         present(alertController, animated: true)
     }
     
