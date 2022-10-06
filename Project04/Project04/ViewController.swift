@@ -17,7 +17,8 @@ class ViewController: UIViewController, WKNavigationDelegate {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: self, action: #selector(openTapped))
         
         let url = URL(string: "https://ionixjunior.dev")!
-        webView.load(URLRequest(url: url))
+        let request = URLRequest(url: url)
+        webView.load(request)
     }
     
     @objc func openTapped() {
