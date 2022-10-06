@@ -5,16 +5,17 @@ class ViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView!
     
     override func loadView() {
-        let url = URL(string: "https://ionixjunior.dev")!
         webView = WKWebView()
         webView.navigationDelegate = self
         webView.allowsBackForwardNavigationGestures = true
-        webView.load(URLRequest(url: url))
         view = webView
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let url = URL(string: "https://ionixjunior.dev")!
+        webView.load(URLRequest(url: url))
     }
 
 
