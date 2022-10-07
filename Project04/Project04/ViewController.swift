@@ -93,8 +93,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
             return url.host()
         }
         
-        guard let host = url?.host else { return nil }
-        return host
+        return url?.host
     }
 }
 
