@@ -27,7 +27,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         toolbarItems = [progress, spacer, refresh]
         navigationController?.isToolbarHidden = false
         
-        let url = URL(string: "https://ionixjunior.dev")!
+        let url = URL(string: "https://" + websites[0])!
         let request = URLRequest(url: url)
         webView.load(request)
     }
