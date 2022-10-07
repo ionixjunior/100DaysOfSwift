@@ -88,8 +88,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     private func getHostFrom(url: URL?) -> String? {
         if #available(iOS 16.0, *) {
-            guard let host = url?.host() else { return nil }
-            return host
+            guard let url = url else { return nil }
+            if url.absoluteString == "about:blank" { return nil }
+            return url.host()
         }
         
         guard let host = url?.host else { return nil }
