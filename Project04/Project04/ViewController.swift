@@ -40,9 +40,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     @objc func openTapped() {
         let alertController = UIAlertController(title: "Choose a page to open", message: nil, preferredStyle: .actionSheet)
-        alertController.addAction(UIAlertAction(title: "ionixjunior.dev", style: .default, handler: pageTapped))
-        alertController.addAction(UIAlertAction(title: "apple.com", style: .default, handler: pageTapped))
-        alertController.addAction(UIAlertAction(title: "hackingwithswift.com", style: .default, handler: pageTapped))
+        
+        for website in websites {
+            alertController.addAction(UIAlertAction(title: website, style: .default, handler: pageTapped))
+        }
+        
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         
         if #available(iOS 16.0, *) {
