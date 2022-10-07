@@ -16,6 +16,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
         
         progressView = UIProgressView(progressViewStyle: .default)
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), context: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: self, action: #selector(openTapped))
         
         let progress = UIBarButtonItem(customView: progressView)
