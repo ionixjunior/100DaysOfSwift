@@ -30,6 +30,12 @@ class ViewController: UIViewController, WKNavigationDelegate {
         webView.load(request)
     }
     
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "estimatedProgress" {
+            progressView.progress = Float(webView.estimatedProgress)
+        }
+    }
+    
     @objc func openTapped() {
         let alertController = UIAlertController(title: "Choose a page to open", message: nil, preferredStyle: .actionSheet)
         alertController.addAction(UIAlertAction(title: "ionixjunior.dev", style: .default, handler: pageTapped))
