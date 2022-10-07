@@ -18,9 +18,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
         progressView = UIProgressView(progressViewStyle: .default)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: self, action: #selector(openTapped))
         
+        let progress = UIBarButtonItem(customView: progressView)
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refreshTapped))
-        toolbarItems = [spacer, refresh]
+        toolbarItems = [progress, spacer, refresh]
         navigationController?.isToolbarHidden = false
         
         let url = URL(string: "https://ionixjunior.dev")!
