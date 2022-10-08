@@ -21,15 +21,20 @@ class ViewController: UIViewController, WKNavigationDelegate {
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), context: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: self, action: #selector(openTapped))
         
+        let back = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: #selector(backTapped))
         let progress = UIBarButtonItem(customView: progressView)
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refreshTapped))
-        toolbarItems = [progress, spacer, refresh]
+        toolbarItems = [back, progress, spacer, refresh]
         navigationController?.isToolbarHidden = false
         
         let url = URL(string: "https://" + websites[0])!
         let request = URLRequest(url: url)
         webView.load(request)
+    }
+    
+    @objc func backTapped() {
+        webView.goBack()
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
