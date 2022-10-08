@@ -23,9 +23,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         let back = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: #selector(backTapped))
         let progress = UIBarButtonItem(customView: progressView)
+        let forward = UIBarButtonItem(title: "Forward", style: .plain, target: nil, action: #selector(forwardTapped))
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refreshTapped))
-        toolbarItems = [back, progress, spacer, refresh]
+        toolbarItems = [back, progress, forward, spacer, refresh]
         navigationController?.isToolbarHidden = false
         
         let url = URL(string: "https://" + websites[0])!
@@ -35,6 +36,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     @objc func backTapped() {
         webView.goBack()
+    }
+    
+    @objc func forwardTapped() {
+        webView.goForward()
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
