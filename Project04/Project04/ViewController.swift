@@ -84,6 +84,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         }
         
         decisionHandler(.cancel)
+        showAccessDeniedMessageFrom(url: url)
     }
     
     private func getHostFrom(url: URL?) -> String? {
@@ -94,6 +95,14 @@ class ViewController: UIViewController, WKNavigationDelegate {
         }
         
         return url?.host
+    }
+    
+    private func showAccessDeniedMessageFrom(url: URL?) {
+        guard let url = url else { return }
+        
+        let alert = UIAlertController(title: "Access denied", message: "Sorry, you don't have permission to access \"\(url.absoluteString)\".", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alert, animated: true)
     }
 }
 
