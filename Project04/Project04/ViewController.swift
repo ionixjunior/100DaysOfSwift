@@ -5,6 +5,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView!
     var progressView: UIProgressView!
     let websites = ["ionixjunior.com.br", "apple.com", "hackingwithswift.com"]
+    var website: String!
     
     override func loadView() {
         webView = WKWebView()
@@ -15,6 +16,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let website = website else { return }
         
         progressView = UIProgressView(progressViewStyle: .default)
         progressView.sizeToFit()
@@ -29,7 +31,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         toolbarItems = [back, progress, forward, spacer, refresh]
         navigationController?.isToolbarHidden = false
         
-        let url = URL(string: "https://" + websites[0])!
+        let url = URL(string: "https://" + website)!
         let request = URLRequest(url: url)
         webView.load(request)
     }
