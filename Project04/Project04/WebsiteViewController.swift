@@ -1,7 +1,7 @@
 import UIKit
 
 class WebsiteViewController: UITableViewController {
-    let websites = ["ionixjunior.com.br", "apple.com", "hackingwithswift.com"]
+    let websites = Website.getList()
 
     override func viewDidLoad() {
         super.viewDidLoad()
