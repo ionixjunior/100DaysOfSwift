@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A870AC528F24790002CB393 /* WebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A870AC428F24790002CB393 /* WebsiteViewController.swift */; };
 		7ACFBCDB28EEE43800A2A94F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACFBCDA28EEE43800A2A94F /* AppDelegate.swift */; };
 		7ACFBCDD28EEE43800A2A94F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACFBCDC28EEE43800A2A94F /* SceneDelegate.swift */; };
 		7ACFBCDF28EEE43800A2A94F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACFBCDE28EEE43800A2A94F /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A870AC428F24790002CB393 /* WebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteViewController.swift; sourceTree = "<group>"; };
 		7ACFBCD728EEE43800A2A94F /* Project04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project04.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACFBCDA28EEE43800A2A94F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ACFBCDC28EEE43800A2A94F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				7ACFBCDC28EEE43800A2A94F /* SceneDelegate.swift */,
 				7ACFBCDE28EEE43800A2A94F /* ViewController.swift */,
 				7ACFBCE028EEE43800A2A94F /* Main.storyboard */,
+				7A870AC428F24790002CB393 /* WebsiteViewController.swift */,
 				7ACFBCE328EEE43A00A2A94F /* Assets.xcassets */,
 				7ACFBCE528EEE43A00A2A94F /* LaunchScreen.storyboard */,
 				7ACFBCE828EEE43A00A2A94F /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A870AC528F24790002CB393 /* WebsiteViewController.swift in Sources */,
 				7ACFBCDF28EEE43800A2A94F /* ViewController.swift in Sources */,
 				7ACFBCDB28EEE43800A2A94F /* AppDelegate.swift in Sources */,
 				7ACFBCDD28EEE43800A2A94F /* SceneDelegate.swift in Sources */,
