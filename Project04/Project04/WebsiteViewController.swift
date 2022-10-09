@@ -37,6 +37,13 @@ class WebsiteViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "WebViewPage") as? ViewController {
+            viewController.website = websites[indexPath.row]
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
 
     /*
     // MARK: - Navigation
