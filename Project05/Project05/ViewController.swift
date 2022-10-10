@@ -24,7 +24,7 @@ class ViewController: UITableViewController {
         
         let submitAction = UIAlertAction(title: "Submit", style: .default) {
             [weak self, weak alert] _ in
-            guard let answer = alert?.textFields?[0].text else { return }
+            guard let answer = alert?.textFields?.first?.text else { return }
             self?.submit(answer)
         }
         alert.addAction(submitAction)
