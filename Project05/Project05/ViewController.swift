@@ -7,6 +7,8 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForAnswer))
+        
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             if let startWords = try? String(contentsOf: startWordsURL) {
                 allWords = startWords.components(separatedBy: "\n")
@@ -14,6 +16,10 @@ class ViewController: UITableViewController {
         }
         
         startGame()
+    }
+    
+    @objc func promptForAnswer() {
+        
     }
     
     private func startGame() {
