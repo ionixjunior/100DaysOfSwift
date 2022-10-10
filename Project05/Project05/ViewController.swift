@@ -21,5 +21,9 @@ class ViewController: UITableViewController {
         usedWords.removeAll(keepingCapacity: true)
         tableView.reloadData()
     }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return usedWords.count
+    }
 }
 
