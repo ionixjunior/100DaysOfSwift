@@ -16,6 +16,7 @@
 		7A72DB8E28F4C42A0001B387 /* Project05Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72DB8D28F4C42A0001B387 /* Project05Tests.swift */; };
 		7A72DB9828F4C42A0001B387 /* Project05UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72DB9728F4C42A0001B387 /* Project05UITests.swift */; };
 		7A72DB9A28F4C42A0001B387 /* Project05UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72DB9928F4C42A0001B387 /* Project05UITestsLaunchTests.swift */; };
+		7A72DBA728F4C83D0001B387 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7A72DBA628F4C83D0001B387 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7A72DB9328F4C42A0001B387 /* Project05UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project05UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A72DB9728F4C42A0001B387 /* Project05UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project05UITests.swift; sourceTree = "<group>"; };
 		7A72DB9928F4C42A0001B387 /* Project05UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project05UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7A72DBA628F4C83D0001B387 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				7A72DB7F28F4C42A0001B387 /* Assets.xcassets */,
 				7A72DB8128F4C42A0001B387 /* LaunchScreen.storyboard */,
 				7A72DB8428F4C42A0001B387 /* Info.plist */,
+				7A72DBA628F4C83D0001B387 /* start.txt */,
 			);
 			path = Project05;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A72DB8328F4C42A0001B387 /* LaunchScreen.storyboard in Resources */,
+				7A72DBA728F4C83D0001B387 /* start.txt in Resources */,
 				7A72DB8028F4C42A0001B387 /* Assets.xcassets in Resources */,
 				7A72DB7E28F4C4270001B387 /* Main.storyboard in Resources */,
 			);
