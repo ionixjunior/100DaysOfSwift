@@ -21,7 +21,19 @@ class ViewController: UITableViewController {
     @objc func promptForAnswer() {
         let alert = UIAlertController(title: "Enter answer", message: nil, preferredStyle: .alert)
         alert.addTextField()
+        
+        let submitAction = UIAlertAction(title: "Submit", style: .default) {
+            [weak self, weak alert] _ in
+            guard let answer = alert?.textFields?[0].text else { return }
+            self?.submit(answer)
+        }
+        alert.addAction(submitAction)
+        
         present(alert, animated: true)
+    }
+    
+    private func submit(_ answer: String) {
+        print(answer)
     }
     
     private func startGame() {
