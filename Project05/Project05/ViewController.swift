@@ -25,5 +25,19 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usedWords.count
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Word", for: indexPath)
+        
+        if #available(iOS 14.0, *) {
+            var contentConfiguration = cell.defaultContentConfiguration()
+            contentConfiguration.text = usedWords[indexPath.row]
+            cell.contentConfiguration = contentConfiguration
+        } else {
+            cell.textLabel?.text = usedWords[indexPath.row]
+        }
+        
+        return cell
+    }
 }
 
