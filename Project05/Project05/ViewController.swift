@@ -19,7 +19,9 @@ class ViewController: UITableViewController {
     }
     
     @objc func promptForAnswer() {
-        
+        let alert = UIAlertController(title: "Enter answer", message: nil, preferredStyle: .alert)
+        alert.addTextField()
+        present(alert, animated: true)
     }
     
     private func startGame() {
