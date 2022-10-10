@@ -12,8 +12,14 @@ class ViewController: UITableViewController {
                 allWords = startWords.components(separatedBy: "\n")
             }
         }
+        
+        startGame()
     }
-
-
+    
+    private func startGame() {
+        title = allWords.randomElement()
+        usedWords.removeAll(keepingCapacity: true)
+        tableView.reloadData()
+    }
 }
 
