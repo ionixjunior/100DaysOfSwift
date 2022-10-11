@@ -71,6 +71,12 @@ class ViewController: UITableViewController {
         return misspelledRange.location == NSNotFound
     }
     
+    private func showError(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alert, animated: true)
+    }
+    
     private func startGame() {
         title = allWords.randomElement()
         usedWords.removeAll(keepingCapacity: true)
