@@ -33,7 +33,29 @@ class ViewController: UITableViewController {
     }
     
     private func submit(_ answer: String) {
-        print(answer)
+        let lowerAnswer = answer.lowercased()
+        
+        if isPossible(word: lowerAnswer) {
+            if isOriginal(word: lowerAnswer) {
+                if isReal(word: lowerAnswer) {
+                    usedWords.insert(lowerAnswer, at: 0)
+                    let indexPath = IndexPath(row: 0, section: 0)
+                    tableView.insertRows(at: [indexPath], with: .automatic)
+                }
+            }
+        }
+    }
+    
+    private func isPossible(word: String) -> Bool {
+        return true
+    }
+    
+    private func isOriginal(word: String) -> Bool {
+        return true
+    }
+    
+    private func isReal(word: String) -> Bool {
+        return true
     }
     
     private func startGame() {
