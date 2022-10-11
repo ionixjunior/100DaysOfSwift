@@ -35,13 +35,16 @@ class ViewController: UITableViewController {
     private func submit(_ answer: String) {
         let lowerAnswer = answer.lowercased()
         
-        if isPossible(word: lowerAnswer) {
-            if isOriginal(word: lowerAnswer) {
-                if isReal(word: lowerAnswer) {
-                    usedWords.insert(lowerAnswer, at: 0)
-                    let indexPath = IndexPath(row: 0, section: 0)
-                    tableView.insertRows(at: [indexPath], with: .automatic)
-                }
+        if isPossible(word: lowerAnswer) == false {
+            showError(title: "Impossible word", message: "This word can't be built.")
+            return
+        }
+        
+        if isOriginal(word: lowerAnswer) {
+            if isReal(word: lowerAnswer) {
+                usedWords.insert(lowerAnswer, at: 0)
+                let indexPath = IndexPath(row: 0, section: 0)
+                tableView.insertRows(at: [indexPath], with: .automatic)
             }
         }
     }
