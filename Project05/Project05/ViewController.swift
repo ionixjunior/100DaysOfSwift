@@ -40,12 +40,15 @@ class ViewController: UITableViewController {
             return
         }
         
-        if isOriginal(word: lowerAnswer) {
-            if isReal(word: lowerAnswer) {
-                usedWords.insert(lowerAnswer, at: 0)
-                let indexPath = IndexPath(row: 0, section: 0)
-                tableView.insertRows(at: [indexPath], with: .automatic)
-            }
+        if isOriginal(word: lowerAnswer) == false {
+            showError(title: "Please, be original!", message: "You already used this word.")
+            return
+        }
+        
+        if isReal(word: lowerAnswer) {
+            usedWords.insert(lowerAnswer, at: 0)
+            let indexPath = IndexPath(row: 0, section: 0)
+            tableView.insertRows(at: [indexPath], with: .automatic)
         }
     }
     
