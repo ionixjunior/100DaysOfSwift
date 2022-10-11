@@ -35,6 +35,11 @@ class ViewController: UITableViewController {
     private func submit(_ answer: String) {
         let lowerAnswer = answer.lowercased()
         
+        if lowerAnswer.isEmpty {
+            showError(title: "What do you mean?", message: "You need to insert some word.")
+            return
+        }
+        
         if isPossible(word: lowerAnswer) == false {
             showError(title: "Impossible word", message: "This word can't be built.")
             return
