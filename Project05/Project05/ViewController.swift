@@ -45,11 +45,14 @@ class ViewController: UITableViewController {
             return
         }
         
-        if isReal(word: lowerAnswer) {
-            usedWords.insert(lowerAnswer, at: 0)
-            let indexPath = IndexPath(row: 0, section: 0)
-            tableView.insertRows(at: [indexPath], with: .automatic)
+        if isReal(word: lowerAnswer) == false {
+            showError(title: "Incorrect word", message: "You need to insert only real words.")
+            return
         }
+        
+        usedWords.insert(lowerAnswer, at: 0)
+        let indexPath = IndexPath(row: 0, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
     }
     
     private func isPossible(word: String) -> Bool {
