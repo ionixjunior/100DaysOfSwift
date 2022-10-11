@@ -36,7 +36,7 @@ class ViewController: UITableViewController {
         let lowerAnswer = answer.lowercased()
         
         if lowerAnswer.isEmpty {
-            showError(title: "What do you mean?", message: "You need to insert some word.")
+            showError(title: "What do you mean?", message: "You need to insert a word.")
             return
         }
         
