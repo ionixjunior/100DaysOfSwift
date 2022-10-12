@@ -45,6 +45,11 @@ class ViewController: UITableViewController {
             return
         }
         
+        if hasTheFirstLettersOfTheMainWord(word: lowerAnswer) {
+            showError(title: "Try to use another answer", message: "Your answer can't start with the same letters as the main word.")
+            return
+        }
+        
         if isPossible(word: lowerAnswer) == false {
             showError(title: "Impossible word", message: "This word can't be built.")
             return
@@ -63,6 +68,11 @@ class ViewController: UITableViewController {
         usedWords.insert(lowerAnswer, at: 0)
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
+    }
+    
+    private func hasTheFirstLettersOfTheMainWord(word: String) -> Bool {
+        guard let title = title?.lowercased() else { return false }
+        return title.starts(with: word)
     }
     
     private func isPossible(word: String) -> Bool {
