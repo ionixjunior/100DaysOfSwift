@@ -17,6 +17,7 @@
 		7A72DB9828F4C42A0001B387 /* Project05UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72DB9728F4C42A0001B387 /* Project05UITests.swift */; };
 		7A72DB9A28F4C42A0001B387 /* Project05UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72DB9928F4C42A0001B387 /* Project05UITestsLaunchTests.swift */; };
 		7A72DBA728F4C83D0001B387 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7A72DBA628F4C83D0001B387 /* start.txt */; };
+		7A9F56AD28F7438500B40AAB /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9F56AC28F7438500B40AAB /* UITableViewCellExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		7A72DB9728F4C42A0001B387 /* Project05UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project05UITests.swift; sourceTree = "<group>"; };
 		7A72DB9928F4C42A0001B387 /* Project05UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project05UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A72DBA628F4C83D0001B387 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
+		7A9F56AC28F7438500B40AAB /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				7A72DB8128F4C42A0001B387 /* LaunchScreen.storyboard */,
 				7A72DB8428F4C42A0001B387 /* Info.plist */,
 				7A72DBA628F4C83D0001B387 /* start.txt */,
+				7A9F56AC28F7438500B40AAB /* UITableViewCellExtension.swift */,
 			);
 			path = Project05;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				7A72DB7B28F4C4270001B387 /* ViewController.swift in Sources */,
 				7A72DB7728F4C4270001B387 /* AppDelegate.swift in Sources */,
 				7A72DB7928F4C4270001B387 /* SceneDelegate.swift in Sources */,
+				7A9F56AD28F7438500B40AAB /* UITableViewCellExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
