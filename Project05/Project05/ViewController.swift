@@ -40,6 +40,11 @@ class ViewController: UITableViewController {
             return
         }
         
+        if lowerAnswer.count < 3 {
+            showError(title: "Short answer", message: "You need to specify an answer with a minimum of three letters.")
+            return
+        }
+        
         if isPossible(word: lowerAnswer) == false {
             showError(title: "Impossible word", message: "This word can't be built.")
             return
