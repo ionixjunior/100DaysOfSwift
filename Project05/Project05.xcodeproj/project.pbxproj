@@ -103,6 +103,7 @@
 		7A72DB7528F4C4270001B387 /* Project05 */ = {
 			isa = PBXGroup;
 			children = (
+				7AB1146928F746E7004E896D /* Extensions */,
 				7A72DB7628F4C4270001B387 /* AppDelegate.swift */,
 				7A72DB7828F4C4270001B387 /* SceneDelegate.swift */,
 				7A72DB7A28F4C4270001B387 /* ViewController.swift */,
@@ -111,7 +112,6 @@
 				7A72DB8128F4C42A0001B387 /* LaunchScreen.storyboard */,
 				7A72DB8428F4C42A0001B387 /* Info.plist */,
 				7A72DBA628F4C83D0001B387 /* start.txt */,
-				7A9F56AC28F7438500B40AAB /* UITableViewCellExtension.swift */,
 			);
 			path = Project05;
 			sourceTree = "<group>";
@@ -131,6 +131,14 @@
 				7A72DB9928F4C42A0001B387 /* Project05UITestsLaunchTests.swift */,
 			);
 			path = Project05UITests;
+			sourceTree = "<group>";
+		};
+		7AB1146928F746E7004E896D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A9F56AC28F7438500B40AAB /* UITableViewCellExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
