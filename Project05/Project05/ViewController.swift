@@ -7,6 +7,7 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(startGame))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForAnswer))
         
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
@@ -106,7 +107,7 @@ class ViewController: UITableViewController {
         present(alert, animated: true)
     }
     
-    private func startGame() {
+    @objc private func startGame() {
         title = allWords.randomElement()
         usedWords.removeAll(keepingCapacity: true)
         tableView.reloadData()
