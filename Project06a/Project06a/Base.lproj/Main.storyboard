@@ -19,6 +19,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBH-9j-TMB">
                                 <rect key="frame" x="95" y="100" width="200" height="100"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="SBH-9j-TMB" secondAttribute="height" multiplier="2:1" id="D6p-kQ-qOS"/>
                                     <constraint firstAttribute="width" constant="200" id="Zvz-YR-FPa"/>
                                     <constraint firstAttribute="height" constant="100" id="m9a-mC-emn"/>
                                 </constraints>
@@ -33,6 +34,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Hzb-cr-DzR"/>
                                     <constraint firstAttribute="height" constant="100" id="dfK-oc-MRM"/>
+                                    <constraint firstAttribute="width" secondItem="oDv-5g-VZa" secondAttribute="height" multiplier="2:1" id="nP0-ZB-ZeT"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="uk"/>
@@ -44,6 +46,7 @@
                                 <rect key="frame" x="95" y="388" width="200" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="N6c-O1-tFR"/>
+                                    <constraint firstAttribute="width" secondItem="cqR-y6-UDE" secondAttribute="height" multiplier="2:1" id="OBd-Ca-06w"/>
                                     <constraint firstAttribute="width" constant="200" id="wUq-gS-n6X"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
