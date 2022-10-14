@@ -59,8 +59,9 @@ class ViewController: UIViewController {
     
     private func prepareLayoutUsingAnchors() {
         var previous: UILabel?
-
-        for label in [label1, label2, label3, label4, label5] {
+        let labels = [label1, label2, label3, label4, label5]
+        
+        for label in labels {
 //            label.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true // the same of leading and trailing anchors
             label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
             label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
@@ -71,6 +72,10 @@ class ViewController: UIViewController {
                 label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
             }
 
+            if label == labels.last {
+                label.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
+            }
+            
             previous = label
         }
     }
