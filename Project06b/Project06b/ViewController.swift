@@ -75,12 +75,21 @@ class ViewController: UIViewController {
         }
     }
     
+    private var labelsHeightConstraints = [NSLayoutConstraint]()
+    
     override func viewDidLayoutSubviews() {
+        for constraint in labelsHeightConstraints {
+            constraint.isActive = false
+        }
+        labelsHeightConstraints.removeAll(keepingCapacity: true)
+        
         let availableHeight = view.bounds.height - view.safeAreaInsets.top - view.safeAreaInsets.bottom - 10
         let labelHeight = availableHeight / 5
         
         for label in [label1, label2, label3, label4, label5] {
-            label.heightAnchor.constraint(equalToConstant: labelHeight).isActive = true
+            let constraint = label.heightAnchor.constraint(equalToConstant: labelHeight)
+            constraint.isActive = true
+            labelsHeightConstraints.append(constraint)
         }
     }
 }
