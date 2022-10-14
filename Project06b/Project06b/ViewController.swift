@@ -64,8 +64,6 @@ class ViewController: UIViewController {
 //            label.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true // the same of leading and trailing anchors
             label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
             label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
-            
-            label.heightAnchor.constraint(equalToConstant: 88).isActive = true
 
             if let previous = previous {
                 label.topAnchor.constraint(equalTo: previous.bottomAnchor, constant: 10).isActive = true
@@ -74,6 +72,15 @@ class ViewController: UIViewController {
             }
 
             previous = label
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        let availableHeight = view.bounds.height - view.safeAreaInsets.top - view.safeAreaInsets.bottom - 10
+        let labelHeight = availableHeight / 5
+        
+        for label in [label1, label2, label3, label4, label5] {
+            label.heightAnchor.constraint(equalToConstant: labelHeight).isActive = true
         }
     }
 }
