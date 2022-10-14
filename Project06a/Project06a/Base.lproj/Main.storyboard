@@ -45,11 +45,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="SBH-9j-TMB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8Ll-pg-j5O"/>
+                            <constraint firstItem="cqR-y6-UDE" firstAttribute="height" secondItem="oDv-5g-VZa" secondAttribute="height" id="8hx-ug-2XN"/>
                             <constraint firstItem="oDv-5g-VZa" firstAttribute="centerX" secondItem="SBH-9j-TMB" secondAttribute="centerX" id="AVb-Fq-DBg"/>
                             <constraint firstItem="SBH-9j-TMB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="Cpi-wk-6SL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cqR-y6-UDE" secondAttribute="bottom" constant="20" id="Se6-kv-aFa"/>
                             <constraint firstItem="oDv-5g-VZa" firstAttribute="top" secondItem="SBH-9j-TMB" secondAttribute="bottom" constant="30" id="YjZ-ec-315"/>
                             <constraint firstItem="cqR-y6-UDE" firstAttribute="centerX" secondItem="oDv-5g-VZa" secondAttribute="centerX" id="hQL-cC-tHo"/>
+                            <constraint firstItem="oDv-5g-VZa" firstAttribute="height" secondItem="SBH-9j-TMB" secondAttribute="height" id="k4D-CX-iB3"/>
                             <constraint firstItem="cqR-y6-UDE" firstAttribute="top" secondItem="oDv-5g-VZa" secondAttribute="bottom" constant="30" id="kZx-oD-dgk"/>
                         </constraints>
                     </view>
