@@ -88,7 +88,7 @@ class ViewController: UIViewController {
         }
         labelsHeightConstraints.removeAll(keepingCapacity: true)
         
-        let availableHeight = view.bounds.height - view.safeAreaInsets.top - view.safeAreaInsets.bottom - 10
+        let availableHeight = view.bounds.height - view.safeAreaInsets.top - view.safeAreaInsets.bottom - 40
         let labelHeight = availableHeight / 5
         
         for label in [label1, label2, label3, label4, label5] {
