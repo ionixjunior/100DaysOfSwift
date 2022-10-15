@@ -10,7 +10,7 @@ class ViewController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
         toolbarItems = [
             UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
-            UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
+            UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped(sender:)))
         ]
         navigationController?.isToolbarHidden = false
         shoppingList = ShoppingList()
@@ -39,8 +39,9 @@ class ViewController: UITableViewController {
         present(alert, animated: true)
     }
     
-    @objc func shareTapped() {
-        let alert = UIActivityViewController(activityItems: ["Here are the items of the list:\n", shoppingList.plainText], applicationActivities: [])
+    @objc func shareTapped(sender: UIBarButtonItem) {
+        let alert = UIActivityViewController(activityItems: ["Hey! I am sharing with you the items of the shopping list:\n", shoppingList.plainText], applicationActivities: [])
+        alert.configurePopoverPresentationController(item: sender)
         present(alert, animated: true)
     }
     
