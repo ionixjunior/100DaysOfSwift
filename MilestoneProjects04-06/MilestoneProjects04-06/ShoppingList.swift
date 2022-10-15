@@ -8,4 +8,14 @@ class ShoppingList {
     func clear() {
         items.removeAll()
     }
+    
+    func getPlainText() -> String {
+        var prefixedItems = [String]()
+        
+        for item in items {
+            prefixedItems.append("- \(item)")
+        }
+        
+        return prefixedItems.joined(separator: "\n")
+    }
 }

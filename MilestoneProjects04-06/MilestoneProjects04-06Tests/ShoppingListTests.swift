@@ -31,4 +31,15 @@ final class ShoppingListTests: XCTestCase {
         
         XCTAssertEqual(0, shoppingList.items.count)
     }
+    
+    func testGetPlainTextShouldBeGetATextWithTheList() throws {
+        let item1 = "item 1"
+        let item2 = "item 2"
+        shoppingList.add(item: item1)
+        shoppingList.add(item: item2)
+        
+        let result = shoppingList.getPlainText()
+        
+        XCTAssertEqual("- \(item1)\n- \(item2)", result)
+    }
 }
