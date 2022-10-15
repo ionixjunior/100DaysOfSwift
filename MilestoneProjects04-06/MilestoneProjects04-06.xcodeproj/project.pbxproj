@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7A2C27F828FAD04D001EDF5A /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C27F728FAD04D001EDF5A /* ShoppingList.swift */; };
 		7A2C27FA28FAD087001EDF5A /* ShoppingListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C27F928FAD087001EDF5A /* ShoppingListTests.swift */; };
+		7A2C280E28FAD8DA001EDF5A /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C280D28FAD8DA001EDF5A /* UITableViewCellExtension.swift */; };
 		7A66361E28FACF6A003954C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66361D28FACF6A003954C0 /* AppDelegate.swift */; };
 		7A66362028FACF6A003954C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66361F28FACF6A003954C0 /* SceneDelegate.swift */; };
 		7A66362228FACF6A003954C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66362128FACF6A003954C0 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		7A2C27F728FAD04D001EDF5A /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
 		7A2C27F928FAD087001EDF5A /* ShoppingListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTests.swift; sourceTree = "<group>"; };
+		7A2C280D28FAD8DA001EDF5A /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		7A66361A28FACF6A003954C0 /* MilestoneProjects04-06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MilestoneProjects04-06.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A66361D28FACF6A003954C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A66361F28FACF6A003954C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A2C280C28FAD8DA001EDF5A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A2C280D28FAD8DA001EDF5A /* UITableViewCellExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		7A66361128FACF69003954C0 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		7A66361C28FACF6A003954C0 /* MilestoneProjects04-06 */ = {
 			isa = PBXGroup;
 			children = (
+				7A2C280C28FAD8DA001EDF5A /* Extensions */,
 				7A66361D28FACF6A003954C0 /* AppDelegate.swift */,
 				7A66361F28FACF6A003954C0 /* SceneDelegate.swift */,
 				7A66362128FACF6A003954C0 /* ViewController.swift */,
@@ -266,6 +277,7 @@
 			files = (
 				7A66362228FACF6A003954C0 /* ViewController.swift in Sources */,
 				7A2C27F828FAD04D001EDF5A /* ShoppingList.swift in Sources */,
+				7A2C280E28FAD8DA001EDF5A /* UITableViewCellExtension.swift in Sources */,
 				7A66361E28FACF6A003954C0 /* AppDelegate.swift in Sources */,
 				7A66362028FACF6A003954C0 /* SceneDelegate.swift in Sources */,
 			);
