@@ -9,6 +9,10 @@ class ShoppingList {
         items.removeAll()
     }
     
+    func itemFrom(position: Int) -> String {
+        return items[position]
+    }
+    
     var plainText: String {
         var prefixedItems = [String]()
         

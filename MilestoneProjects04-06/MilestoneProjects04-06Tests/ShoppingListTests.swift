@@ -50,4 +50,15 @@ final class ShoppingListTests: XCTestCase {
         
         XCTAssertEqual(1, result)
     }
+    
+    func testItemFromShouldGetTheItemFromList() throws {
+        let item1 = "item 1"
+        let item2 = "item 2"
+        shoppingList.add(item: item1)
+        shoppingList.add(item: item2)
+        
+        let result = shoppingList.itemFrom(position: 1)
+        
+        XCTAssertEqual(item2, result)
+    }
 }
