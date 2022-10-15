@@ -19,6 +19,7 @@
 		7A66363528FACF6E003954C0 /* MilestoneProjects04_06Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66363428FACF6E003954C0 /* MilestoneProjects04_06Tests.swift */; };
 		7A66363F28FACF6E003954C0 /* MilestoneProjects04_06UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66363E28FACF6E003954C0 /* MilestoneProjects04_06UITests.swift */; };
 		7A66364128FACF6E003954C0 /* MilestoneProjects04_06UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66364028FACF6E003954C0 /* MilestoneProjects04_06UITestsLaunchTests.swift */; };
+		7A8DF1B228FAEDF200759CB6 /* UIActivityViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8DF1B128FAEDF200759CB6 /* UIActivityViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		7A66363A28FACF6E003954C0 /* MilestoneProjects04-06UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MilestoneProjects04-06UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A66363E28FACF6E003954C0 /* MilestoneProjects04_06UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects04_06UITests.swift; sourceTree = "<group>"; };
 		7A66364028FACF6E003954C0 /* MilestoneProjects04_06UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects04_06UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7A8DF1B128FAEDF200759CB6 /* UIActivityViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				7A2C280D28FAD8DA001EDF5A /* UITableViewCellExtension.swift */,
+				7A8DF1B128FAEDF200759CB6 /* UIActivityViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				7A66362228FACF6A003954C0 /* ViewController.swift in Sources */,
 				7A2C27F828FAD04D001EDF5A /* ShoppingList.swift in Sources */,
 				7A2C280E28FAD8DA001EDF5A /* UITableViewCellExtension.swift in Sources */,
+				7A8DF1B228FAEDF200759CB6 /* UIActivityViewControllerExtension.swift in Sources */,
 				7A66361E28FACF6A003954C0 /* AppDelegate.swift in Sources */,
 				7A66362028FACF6A003954C0 /* SceneDelegate.swift in Sources */,
 			);
