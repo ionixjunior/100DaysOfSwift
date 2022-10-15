@@ -16,9 +16,7 @@
 		7A66362528FACF6A003954C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A66362328FACF6A003954C0 /* Main.storyboard */; };
 		7A66362728FACF6E003954C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A66362628FACF6E003954C0 /* Assets.xcassets */; };
 		7A66362A28FACF6E003954C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A66362828FACF6E003954C0 /* LaunchScreen.storyboard */; };
-		7A66363528FACF6E003954C0 /* MilestoneProjects04_06Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66363428FACF6E003954C0 /* MilestoneProjects04_06Tests.swift */; };
 		7A66363F28FACF6E003954C0 /* MilestoneProjects04_06UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66363E28FACF6E003954C0 /* MilestoneProjects04_06UITests.swift */; };
-		7A66364128FACF6E003954C0 /* MilestoneProjects04_06UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66364028FACF6E003954C0 /* MilestoneProjects04_06UITestsLaunchTests.swift */; };
 		7A8DF1B228FAEDF200759CB6 /* UIActivityViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8DF1B128FAEDF200759CB6 /* UIActivityViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,10 +50,8 @@
 		7A66362928FACF6E003954C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A66362B28FACF6E003954C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A66363028FACF6E003954C0 /* MilestoneProjects04-06Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MilestoneProjects04-06Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A66363428FACF6E003954C0 /* MilestoneProjects04_06Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects04_06Tests.swift; sourceTree = "<group>"; };
 		7A66363A28FACF6E003954C0 /* MilestoneProjects04-06UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MilestoneProjects04-06UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A66363E28FACF6E003954C0 /* MilestoneProjects04_06UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects04_06UITests.swift; sourceTree = "<group>"; };
-		7A66364028FACF6E003954C0 /* MilestoneProjects04_06UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects04_06UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A8DF1B128FAEDF200759CB6 /* UIActivityViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,7 +128,6 @@
 		7A66363328FACF6E003954C0 /* MilestoneProjects04-06Tests */ = {
 			isa = PBXGroup;
 			children = (
-				7A66363428FACF6E003954C0 /* MilestoneProjects04_06Tests.swift */,
 				7A2C27F928FAD087001EDF5A /* ShoppingListTests.swift */,
 			);
 			path = "MilestoneProjects04-06Tests";
@@ -142,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				7A66363E28FACF6E003954C0 /* MilestoneProjects04_06UITests.swift */,
-				7A66364028FACF6E003954C0 /* MilestoneProjects04_06UITestsLaunchTests.swift */,
 			);
 			path = "MilestoneProjects04-06UITests";
 			sourceTree = "<group>";
@@ -291,7 +285,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A66363528FACF6E003954C0 /* MilestoneProjects04_06Tests.swift in Sources */,
 				7A2C27FA28FAD087001EDF5A /* ShoppingListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +294,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A66363F28FACF6E003954C0 /* MilestoneProjects04_06UITests.swift in Sources */,
-				7A66364128FACF6E003954C0 /* MilestoneProjects04_06UITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
