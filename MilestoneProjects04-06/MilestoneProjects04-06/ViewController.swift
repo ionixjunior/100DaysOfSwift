@@ -7,5 +7,9 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         shoppingList = ShoppingList()
     }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return shoppingList.total
+    }
 }
 
