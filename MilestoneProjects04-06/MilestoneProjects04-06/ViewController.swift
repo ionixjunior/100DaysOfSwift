@@ -6,8 +6,19 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Shopping list"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(clearTapped))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
         shoppingList = ShoppingList()
+    }
+    
+    @objc func clearTapped() {
+        let alert = UIAlertController(title: "Are you sure you want to clear the list?", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default) { _ in
+            self.shoppingList.clear()
+            self.tableView.reloadData()
+        })
+        alert.addAction(UIAlertAction(title: "No", style: .cancel))
+        present(alert, animated: true)
     }
     
     @objc func addTapped() {
