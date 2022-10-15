@@ -5,6 +5,7 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Shopping list"
         shoppingList = ShoppingList()
     }
     
