@@ -18,4 +18,8 @@ class ShoppingList {
         
         return prefixedItems.joined(separator: "\n")
     }
+    
+    var total: Int {
+        return items.count
+    }
 }

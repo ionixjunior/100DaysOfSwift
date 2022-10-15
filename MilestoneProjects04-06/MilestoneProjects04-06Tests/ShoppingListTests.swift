@@ -42,4 +42,12 @@ final class ShoppingListTests: XCTestCase {
         
         XCTAssertEqual("- \(item1)\n- \(item2)", result)
     }
+    
+    func testTotalShouldBeTotalOfInsertedItems() throws {
+        shoppingList.add(item: "item 1")
+        
+        let result = shoppingList.total
+        
+        XCTAssertEqual(1, result)
+    }
 }
