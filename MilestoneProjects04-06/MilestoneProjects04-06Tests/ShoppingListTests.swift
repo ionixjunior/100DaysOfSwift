@@ -14,4 +14,12 @@ final class ShoppingListTests: XCTestCase {
     func testItemsShouldBeEmptyAtStart() throws {
         XCTAssertEqual(0, shoppingList.items.count)
     }
+    
+    func testItemShouldBeAddedIntoList() throws {
+        let item = "new item"
+        
+        shoppingList.add(item: item)
+        
+        XCTAssertTrue(shoppingList.items.contains(item))
+    }
 }
