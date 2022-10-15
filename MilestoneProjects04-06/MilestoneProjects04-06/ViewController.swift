@@ -40,7 +40,8 @@ class ViewController: UITableViewController {
     }
     
     @objc func shareTapped() {
-        
+        let alert = UIActivityViewController(activityItems: ["Here are the items of the list:\n", shoppingList.plainText], applicationActivities: [])
+        present(alert, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
