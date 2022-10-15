@@ -40,7 +40,7 @@ final class ShoppingListTests: XCTestCase {
         
         let result = shoppingList.plainText
         
-        XCTAssertEqual("- \(item1)\n- \(item2)", result)
+        XCTAssertEqual("- \(item2)\n- \(item1)", result)
     }
     
     func testTotalShouldBeTotalOfInsertedItems() throws {
@@ -59,6 +59,19 @@ final class ShoppingListTests: XCTestCase {
         
         let result = shoppingList.itemFrom(position: 1)
         
-        XCTAssertEqual(item2, result)
+        XCTAssertEqual(item1, result)
+    }
+    
+    func testNewItemsShouldBeOnTopOfTheList() throws {
+        let item1 = "item 1"
+        let item2 = "item 2"
+        shoppingList.add(item: item1)
+        shoppingList.add(item: item2)
+        
+        let itemOfPosition0 = shoppingList.itemFrom(position: 0)
+        let itemOfPosition1 = shoppingList.itemFrom(position: 1)
+        
+        XCTAssertEqual(item2, itemOfPosition0)
+        XCTAssertEqual(item1, itemOfPosition1)
     }
 }

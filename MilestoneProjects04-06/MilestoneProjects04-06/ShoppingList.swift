@@ -2,7 +2,7 @@ class ShoppingList {
     private (set) var items = [String]()
     
     func add(item: String) {
-        items.append(item)
+        items.insert(item, at: 0)
     }
     
     func clear() {
