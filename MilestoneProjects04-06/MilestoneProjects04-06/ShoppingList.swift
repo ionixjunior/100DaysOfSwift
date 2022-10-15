@@ -9,7 +9,7 @@ class ShoppingList {
         items.removeAll()
     }
     
-    func getPlainText() -> String {
+    var plainText: String {
         var prefixedItems = [String]()
         
         for item in items {
