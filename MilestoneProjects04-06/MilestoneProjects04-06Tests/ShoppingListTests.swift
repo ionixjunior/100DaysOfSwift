@@ -22,4 +22,13 @@ final class ShoppingListTests: XCTestCase {
         
         XCTAssertTrue(shoppingList.items.contains(item))
     }
+    
+    func testClearShouldBeEmptyItems() throws {
+        shoppingList.add(item: "item 1")
+        shoppingList.add(item: "item 2")
+        
+        shoppingList.clear()
+        
+        XCTAssertEqual(0, shoppingList.items.count)
+    }
 }

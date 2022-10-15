@@ -4,4 +4,8 @@ class ShoppingList {
     func add(item: String) {
         items.append(item)
     }
+    
+    func clear() {
+        items.removeAll()
+    }
 }
