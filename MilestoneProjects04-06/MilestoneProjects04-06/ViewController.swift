@@ -8,6 +8,11 @@ class ViewController: UITableViewController {
         title = "Shopping list"
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(clearTapped))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+        toolbarItems = [
+            UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
+            UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
+        ]
+        navigationController?.isToolbarHidden = false
         shoppingList = ShoppingList()
     }
     
@@ -32,6 +37,10 @@ class ViewController: UITableViewController {
         })
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(alert, animated: true)
+    }
+    
+    @objc func shareTapped() {
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
