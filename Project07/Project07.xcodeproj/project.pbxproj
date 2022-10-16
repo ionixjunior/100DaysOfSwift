@@ -18,6 +18,7 @@
 		7A416CA328FC2F2B00DA3596 /* Project07UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A416CA228FC2F2B00DA3596 /* Project07UITestsLaunchTests.swift */; };
 		7A416CB028FC37FE00DA3596 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A416CAF28FC37FE00DA3596 /* Petition.swift */; };
 		7A416CB228FC388700DA3596 /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A416CB128FC388700DA3596 /* Petitions.swift */; };
+		7A416CB528FC3D9200DA3596 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A416CB428FC3D9200DA3596 /* UITableViewCellExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		7A416CA228FC2F2B00DA3596 /* Project07UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project07UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A416CAF28FC37FE00DA3596 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
 		7A416CB128FC388700DA3596 /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
+		7A416CB428FC3D9200DA3596 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		7A416C7E28FC2F2800DA3596 /* Project07 */ = {
 			isa = PBXGroup;
 			children = (
+				7A416CB328FC3D4300DA3596 /* Extensions */,
 				7A416C7F28FC2F2800DA3596 /* AppDelegate.swift */,
 				7A416C8128FC2F2800DA3596 /* SceneDelegate.swift */,
 				7A416C8328FC2F2800DA3596 /* ViewController.swift */,
@@ -131,6 +134,14 @@
 				7A416CA228FC2F2B00DA3596 /* Project07UITestsLaunchTests.swift */,
 			);
 			path = Project07UITests;
+			sourceTree = "<group>";
+		};
+		7A416CB328FC3D4300DA3596 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A416CB428FC3D9200DA3596 /* UITableViewCellExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 				7A416C8428FC2F2800DA3596 /* ViewController.swift in Sources */,
 				7A416CB028FC37FE00DA3596 /* Petition.swift in Sources */,
 				7A416C8028FC2F2800DA3596 /* AppDelegate.swift in Sources */,
+				7A416CB528FC3D9200DA3596 /* UITableViewCellExtension.swift in Sources */,
 				7A416C8228FC2F2800DA3596 /* SceneDelegate.swift in Sources */,
 				7A416CB228FC388700DA3596 /* Petitions.swift in Sources */,
 			);
