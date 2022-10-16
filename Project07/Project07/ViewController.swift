@@ -15,7 +15,7 @@ class ViewController: UITableViewController {
         tableView.refreshControl?.beginRefreshing()
         tableView.refreshControl?.attributedTitle = NSAttributedString(string: "Loading data...")
         
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .userInitiated).async {
             if let url = URL(string: "https://www.hackingwithswift.com/samples/petitions-1.json") {
                 if let data = try? Data(contentsOf: url) {
                     self.parse(data: data)
