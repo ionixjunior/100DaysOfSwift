@@ -19,5 +19,9 @@ class ViewController: UITableViewController {
             petitions = decodedPetitions.results
         }
     }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return petitions.count
+    }
 }
 
