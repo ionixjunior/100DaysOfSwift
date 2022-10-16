@@ -6,6 +6,11 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        loadData()
+    }
+    
+    private func loadData() {
         DispatchQueue.global(qos: .background).async {
             if let url = URL(string: "https://www.hackingwithswift.com/samples/petitions-1.json") {
                 if let data = try? Data(contentsOf: url) {
