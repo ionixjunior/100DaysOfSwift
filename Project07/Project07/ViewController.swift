@@ -6,11 +6,13 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        tableView.refreshControl = UIRefreshControl()
         loadData()
     }
     
     private func loadData() {
+        tableView.refreshControl?.beginRefreshing()
+        
         DispatchQueue.global(qos: .background).async {
             if let url = URL(string: "https://www.hackingwithswift.com/samples/petitions-1.json") {
                 if let data = try? Data(contentsOf: url) {
@@ -27,6 +29,7 @@ class ViewController: UITableViewController {
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.tableView.refreshControl?.endRefreshing()
             }
         }
     }
