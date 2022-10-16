@@ -13,6 +13,7 @@ class ViewController: UITableViewController {
     
     @objc private func loadData() {
         tableView.refreshControl?.beginRefreshing()
+        tableView.refreshControl?.attributedTitle = NSAttributedString(string: "Loading data...")
         
         DispatchQueue.global(qos: .background).async {
             if let url = URL(string: "https://www.hackingwithswift.com/samples/petitions-1.json") {
@@ -31,6 +32,7 @@ class ViewController: UITableViewController {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.tableView.refreshControl?.endRefreshing()
+                self.tableView.refreshControl?.attributedTitle = NSAttributedString(string: "")
             }
         }
     }
