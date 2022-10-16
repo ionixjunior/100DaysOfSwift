@@ -6,9 +6,11 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let url = URL(string: "https://www.hackingwithswift.com/samples/petitions-1.json") {
-            if let data = try? Data(contentsOf: url) {
-                parse(data: data)
+        DispatchQueue.global(qos: .background).async {
+            if let url = URL(string: "https://www.hackingwithswift.com/samples/petitions-1.json") {
+                if let data = try? Data(contentsOf: url) {
+                    self.parse(data: data)
+                }
             }
         }
     }
@@ -17,7 +19,10 @@ class ViewController: UITableViewController {
         let jsonDecoder = JSONDecoder()
         if let decodedPetitions = try? jsonDecoder.decode(Petitions.self, from: data) {
             petitions = decodedPetitions.results
-            tableView.reloadData()
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
