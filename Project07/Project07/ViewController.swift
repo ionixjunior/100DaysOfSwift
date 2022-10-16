@@ -7,10 +7,11 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
         loadData()
     }
     
-    private func loadData() {
+    @objc private func loadData() {
         tableView.refreshControl?.beginRefreshing()
         
         DispatchQueue.global(qos: .background).async {
