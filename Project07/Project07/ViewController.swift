@@ -23,5 +23,12 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return petitions.count
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let petition = petitions[indexPath.row]
+        cell.update(title: petition.title, subtitle: petition.body)
+        return cell
+    }
 }
 
