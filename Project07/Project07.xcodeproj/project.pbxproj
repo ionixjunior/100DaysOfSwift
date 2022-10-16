@@ -16,6 +16,7 @@
 		7A416C9728FC2F2B00DA3596 /* Project07Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A416C9628FC2F2B00DA3596 /* Project07Tests.swift */; };
 		7A416CA128FC2F2B00DA3596 /* Project07UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A416CA028FC2F2B00DA3596 /* Project07UITests.swift */; };
 		7A416CA328FC2F2B00DA3596 /* Project07UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A416CA228FC2F2B00DA3596 /* Project07UITestsLaunchTests.swift */; };
+		7A416CB028FC37FE00DA3596 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A416CAF28FC37FE00DA3596 /* Petition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7A416C9C28FC2F2B00DA3596 /* Project07UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project07UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A416CA028FC2F2B00DA3596 /* Project07UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project07UITests.swift; sourceTree = "<group>"; };
 		7A416CA228FC2F2B00DA3596 /* Project07UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project07UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7A416CAF28FC37FE00DA3596 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				7A416C8828FC2F2B00DA3596 /* Assets.xcassets */,
 				7A416C8A28FC2F2B00DA3596 /* LaunchScreen.storyboard */,
 				7A416C8D28FC2F2B00DA3596 /* Info.plist */,
+				7A416CAF28FC37FE00DA3596 /* Petition.swift */,
 			);
 			path = Project07;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A416C8428FC2F2800DA3596 /* ViewController.swift in Sources */,
+				7A416CB028FC37FE00DA3596 /* Petition.swift in Sources */,
 				7A416C8028FC2F2800DA3596 /* AppDelegate.swift in Sources */,
 				7A416C8228FC2F2800DA3596 /* SceneDelegate.swift in Sources */,
 			);
