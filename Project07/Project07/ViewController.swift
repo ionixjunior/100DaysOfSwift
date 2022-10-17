@@ -20,8 +20,11 @@ class ViewController: UITableViewController {
             if let url = URL(string: urlString) {
                 if let data = try? Data(contentsOf: url) {
                     self.parse(data: data)
+                    return
                 }
             }
+            
+            self.showError()
         }
     }
     
@@ -43,6 +46,15 @@ class ViewController: UITableViewController {
                 self.tableView.refreshControl?.endRefreshing()
                 self.tableView.refreshControl?.attributedTitle = NSAttributedString(string: "")
             }
+        }
+    }
+    
+    private func showError() {
+        let alert = UIAlertController(title: "Something wrong", message: "Fail to load the page. Please try again.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        
+        DispatchQueue.main.async {
+            self.present(alert, animated: true)
         }
     }
     
