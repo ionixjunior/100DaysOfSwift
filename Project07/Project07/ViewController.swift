@@ -7,11 +7,20 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        showTitle(text: nil)
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterTapped))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(creditTapped))
         tableView.refreshControl = UIRefreshControl()
         tableView.refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
         loadData()
+    }
+    
+    private func showTitle(text: String?) {
+        if let text = text {
+            title = text
+        } else {
+            title = "Petitions"
+        }
     }
     
     @objc private func filterTapped() {
@@ -20,6 +29,7 @@ class ViewController: UITableViewController {
         
         alert.addAction(UIAlertAction(title: "Clear", style: .cancel, handler: { _ in
             self.filteredPetitions = self.allPetitions
+            self.showTitle(text: nil)
             self.tableView.reloadData()
         }))
         
@@ -29,6 +39,7 @@ class ViewController: UITableViewController {
                     return petition.title.lowercased().contains(text.lowercased())
                 }
                 
+                self.showTitle(text: text)
                 self.tableView.reloadData()
             }
         }))
@@ -74,6 +85,7 @@ class ViewController: UITableViewController {
             filteredPetitions = allPetitions
             
             DispatchQueue.main.async {
+                self.showTitle(text: nil)
                 self.tableView.reloadData()
                 self.tableView.refreshControl?.endRefreshing()
                 self.tableView.refreshControl?.attributedTitle = NSAttributedString(string: "")
