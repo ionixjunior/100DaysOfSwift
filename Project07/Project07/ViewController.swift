@@ -15,7 +15,7 @@ class ViewController: UITableViewController {
     }
     
     @objc private func filterTapped() {
-        let alert = UIAlertController(title: "What do you want to filter?", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "What do you want to filter?", message: "The filter will be applied only for titles.", preferredStyle: .alert)
         alert.addTextField()
         
         alert.addAction(UIAlertAction(title: "Clear", style: .cancel, handler: { _ in
