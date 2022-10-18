@@ -1,6 +1,7 @@
 import UIKit
 
 class ViewController: UITableViewController {
+    private var allPetitions = [Petition]()
     private var petitions = [Petition]()
 
     override func viewDidLoad() {
@@ -64,7 +65,8 @@ class ViewController: UITableViewController {
     private func parse(data: Data) {
         let jsonDecoder = JSONDecoder()
         if let decodedPetitions = try? jsonDecoder.decode(Petitions.self, from: data) {
-            petitions = decodedPetitions.results
+            allPetitions = decodedPetitions.results
+            petitions = allPetitions
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
