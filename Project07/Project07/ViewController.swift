@@ -6,9 +6,16 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(creditTapped))
         tableView.refreshControl = UIRefreshControl()
         tableView.refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
         loadData()
+    }
+    
+    @objc private func creditTapped() {
+        let alert = UIAlertController(title: "Where is the data comes from?", message: "The data comes from The People API of the Whitehouse.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alert, animated: true)
     }
     
     @objc private func loadData() {
