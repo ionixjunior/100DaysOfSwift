@@ -2,7 +2,7 @@ import UIKit
 
 class ViewController: UITableViewController {
     private var allPetitions = [Petition]()
-    private var petitions = [Petition]()
+    private var filteredPetitions = [Petition]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +66,7 @@ class ViewController: UITableViewController {
         let jsonDecoder = JSONDecoder()
         if let decodedPetitions = try? jsonDecoder.decode(Petitions.self, from: data) {
             allPetitions = decodedPetitions.results
-            petitions = allPetitions
+            filteredPetitions = allPetitions
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -86,19 +86,19 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return petitions.count
+        return filteredPetitions.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let petition = petitions[indexPath.row]
+        let petition = filteredPetitions[indexPath.row]
         cell.update(title: petition.title, subtitle: petition.body)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewController = DetailViewController()
-        viewController.detailItem = petitions[indexPath.row]
+        viewController.detailItem = filteredPetitions[indexPath.row]
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
