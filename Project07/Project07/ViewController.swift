@@ -19,7 +19,8 @@ class ViewController: UITableViewController {
         alert.addTextField()
         
         alert.addAction(UIAlertAction(title: "Clear", style: .cancel, handler: { _ in
-            // todo clear
+            self.filteredPetitions = self.allPetitions
+            self.tableView.reloadData()
         }))
         
         alert.addAction(UIAlertAction(title: "Filter", style: .default, handler: { [weak alert] _ in
