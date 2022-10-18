@@ -24,7 +24,11 @@ class ViewController: UITableViewController {
         
         alert.addAction(UIAlertAction(title: "Filter", style: .default, handler: { [weak alert] _ in
             if let text = alert?.textFields?.first?.text {
-                // todo filter
+                self.filteredPetitions = self.allPetitions.filter { petition in
+                    return petition.title.lowercased().contains(text.lowercased())
+                }
+                
+                self.tableView.reloadData()
             }
         }))
         
