@@ -6,10 +6,28 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterTapped))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(creditTapped))
         tableView.refreshControl = UIRefreshControl()
         tableView.refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
         loadData()
+    }
+    
+    @objc private func filterTapped() {
+        let alert = UIAlertController(title: "What do you want to filter?", message: nil, preferredStyle: .alert)
+        alert.addTextField()
+        
+        alert.addAction(UIAlertAction(title: "Clear", style: .cancel, handler: { _ in
+            // todo clear
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Filter", style: .default, handler: { [weak alert] _ in
+            if let text = alert?.textFields?.first?.text {
+                // todo filter
+            }
+        }))
+        
+        present(alert, animated: true)
     }
     
     @objc private func creditTapped() {
