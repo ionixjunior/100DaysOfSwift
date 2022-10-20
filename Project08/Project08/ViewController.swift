@@ -124,7 +124,35 @@ class ViewController: UIViewController {
     }
     
     @objc func submitTapped(_ sender: UIButton) {
+        guard let answerText = currentAnswer.text else { return }
         
+        if let solutionPosition = solutions.firstIndex(of: answerText) {
+            activatedButtons.removeAll()
+            
+            var splitAnswer = answersLabel.text?.components(separatedBy: "\n")
+            splitAnswer?[solutionPosition] = answerText
+            answersLabel.text = splitAnswer?.joined(separator: "\n")
+            
+            currentAnswer.text = ""
+            score += 1
+            
+            if score % 7 == 0 {
+                let alert = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
+                present(alert, animated: true)
+            }
+        }
+    }
+    
+    @objc func levelUp(action: UIAlertAction) {
+        level += 1
+        
+        solutions.removeAll(keepingCapacity: true)
+        loadLevel()
+        
+        for button in letterButtons {
+            button.isHidden = false
+        }
     }
     
     @objc func clearTapped(_ sender: UIButton) {
