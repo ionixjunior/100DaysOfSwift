@@ -165,7 +165,11 @@ class ViewController: UIViewController {
     }
     
     var solutions = [String]()
-    var score = 0
+    var score = 0 {
+        didSet {
+            scoreLabel.text = "Score: \(String(score))"
+        }
+    }
     var level = 1
     
     func loadLevel() {
