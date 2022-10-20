@@ -128,7 +128,12 @@ class ViewController: UIViewController {
     }
     
     @objc func clearTapped(_ sender: UIButton) {
+        for button in activatedButtons {
+            button.isHidden = false
+        }
         
+        currentAnswer.text = ""
+        activatedButtons.removeAll()
     }
     
     var solutions = [String]()
