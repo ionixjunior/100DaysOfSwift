@@ -125,6 +125,8 @@ class ViewController: UIViewController {
         sender.isHidden = true
     }
     
+    var correctAnswers = 0
+    
     @objc func submitTapped(_ sender: UIButton) {
         guard let answerText = currentAnswer.text else { return }
         
@@ -137,8 +139,9 @@ class ViewController: UIViewController {
             
             currentAnswer.text = ""
             score += 1
+            correctAnswers += 1
             
-            if score % 7 == 0 {
+            if correctAnswers % 7 == 0 {
                 let alert = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
                 present(alert, animated: true)
