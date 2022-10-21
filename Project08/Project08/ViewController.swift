@@ -143,6 +143,20 @@ class ViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
                 present(alert, animated: true)
             }
+        } else {
+            let alert = UIAlertController(title: "You're wrong", message: "Sorry, the letters don't match.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default) {
+                [weak self] _ in
+                guard let viewController = self else { return }
+                
+                for button in viewController.activatedButtons {
+                    button.isHidden = false
+                }
+                
+                viewController.currentAnswer.text = ""
+                viewController.activatedButtons.removeAll()
+            })
+            present(alert, animated: true)
         }
     }
     
