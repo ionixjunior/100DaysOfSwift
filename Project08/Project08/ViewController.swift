@@ -158,6 +158,7 @@ class ViewController: UIViewController {
                 
                 viewController.currentAnswer.text = ""
                 viewController.activatedButtons.removeAll()
+                viewController.score -= 1
             })
             present(alert, animated: true)
         }
