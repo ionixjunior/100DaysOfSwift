@@ -68,7 +68,7 @@ class ViewController: UITableViewController {
             }
         }
         
-        showError()
+        performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
     }
     
     private func getUrlString() -> String {
@@ -95,13 +95,10 @@ class ViewController: UITableViewController {
         tableView.refreshControl?.attributedTitle = NSAttributedString(string: "")
     }
     
-    private func showError() {
+    @objc private func showError() {
         let alert = UIAlertController(title: "Something wrong", message: "Fail to load the page. Please try again.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default))
-        
-        DispatchQueue.main.async {
-            self.present(alert, animated: true)
-        }
+        present(alert, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
