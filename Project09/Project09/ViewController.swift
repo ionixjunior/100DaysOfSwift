@@ -84,17 +84,15 @@ class ViewController: UITableViewController {
         if let decodedPetitions = try? jsonDecoder.decode(Petitions.self, from: data) {
             allPetitions = decodedPetitions.results
             filteredPetitions = allPetitions
-            refreshData()
+            performSelector(onMainThread: #selector(refreshData), with: nil, waitUntilDone: false)
         }
     }
     
-    private func refreshData() {
-        DispatchQueue.main.async {
-            self.showTitle(text: nil)
-            self.tableView.reloadData()
-            self.tableView.refreshControl?.endRefreshing()
-            self.tableView.refreshControl?.attributedTitle = NSAttributedString(string: "")
-        }
+    @objc private func refreshData() {
+        showTitle(text: nil)
+        tableView.reloadData()
+        tableView.refreshControl?.endRefreshing()
+        tableView.refreshControl?.attributedTitle = NSAttributedString(string: "")
     }
     
     private func showError() {
