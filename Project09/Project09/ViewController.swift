@@ -57,20 +57,18 @@ class ViewController: UITableViewController {
         tableView.refreshControl?.beginRefreshing()
         tableView.refreshControl?.attributedTitle = NSAttributedString(string: "Loading data...")
         let urlString = getUrlString()
-        loadUrlAndParseJson(urlString)
+        performSelector(inBackground: #selector(loadUrlAndParseJson), with: urlString)
     }
     
-    fileprivate func loadUrlAndParseJson(_ urlString: String) {
-        DispatchQueue.global(qos: .userInitiated).async {
-            if let url = URL(string: urlString) {
-                if let data = try? Data(contentsOf: url) {
-                    self.parse(data: data)
-                    return
-                }
+    @objc fileprivate func loadUrlAndParseJson(_ urlString: String) {
+        if let url = URL(string: urlString) {
+            if let data = try? Data(contentsOf: url) {
+                parse(data: data)
+                return
             }
-            
-            self.showError()
         }
+        
+        showError()
     }
     
     private func getUrlString() -> String {
