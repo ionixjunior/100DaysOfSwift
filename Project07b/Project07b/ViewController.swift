@@ -35,12 +35,16 @@ class ViewController: UITableViewController {
         
         alert.addAction(UIAlertAction(title: "Filter", style: .default, handler: { [weak alert] _ in
             if let text = alert?.textFields?.first?.text {
-                self.filteredPetitions = self.allPetitions.filter { petition in
-                    return petition.title.lowercased().contains(text.lowercased())
+                DispatchQueue.global(qos: .userInitiated).async {
+                    self.filteredPetitions = self.allPetitions.filter { petition in
+                        return petition.title.lowercased().contains(text.lowercased())
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.showTitle(text: text)
+                        self.tableView.reloadData()
+                    }
                 }
-                
-                self.showTitle(text: text)
-                self.tableView.reloadData()
             }
         }))
         
