@@ -193,16 +193,17 @@ class ViewController: UIViewController {
     var level = 1
     
     func loadLevel() {
-        let level = readLevelFrom(fileName: "level\(level)")
-        
-        cluesLabel.text = level.clueString.trimmingCharacters(in: .whitespacesAndNewlines)
-        answersLabel.text = level.solutionsString.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        letterButtons.shuffle()
-        
-        if letterButtons.count == level.lettersBits.count {
-            for i in 0..<letterButtons.count {
-                letterButtons[i].setTitle(level.lettersBits[i], for: .normal)
+        DispatchQueue.global(qos: .userInitiated).async {
+            let level = self.readLevelFrom(fileName: "level\(self.level)")
+            self.letterButtons.shuffle()
+            
+            self.cluesLabel.text = level.clueString.trimmingCharacters(in: .whitespacesAndNewlines)
+            self.answersLabel.text = level.solutionsString.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            if self.letterButtons.count == level.lettersBits.count {
+                for i in 0..<self.letterButtons.count {
+                    self.letterButtons[i].setTitle(level.lettersBits[i], for: .normal)
+                }
             }
         }
     }
