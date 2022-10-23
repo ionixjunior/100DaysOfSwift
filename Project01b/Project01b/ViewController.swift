@@ -7,13 +7,8 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.backgroundColor = UIColor.systemBackground
-        
-        let fileManager = FileManager.default
-        let resourcePath = Bundle.main.resourcePath!
-        let content = try! fileManager.contentsOfDirectory(atPath: resourcePath)
-        pictures = PictureLoader.loadPicturesFrom(content: content)
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(recommendTapped))
+        performSelector(inBackground: #selector(loadData), with: nil)
     }
     
     @objc func recommendTapped() {
@@ -26,6 +21,14 @@ class ViewController: UITableViewController {
         }
         
         present(viewController, animated: true)
+    }
+    
+    @objc private func loadData() {
+        let fileManager = FileManager.default
+        let resourcePath = Bundle.main.resourcePath!
+        let content = try! fileManager.contentsOfDirectory(atPath: resourcePath)
+        pictures = PictureLoader.loadPicturesFrom(content: content)
+        tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
