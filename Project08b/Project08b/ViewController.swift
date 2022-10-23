@@ -193,11 +193,26 @@ class ViewController: UIViewController {
     var level = 1
     
     func loadLevel() {
+        let level = readLevelFrom(fileName: "level\(level)")
+        
+        cluesLabel.text = level.clueString.trimmingCharacters(in: .whitespacesAndNewlines)
+        answersLabel.text = level.solutionsString.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        letterButtons.shuffle()
+        
+        if letterButtons.count == level.lettersBits.count {
+            for i in 0..<letterButtons.count {
+                letterButtons[i].setTitle(level.lettersBits[i], for: .normal)
+            }
+        }
+    }
+    
+    private func readLevelFrom(fileName: String) -> (clueString: String, solutionsString: String, lettersBits: [String]) {
         var clueString = ""
-        var solutinosString = ""
+        var solutionsString = ""
         var lettersBits = [String]()
         
-        if let levelFileURL = Bundle.main.url(forResource: "level\(level)", withExtension: "txt") {
+        if let levelFileURL = Bundle.main.url(forResource: fileName, withExtension: "txt") {
             if let levelContents = try? String(contentsOf: levelFileURL) {
                 var lines = levelContents.components(separatedBy: "\n")
                 lines.shuffle()
@@ -210,7 +225,7 @@ class ViewController: UIViewController {
                     clueString += "\(index + 1). \(clue)\n"
                     
                     let solutionWord = answer.replacingOccurrences(of: "|", with: "")
-                    solutinosString += "\(solutionWord.count) letters\n"
+                    solutionsString += "\(solutionWord.count) letters\n"
                     solutions.append(solutionWord)
                     
                     let bits = answer.components(separatedBy: "|")
@@ -219,16 +234,7 @@ class ViewController: UIViewController {
             }
         }
         
-        cluesLabel.text = clueString.trimmingCharacters(in: .whitespacesAndNewlines)
-        answersLabel.text = solutinosString.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        letterButtons.shuffle()
-        
-        if letterButtons.count == lettersBits.count {
-            for i in 0..<letterButtons.count {
-                letterButtons[i].setTitle(lettersBits[i], for: .normal)
-            }
-        }
+        return (clueString, solutionsString, lettersBits)
     }
 }
 
