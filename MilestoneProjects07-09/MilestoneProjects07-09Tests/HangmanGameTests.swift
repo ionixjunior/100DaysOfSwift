@@ -95,6 +95,16 @@ final class HangmanGameTests: XCTestCase {
         XCTAssertEqual("h e a d p h o n e", result)
     }
     
+    func testAllTypedLettersShouldBeShow() throws {
+        hangmanGame.start(word: word)
+        _ = hangmanGame.type(letter: "h")
+        _ = hangmanGame.type(letter: "y")
+        
+        let result = hangmanGame.getTypedLetters()
+        
+        XCTAssertEqual("h - y", result)
+    }
+    
     func testMaskedWordShoulBeUpdatedWhenGameStart() throws {
         hangmanGame.start(word: word)
         _ = hangmanGame.type(letter: "e")
@@ -113,5 +123,16 @@ final class HangmanGameTests: XCTestCase {
         let result = hangmanGame.getLives()
         
         XCTAssertEqual(7, result)
+    }
+    
+    func testAllTypedLettersShouldBeEmptyWhenGameStart() throws {
+        hangmanGame.start(word: word)
+        _ = hangmanGame.type(letter: "h")
+        _ = hangmanGame.type(letter: "y")
+        hangmanGame.start(word: "pen")
+        
+        let result = hangmanGame.getTypedLetters()
+        
+        XCTAssertEqual("", result)
     }
 }

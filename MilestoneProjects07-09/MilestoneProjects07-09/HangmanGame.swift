@@ -42,4 +42,8 @@ class HangmanGame {
     func getLives() -> Int {
         return lives
     }
+    
+    func getTypedLetters() -> String {
+        return typedLetters.joined(separator: " - ")
+    }
 }
