@@ -1,12 +1,17 @@
 class HangmanGame {
     private var word: String!
     private var typedLetters = [String]()
-    private var lives = 7
+    private let maxNumberOfLives = 7
+    private var lives: Int!
+    
+    init() {
+        lives = maxNumberOfLives
+    }
     
     func start(word: String) {
         self.word = word
         typedLetters.removeAll()
-        lives = 7
+        lives = maxNumberOfLives
     }
     
     func getMaskedWord() -> String {
