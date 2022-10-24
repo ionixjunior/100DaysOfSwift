@@ -16,6 +16,8 @@
 		7A9D70492906A4A8001112BE /* MilestoneProjects07_09Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9D70482906A4A8001112BE /* MilestoneProjects07_09Tests.swift */; };
 		7A9D70532906A4A8001112BE /* MilestoneProjects07_09UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9D70522906A4A8001112BE /* MilestoneProjects07_09UITests.swift */; };
 		7A9D70552906A4A8001112BE /* MilestoneProjects07_09UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9D70542906A4A8001112BE /* MilestoneProjects07_09UITestsLaunchTests.swift */; };
+		7A9D70622906A5A2001112BE /* HangmanGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9D70612906A5A2001112BE /* HangmanGame.swift */; };
+		7A9D70642906A5BB001112BE /* HangmanGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9D70632906A5BB001112BE /* HangmanGameTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		7A9D704E2906A4A8001112BE /* MilestoneProjects07-09UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MilestoneProjects07-09UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A9D70522906A4A8001112BE /* MilestoneProjects07_09UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects07_09UITests.swift; sourceTree = "<group>"; };
 		7A9D70542906A4A8001112BE /* MilestoneProjects07_09UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects07_09UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7A9D70612906A5A2001112BE /* HangmanGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanGame.swift; sourceTree = "<group>"; };
+		7A9D70632906A5BB001112BE /* HangmanGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanGameTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				7A9D703A2906A4A8001112BE /* Assets.xcassets */,
 				7A9D703C2906A4A8001112BE /* LaunchScreen.storyboard */,
 				7A9D703F2906A4A8001112BE /* Info.plist */,
+				7A9D70612906A5A2001112BE /* HangmanGame.swift */,
 			);
 			path = "MilestoneProjects07-09";
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				7A9D70482906A4A8001112BE /* MilestoneProjects07_09Tests.swift */,
+				7A9D70632906A5BB001112BE /* HangmanGameTests.swift */,
 			);
 			path = "MilestoneProjects07-09Tests";
 			sourceTree = "<group>";
@@ -258,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9D70622906A5A2001112BE /* HangmanGame.swift in Sources */,
 				7A9D70362906A4A6001112BE /* ViewController.swift in Sources */,
 				7A9D70322906A4A6001112BE /* AppDelegate.swift in Sources */,
 				7A9D70342906A4A6001112BE /* SceneDelegate.swift in Sources */,
@@ -268,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9D70642906A5BB001112BE /* HangmanGameTests.swift in Sources */,
 				7A9D70492906A4A8001112BE /* MilestoneProjects07_09Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
