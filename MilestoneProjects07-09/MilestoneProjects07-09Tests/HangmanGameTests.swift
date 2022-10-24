@@ -37,4 +37,20 @@ final class HangmanGameTests: XCTestCase {
         
         XCTAssertEqual("_ _ _ _ _ _ _ _ _", result)
     }
+    
+    func testTypeShouldBeTrueWhenLetterIsCorrect() throws {
+        hangmanGame.start(word: word)
+        
+        let result = hangmanGame.type(letter: "e")
+        
+        XCTAssertTrue(result)
+    }
+    
+    func testTypeShouldBeFalseWhenLetterIsIncorrect() throws {
+        hangmanGame.start(word: word)
+        
+        let result = hangmanGame.type(letter: "y")
+        
+        XCTAssertFalse(result)
+    }
 }
