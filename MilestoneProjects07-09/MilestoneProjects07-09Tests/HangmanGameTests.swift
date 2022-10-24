@@ -94,4 +94,14 @@ final class HangmanGameTests: XCTestCase {
         
         XCTAssertEqual("h e a d p h o n e", result)
     }
+    
+    func testMaskedWordShoulBeUpdatedWhenGameStart() throws {
+        hangmanGame.start(word: word)
+        _ = hangmanGame.type(letter: "e")
+        hangmanGame.start(word: "pen")
+        
+        let result = hangmanGame.getMaskedWord()
+        
+        XCTAssertEqual("_ _ _", result)
+    }
 }

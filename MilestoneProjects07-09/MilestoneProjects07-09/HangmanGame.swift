@@ -5,6 +5,7 @@ class HangmanGame {
     
     func start(word: String) {
         self.word = word
+        typedLetters.removeAll()
     }
     
     func getMaskedWord() -> String {
