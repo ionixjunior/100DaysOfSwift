@@ -79,4 +79,19 @@ final class HangmanGameTests: XCTestCase {
         
         XCTAssertEqual(6, result)
     }
+    
+    func testShouldRevealTheWordWhenTypeAllLettersCorrect() throws {
+        hangmanGame.start(word: word)
+        _ = hangmanGame.type(letter: "h")
+        _ = hangmanGame.type(letter: "e")
+        _ = hangmanGame.type(letter: "a")
+        _ = hangmanGame.type(letter: "d")
+        _ = hangmanGame.type(letter: "p")
+        _ = hangmanGame.type(letter: "o")
+        _ = hangmanGame.type(letter: "n")
+        
+        let result = hangmanGame.getMaskedWord()
+        
+        XCTAssertEqual("h e a d p h o n e", result)
+    }
 }
