@@ -12,7 +12,7 @@ final class HangmanGameTests: XCTestCase {
     override func tearDownWithError() throws {
     }
     
-    func testShowMaskedWordWhenGameStart() throws {
+    func testMaskedWordShouldNotRevealWordWhenGameStart() throws {
         hangmanGame.start(word: word)
         
         let result = hangmanGame.getMaskedWord()
