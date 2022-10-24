@@ -17,6 +17,6 @@ final class HangmanGameTests: XCTestCase {
         
         let result = hangmanGame.getMaskedWord()
         
-        XCTAssertEqual(" ?  ?  ?  ?  ?  ?  ?  ?  ? ", result)
+        XCTAssertEqual("_ _ _ _ _ _ _ _ _", result)
     }
 }

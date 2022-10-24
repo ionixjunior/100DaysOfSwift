@@ -9,9 +9,9 @@ class HangmanGame {
         var maskedWord = ""
         
         for letter in word {
-            maskedWord += " ? "
+            maskedWord += "_ "
         }
         
-        return maskedWord
+        return maskedWord.trimmingCharacters(in: .whitespaces)
     }
 }
