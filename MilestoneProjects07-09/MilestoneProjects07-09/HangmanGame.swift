@@ -23,7 +23,13 @@ class HangmanGame {
     
     func type(letter: String) -> Bool {
         typedLetters.append(letter)
-        return word.contains(letter)
+        let letterExists = word.contains(letter)
+        
+        if letterExists == false {
+            lives -= 1
+        }
+        
+        return letterExists
     }
     
     func getLives() -> Int {
