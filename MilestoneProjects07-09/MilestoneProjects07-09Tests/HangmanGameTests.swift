@@ -20,6 +20,14 @@ final class HangmanGameTests: XCTestCase {
         XCTAssertEqual("_ _ _ _ _ _ _ _ _", result)
     }
     
+    func testLivesShouldBe7WhenGameStart() throws {
+        hangmanGame.start(word: word)
+        
+        let result = hangmanGame.getLives()
+        
+        XCTAssertEqual(7, result)
+    }
+    
     func testMaskedWordShouldRevealTypedLetterWhenItIsCorrect() throws {
         hangmanGame.start(word: word)
         _ = hangmanGame.type(letter: "e")
