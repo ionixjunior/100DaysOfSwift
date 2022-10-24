@@ -6,6 +6,7 @@ class HangmanGame {
     func start(word: String) {
         self.word = word
         typedLetters.removeAll()
+        lives = 7
     }
     
     func getMaskedWord() -> String {

@@ -104,4 +104,14 @@ final class HangmanGameTests: XCTestCase {
         
         XCTAssertEqual("_ _ _", result)
     }
+    
+    func testLivesShouldBeResetWhenGameStart() throws {
+        hangmanGame.start(word: word)
+        _ = hangmanGame.type(letter: "y")
+        hangmanGame.start(word: "pen")
+        
+        let result = hangmanGame.getLives()
+        
+        XCTAssertEqual(7, result)
+    }
 }
