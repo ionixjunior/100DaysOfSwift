@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         view.addSubview(livesLabel)
         
         textFieldMaskedWord = UITextField()
+        textFieldMaskedWord.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(textFieldMaskedWord)
 
         typedLettersLabel = UILabel()
@@ -22,7 +23,9 @@ class ViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             livesLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            livesLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
+            livesLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            textFieldMaskedWord.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            textFieldMaskedWord.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
         ])
     }
     
