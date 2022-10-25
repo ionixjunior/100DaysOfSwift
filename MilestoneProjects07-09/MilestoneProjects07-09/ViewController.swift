@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         textFieldMaskedWord = UITextField()
         textFieldMaskedWord.translatesAutoresizingMaskIntoConstraints = false
         textFieldMaskedWord.font = UIFont.systemFont(ofSize: 40)
+        textFieldMaskedWord.isUserInteractionEnabled = false
         view.addSubview(textFieldMaskedWord)
 
         typedLettersLabel = UILabel()
