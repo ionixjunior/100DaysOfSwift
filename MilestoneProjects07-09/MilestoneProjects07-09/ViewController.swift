@@ -30,8 +30,7 @@ class ViewController: UIViewController {
             textFieldMaskedWord.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             textFieldMaskedWord.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
             typedLettersLabel.topAnchor.constraint(equalTo: textFieldMaskedWord.bottomAnchor, constant: 20),
-            typedLettersLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            typedLettersLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
+            typedLettersLabel.centerXAnchor.constraint(equalTo: textFieldMaskedWord.centerXAnchor)
         ])
     }
     
