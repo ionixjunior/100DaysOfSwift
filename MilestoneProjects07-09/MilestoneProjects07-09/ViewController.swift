@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     private var livesLabel: UILabel!
     private var textFieldMaskedWord: UITextField!
     private var typedLettersLabel: UILabel!
@@ -18,7 +18,8 @@ class ViewController: UIViewController {
         textFieldMaskedWord = UITextField()
         textFieldMaskedWord.translatesAutoresizingMaskIntoConstraints = false
         textFieldMaskedWord.font = UIFont.systemFont(ofSize: 40)
-        textFieldMaskedWord.isUserInteractionEnabled = false
+        textFieldMaskedWord.addTarget(self, action: #selector(letterTyped), for: .editingChanged)
+        textFieldMaskedWord.delegate = self
         view.addSubview(textFieldMaskedWord)
 
         typedLettersLabel = UILabel()
@@ -48,6 +49,16 @@ class ViewController: UIViewController {
         livesLabel.text = "Lives: \(game.getLives())"
         textFieldMaskedWord.text = game.getMaskedWord()
         typedLettersLabel.text = "Typed letters: \(game.getTypedLetters())"
+    }
+    
+    @objc private func letterTyped() {
+        textFieldMaskedWord.text = game.getMaskedWord()
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let thisLetterExists = game.type(letter: string)
+        updateData()
+        return true
     }
 }
 
