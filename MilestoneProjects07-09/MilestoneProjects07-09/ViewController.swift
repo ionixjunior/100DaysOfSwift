@@ -25,6 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         typedLettersLabel = UILabel()
         typedLettersLabel.translatesAutoresizingMaskIntoConstraints = false
         typedLettersLabel.numberOfLines = 0
+        typedLettersLabel.textAlignment = .center
         view.addSubview(typedLettersLabel)
         
         NSLayoutConstraint.activate([
