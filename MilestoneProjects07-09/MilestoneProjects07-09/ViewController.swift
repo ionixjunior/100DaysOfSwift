@@ -4,6 +4,7 @@ class ViewController: UIViewController {
     private var livesLabel: UILabel!
     private var textFieldMaskedWord: UITextField!
     private var typedLettersLabel: UILabel!
+    private var game: HangmanGame!
 
     override func loadView() {
         view = UIView()
@@ -37,11 +38,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        livesLabel.text = "Lives: "
-        textFieldMaskedWord.text = "_ e _"
-        typedLettersLabel.text = "Typed letters: a - e"
+        game = HangmanGame()
+        game.start(word: "developer")
+        
+        updateData()
     }
-
-
+    
+    private func updateData() {
+        livesLabel.text = "Lives: \(game.getLives())"
+        textFieldMaskedWord.text = game.getMaskedWord()
+        typedLettersLabel.text = "Typed letters: \(game.getTypedLetters())"
+    }
 }
 
