@@ -40,9 +40,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         game = HangmanGame()
-        game.start(word: "developer")
+        startGame()
         
         updateData()
+    }
+    
+    private func startGame() {
+        game.start(word: "developer")
     }
     
     private func updateData() {
@@ -58,6 +62,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let thisLetterExists = game.type(letter: string)
         updateData()
+        
+        if thisLetterExists == false {
+            if game.getLives() == 0 {
+                let alert = UIAlertController(title: "Game over", message: "Your lives is over. Please, try again!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Try again", style: .default) {
+                    [weak self] _ in
+                    self?.startGame()
+                    self?.updateData()
+                })
+                present(alert, animated: true)
+            } else {
+                let alert = UIAlertController(title: "Letter not found", message: "The letter \(string) does not exists in the word.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Continue", style: .default))
+                present(alert, animated: true)
+            }
+        }
+        
         return true
     }
 }
