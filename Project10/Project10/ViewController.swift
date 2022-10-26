@@ -1,7 +1,8 @@
 import UIKit
 
 class ViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    var people = [Person]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
