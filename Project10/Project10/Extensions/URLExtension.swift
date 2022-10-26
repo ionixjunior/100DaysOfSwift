@@ -8,4 +8,12 @@ extension URL {
         
         return self.appendingPathComponent(path)
     }
+    
+    func getPath() -> String {
+        if #available(iOS 16.0, *) {
+            return self.path()
+        }
+        
+        return self.path
+    }
 }
