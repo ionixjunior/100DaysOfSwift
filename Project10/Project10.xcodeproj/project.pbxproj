@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A5E495A2909464E00CE686F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E49592909464E00CE686F /* Person.swift */; };
 		7A870F632907F65A00080678 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A870F622907F65A00080678 /* PersonCell.swift */; };
 		7A9137B62907EF230010F5CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9137B52907EF230010F5CF /* AppDelegate.swift */; };
 		7A9137B82907EF230010F5CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9137B72907EF230010F5CF /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A5E49592909464E00CE686F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		7A870F622907F65A00080678 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		7A9137B22907EF230010F5CF /* Project10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A9137B52907EF230010F5CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				7A9137B52907EF230010F5CF /* AppDelegate.swift */,
 				7A9137B72907EF230010F5CF /* SceneDelegate.swift */,
 				7A9137B92907EF230010F5CF /* ViewController.swift */,
+				7A5E49592909464E00CE686F /* Person.swift */,
 				7A9137BB2907EF230010F5CF /* Main.storyboard */,
 				7A870F622907F65A00080678 /* PersonCell.swift */,
 				7A9137BE2907EF250010F5CF /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A5E495A2909464E00CE686F /* Person.swift in Sources */,
 				7A9137BA2907EF230010F5CF /* ViewController.swift in Sources */,
 				7A9137B62907EF230010F5CF /* AppDelegate.swift in Sources */,
 				7A870F632907F65A00080678 /* PersonCell.swift in Sources */,
