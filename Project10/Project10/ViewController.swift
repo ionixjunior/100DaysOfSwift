@@ -21,6 +21,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         let path = getDocumentsDirectory().appending(path: person.image)
         let image = path.getPath()
         cell.update(name: name, image: image)
+        cell.addBorders()
         
         return cell
     }
