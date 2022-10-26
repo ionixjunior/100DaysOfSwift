@@ -27,9 +27,17 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let person = self.people[indexPath.item]
+        
         let alert = UIAlertController(title: "Type a name", message: nil, preferredStyle: .alert)
         alert.addTextField()
-        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) {
+            [weak self, weak alert] _ in
+            if let name = alert?.textFields?.first?.text {
+                person.name = name
+                self?.collectionView.reloadItems(at: [indexPath])
+            }
+        })
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(alert, animated: true)
     }
