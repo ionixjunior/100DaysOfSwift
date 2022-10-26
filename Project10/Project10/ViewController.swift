@@ -15,6 +15,13 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Person", for: indexPath) as? PersonCell else { fatalError("Unable to dequeue PersonCell") }
+        
+        let person = people[indexPath.item]
+        let name = person.name
+        let path = getDocumentsDirectory().appending(path: person.image)
+        let image = path.getPath()
+        cell.update(name: name, image: image)
+        
         return cell
     }
     
