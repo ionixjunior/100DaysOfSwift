@@ -36,29 +36,8 @@ class ViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Picture", for: indexPath)
-        return updateCell(cell, text: pictures[indexPath.item].name)
-    }
-    
-    private func updateCell(_ cell: UICollectionViewCell, text: String) -> UICollectionViewCell {
-        if #available(iOS 14.0, *) {
-            return updateCellUsingContentConfiguration(cell, text: text)
-        }
-        
-        return updateCellUsingLegacyWay(cell, text: text)
-    }
-    
-    private func updateCellUsingContentConfiguration(_ cell: UICollectionViewCell, text: String) -> UICollectionViewCell {
-//        var content = cell.defaultContentConfiguration()
-//        content.text = text
-//        content.textProperties.font = UIFont.preferredFont(forTextStyle: .title1)
-//        cell.contentConfiguration = content
-        return cell
-    }
-    
-    private func updateCellUsingLegacyWay(_ cell: UICollectionViewCell, text: String) -> UICollectionViewCell {
-//        cell.textLabel?.text = text
-//        cell.textLabel?.font = UIFont.preferredFont(forTextStyle: .title1)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Picture", for: indexPath) as! PictureCell
+        cell.update(name: pictures[indexPath.item].name)
         return cell
     }
     
