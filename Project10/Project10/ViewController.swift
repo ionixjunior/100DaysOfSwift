@@ -63,10 +63,28 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     
     @objc func addPersonTapped() {
         if UIImagePickerController .isSourceTypeAvailable(.camera) {
-            
+            let alert = UIAlertController(title: "Choose an option", message: nil, preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Camera", style: .default) {
+                [weak self] _ in
+                self?.pickFromCamera()
+            })
+            alert.addAction(UIAlertAction(title: "Photo Library", style: .default) {
+                [weak self] _ in
+                self?.pickFromPhotoLibrary()
+            })
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            present(alert, animated: true)
         } else {
             pickFromPhotoLibrary()
         }
+    }
+    
+    private func pickFromCamera() {
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true)
     }
     
     private func pickFromPhotoLibrary() {
