@@ -89,6 +89,16 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
             present(picker, animated: true)
             return
         }
+        
+        let alert = UIAlertController(title: "Please, allow camera access", message: "You need to allow camera access to use this feature. Go to settings and allow it.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Go to settings", style: .default) {
+            _ in
+            if let url = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(url)
+            }
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alert, animated: true)
     }
     
     private func pickFromPhotoLibrary() {
