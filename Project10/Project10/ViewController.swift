@@ -62,6 +62,10 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     }
     
     @objc func addPersonTapped() {
+        pickFromPhotoLibrary()
+    }
+    
+    private func pickFromPhotoLibrary() {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
         picker.delegate = self
