@@ -62,7 +62,11 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     }
     
     @objc func addPersonTapped() {
-        pickFromPhotoLibrary()
+        if UIImagePickerController .isSourceTypeAvailable(.camera) {
+            
+        } else {
+            pickFromPhotoLibrary()
+        }
     }
     
     private func pickFromPhotoLibrary() {
