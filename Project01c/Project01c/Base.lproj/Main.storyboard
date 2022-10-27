@@ -39,7 +39,7 @@
             </objects>
             <point key="canvasLocation" x="2550.7246376811595" y="63.616071428571423"/>
         </scene>
-        <!--View Controller-->
+        <!--Storm Viewer-->
         <scene sceneID="clr-y5-Cya">
             <objects>
                 <collectionViewController id="8sS-s1-0wQ" customClass="ViewController" customModule="Project01c" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,7 +86,7 @@
                             <outlet property="delegate" destination="8sS-s1-0wQ" id="MdS-JI-RBe"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="RMx-4S-W31"/>
+                    <navigationItem key="navigationItem" title="Storm Viewer" id="RMx-4S-W31"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XV8-1N-uLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
