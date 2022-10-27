@@ -75,6 +75,10 @@
                                     </subviews>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="160" height="180"/>
+                                <connections>
+                                    <outlet property="imageView" destination="FGo-Om-S4o" id="HNA-3c-hpP"/>
+                                    <outlet property="name" destination="a6F-Qw-7cD" id="P5I-Vt-zPs"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
