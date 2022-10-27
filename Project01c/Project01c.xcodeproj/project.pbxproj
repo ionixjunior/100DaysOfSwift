@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A86239D290AA0DD009255A0 /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A86239C290AA0DD009255A0 /* PictureCell.swift */; };
 		7A965BDF28E63CB6004CFB8D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A965BDE28E63CB6004CFB8D /* DetailViewController.swift */; };
 		7AA8D46C28E45A2A00E0D15B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8D46B28E45A2A00E0D15B /* AppDelegate.swift */; };
 		7AA8D46E28E45A2A00E0D15B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8D46D28E45A2A00E0D15B /* SceneDelegate.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A86239C290AA0DD009255A0 /* PictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		7A965BDE28E63CB6004CFB8D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7AA8D46828E45A2A00E0D15B /* Project01c.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project01c.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA8D46B28E45A2A00E0D15B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				7AA8D47928E45A2D00E0D15B /* Info.plist */,
 				7AA8D49B28E45CB500E0D15B /* Content */,
 				7AC8C5B228E7B49B000B4683 /* Picture.swift */,
+				7A86239C290AA0DD009255A0 /* PictureCell.swift */,
 				7AC8C5B428E7B5AA000B4683 /* PictureLoader.swift */,
 			);
 			path = Project01c;
@@ -317,6 +320,7 @@
 				7AA8D46C28E45A2A00E0D15B /* AppDelegate.swift in Sources */,
 				7AC8C5B528E7B5AA000B4683 /* PictureLoader.swift in Sources */,
 				7AA8D46E28E45A2A00E0D15B /* SceneDelegate.swift in Sources */,
+				7A86239D290AA0DD009255A0 /* PictureCell.swift in Sources */,
 				7A965BDF28E63CB6004CFB8D /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
