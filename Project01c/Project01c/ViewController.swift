@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UICollectionViewController {
     private var pictures = [Picture]()
 
     override func viewDidLoad() {
@@ -28,19 +28,19 @@ class ViewController: UITableViewController {
         let resourcePath = Bundle.main.resourcePath!
         let content = try! fileManager.contentsOfDirectory(atPath: resourcePath)
         pictures = PictureLoader.loadPicturesFrom(content: content)
-        tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
+        collectionView.performSelector(onMainThread: #selector(UICollectionView.reloadData), with: nil, waitUntilDone: false)
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pictures.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
-        return updateCell(cell, text: pictures[indexPath.row].name)
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Picture", for: indexPath)
+        return updateCell(cell, text: pictures[indexPath.item].name)
     }
     
-    private func updateCell(_ cell: UITableViewCell, text: String) -> UITableViewCell {
+    private func updateCell(_ cell: UICollectionViewCell, text: String) -> UICollectionViewCell {
         if #available(iOS 14.0, *) {
             return updateCellUsingContentConfiguration(cell, text: text)
         }
@@ -48,21 +48,21 @@ class ViewController: UITableViewController {
         return updateCellUsingLegacyWay(cell, text: text)
     }
     
-    private func updateCellUsingContentConfiguration(_ cell: UITableViewCell, text: String) -> UITableViewCell {
-        var content = cell.defaultContentConfiguration()
-        content.text = text
-        content.textProperties.font = UIFont.preferredFont(forTextStyle: .title1)
-        cell.contentConfiguration = content
+    private func updateCellUsingContentConfiguration(_ cell: UICollectionViewCell, text: String) -> UICollectionViewCell {
+//        var content = cell.defaultContentConfiguration()
+//        content.text = text
+//        content.textProperties.font = UIFont.preferredFont(forTextStyle: .title1)
+//        cell.contentConfiguration = content
         return cell
     }
     
-    private func updateCellUsingLegacyWay(_ cell: UITableViewCell, text: String) -> UITableViewCell {
-        cell.textLabel?.text = text
-        cell.textLabel?.font = UIFont.preferredFont(forTextStyle: .title1)
+    private func updateCellUsingLegacyWay(_ cell: UICollectionViewCell, text: String) -> UICollectionViewCell {
+//        cell.textLabel?.text = text
+//        cell.textLabel?.font = UIFont.preferredFont(forTextStyle: .title1)
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
             vc.selectedImage = pictures[indexPath.row].name
             vc.currentPicture = pictures[indexPath.row].position
