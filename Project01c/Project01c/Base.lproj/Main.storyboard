@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="2550.7246376811595" y="63.616071428571423"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--View Controller-->
         <scene sceneID="clr-y5-Cya">
             <objects>
-                <collectionViewController id="8sS-s1-0wQ" sceneMemberID="viewController">
+                <collectionViewController id="8sS-s1-0wQ" customClass="ViewController" customModule="Project01c" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ryy-qQ-gOy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
