@@ -1,4 +1,5 @@
 import UIKit
+import AVFoundation
 
 class ViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var people = [Person]()
@@ -80,11 +81,14 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     }
     
     private func pickFromCamera() {
-        let picker = UIImagePickerController()
-        picker.sourceType = .camera
-        picker.allowsEditing = true
-        picker.delegate = self
-        present(picker, animated: true)
+        if AVCaptureDevice.authorizationStatus(for: .video) == .authorized {
+            let picker = UIImagePickerController()
+            picker.sourceType = .camera
+            picker.allowsEditing = true
+            picker.delegate = self
+            present(picker, animated: true)
+            return
+        }
     }
     
     private func pickFromPhotoLibrary() {
