@@ -29,6 +29,10 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let person = self.people[indexPath.item]
         
+        rename(person: person, at: indexPath)
+    }
+    
+    private func rename(person: Person, at indexPath: IndexPath) {
         let alert = UIAlertController(title: "Type a name", message: nil, preferredStyle: .alert)
         alert.addTextField()
         alert.addAction(UIAlertAction(title: "Ok", style: .default) {
