@@ -34,7 +34,10 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
             [weak self] _ in
             self?.rename(person: person, at: indexPath)
         })
-        alert.addAction(UIAlertAction(title: "Delete", style: .destructive))
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive) {
+            [weak self] _ in
+            self?.delete(person: person, at: indexPath)
+        })
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(alert, animated: true)
     }
@@ -51,6 +54,11 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         })
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(alert, animated: true)
+    }
+    
+    private func delete(person: Person, at indexPath: IndexPath) {
+        people.remove(at: indexPath.item)
+        collectionView.deleteItems(at: [indexPath])
     }
     
     @objc func addPersonTapped() {
