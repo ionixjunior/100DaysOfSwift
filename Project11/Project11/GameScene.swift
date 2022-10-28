@@ -19,6 +19,7 @@ class GameScene: SKScene {
         let location = touch.location(in: self)
         
         let box = SKSpriteNode(color: .red, size: CGSize(width: 64, height: 64))
+        box.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 64, height: 64))
         box.position = location
         addChild(box)
     }
