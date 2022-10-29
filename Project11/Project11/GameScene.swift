@@ -37,7 +37,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         editLabel = SKLabelNode(fontNamed: "Chalkduster")
         editLabel.text = "Edit"
-        editLabel.position = CGPoint(x: 800, y: 700)
+        editLabel.position = CGPoint(x: 80, y: 700)
         addChild(editLabel)
         
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
