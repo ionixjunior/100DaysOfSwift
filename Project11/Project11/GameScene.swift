@@ -176,6 +176,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func destroy(obstacle: SKNode) {
+        if let obstacleParticles = SKEmitterNode(fileNamed: "ObstacleParticles") {
+            obstacleParticles.position = obstacle.position
+            addChild(obstacleParticles)
+        }
+        
         obstacle.removeFromParent()
     }
     
