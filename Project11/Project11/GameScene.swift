@@ -78,7 +78,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             return
         }
         
-        let ball = SKSpriteNode(imageNamed: "ballRed")
+        let randomIndex = Int.random(in: 0..<nameOfTheBalls.count)
+        let ballName = nameOfTheBalls[randomIndex]
+        let ball = SKSpriteNode(imageNamed: ballName)
         ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width / 2.0)
         ball.physicsBody?.restitution = 0.4
         ball.physicsBody?.contactTestBitMask = ball.physicsBody?.collisionBitMask ?? 0
