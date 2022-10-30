@@ -97,6 +97,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             return
         }
         
+        if ballsAvailable == 0 {
+            return
+        }
+        
         var ballPosition = location
         ballPosition.y = frame.height
         
