@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A474C66290E9F6E00D9137A /* FireParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7A474C65290E9F6E00D9137A /* FireParticles.sks */; };
+		7A474C78290EAD2000D9137A /* ObstacleParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7A474C77290EAD2000D9137A /* ObstacleParticles.sks */; };
 		7AFC14F1290BE538002D7976 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC14F0290BE538002D7976 /* AppDelegate.swift */; };
 		7AFC14F3290BE538002D7976 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7AFC14F2290BE538002D7976 /* GameScene.sks */; };
 		7AFC14F7290BE538002D7976 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC14F6290BE538002D7976 /* GameScene.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		7A474C65290E9F6E00D9137A /* FireParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticles.sks; sourceTree = "<group>"; };
+		7A474C77290EAD2000D9137A /* ObstacleParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ObstacleParticles.sks; sourceTree = "<group>"; };
 		7AFC14ED290BE538002D7976 /* Project11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AFC14F0290BE538002D7976 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AFC14F2290BE538002D7976 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				7AFC14FD290BE53A002D7976 /* Assets.xcassets */,
 				7AFC14FF290BE53A002D7976 /* LaunchScreen.storyboard */,
 				7A474C65290E9F6E00D9137A /* FireParticles.sks */,
+				7A474C77290EAD2000D9137A /* ObstacleParticles.sks */,
 			);
 			path = Project11;
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A474C78290EAD2000D9137A /* ObstacleParticles.sks in Resources */,
 				7AFC14FC290BE538002D7976 /* Main.storyboard in Resources */,
 				7AFC14F3290BE538002D7976 /* GameScene.sks in Resources */,
 				7A474C66290E9F6E00D9137A /* FireParticles.sks in Resources */,
