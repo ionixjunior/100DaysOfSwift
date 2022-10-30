@@ -55,6 +55,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         makeSlot(at: CGPoint(x: 896, y: 0), isGood: false)
     }
     
+    let nameOfTheBalls = ["ballBlue", "ballCyan", "ballGreen", "ballGrey", "ballPurple", "ballRed", "ballYellow"]
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         let location = touch.location(in: self)
