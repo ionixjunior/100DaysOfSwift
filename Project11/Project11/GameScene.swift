@@ -93,6 +93,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             box.position = location
             box.physicsBody = SKPhysicsBody(rectangleOf: box.size)
             box.physicsBody?.isDynamic = false
+            box.name = "obstacle"
             addChild(box)
             return
         }
