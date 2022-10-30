@@ -22,6 +22,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    var ballsAvailableLabel: SKLabelNode!
+    var ballsAvailable: Int = 0 {
+        didSet {
+            if ballsAvailable == 0 {
+                ballsAvailableLabel.text = "No ball available"
+            } else if ballsAvailable == 1 {
+                ballsAvailableLabel.text = "\(ballsAvailable) ball available"
+            } else {
+                ballsAvailableLabel.text = "\(ballsAvailable) balls available"
+            }
+        }
+    }
+    
     override func didMove(to view: SKView) {
         let background = SKSpriteNode(imageNamed: "background")
         background.position = CGPoint(x: 512, y: 384)
@@ -39,6 +52,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         editLabel.text = "Edit"
         editLabel.position = CGPoint(x: 80, y: 700)
         addChild(editLabel)
+        
+        ballsAvailableLabel = SKLabelNode(fontNamed: "Chalkduster")
+        ballsAvailableLabel.horizontalAlignmentMode = .right
+        ballsAvailableLabel.position = CGPoint(x: 980, y: 650)
+        ballsAvailable = 5
+        addChild(ballsAvailableLabel)
         
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         physicsWorld.contactDelegate = self
