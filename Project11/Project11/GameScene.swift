@@ -109,6 +109,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.position = ballPosition
         ball.name = "ball"
         addChild(ball)
+        ballsAvailable -= 1
     }
     
     func makeBouncer(at position: CGPoint) {
@@ -151,6 +152,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if object.name == "good" {
             destroy(ball: ball)
             score += 1
+            ballsAvailable += 1
         } else if object.name == "bad" {
             destroy(ball: ball)
             score -= 1
