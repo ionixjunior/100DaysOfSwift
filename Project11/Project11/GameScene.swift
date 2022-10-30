@@ -161,6 +161,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if object.name == "bad" {
             destroy(ball: ball)
             score -= 1
+        } else if object.name == "obstacle" {
+            destroy(obstacle: object)
         }
     }
     
@@ -171,6 +173,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         ball.removeFromParent()
+    }
+    
+    func destroy(obstacle: SKNode) {
+        obstacle.removeFromParent()
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
