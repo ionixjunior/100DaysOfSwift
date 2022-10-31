@@ -51,6 +51,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
             if let name = alert?.textFields?.first?.text {
                 person.name = name
                 self?.collectionView.reloadItems(at: [indexPath])
+                self?.save()
             }
         })
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
@@ -60,6 +61,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     private func delete(person: Person, at indexPath: IndexPath) {
         people.remove(at: indexPath.item)
         collectionView.deleteItems(at: [indexPath])
+        save()
     }
     
     @objc func addPersonTapped() {
@@ -121,6 +123,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         let person = Person(name: "Unknown", image: imageName)
         people.append(person)
         collectionView.reloadData()
+        save()
         
         dismiss(animated: true)
     }
