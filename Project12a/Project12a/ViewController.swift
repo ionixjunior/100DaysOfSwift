@@ -129,5 +129,12 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         let paths = FileManager().urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
     }
+    
+    func save() {
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: people, requiringSecureCoding: false) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: "people")
+        }
+    }
 }
 
