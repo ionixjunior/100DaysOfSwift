@@ -59,7 +59,7 @@
                                 <rect key="frame" x="0.0" y="4" width="414" height="888"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndX-jS-tHb">
-                                <rect key="frame" x="20" y="841" width="42" height="21"/>
+                                <rect key="frame" x="20" y="801" width="42" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -71,7 +71,7 @@
                         <constraints>
                             <constraint firstItem="d0w-cp-fYR" firstAttribute="centerY" secondItem="MNH-Pa-xzK" secondAttribute="centerY" id="8Nc-GQ-KU4"/>
                             <constraint firstItem="d0w-cp-fYR" firstAttribute="leading" secondItem="Jfx-Bn-mfn" secondAttribute="leading" id="BKg-6u-hgQ"/>
-                            <constraint firstItem="ndX-jS-tHb" firstAttribute="bottom" secondItem="Jfx-Bn-mfn" secondAttribute="bottom" id="W66-iW-DnT"/>
+                            <constraint firstItem="ndX-jS-tHb" firstAttribute="bottom" secondItem="Jfx-Bn-mfn" secondAttribute="bottom" constant="-40" id="W66-iW-DnT"/>
                             <constraint firstItem="ndX-jS-tHb" firstAttribute="leading" secondItem="Jfx-Bn-mfn" secondAttribute="leading" constant="20" id="hsf-SO-FVb"/>
                             <constraint firstItem="d0w-cp-fYR" firstAttribute="centerX" secondItem="MNH-Pa-xzK" secondAttribute="centerX" id="kK7-Z0-F1u"/>
                             <constraint firstItem="d0w-cp-fYR" firstAttribute="top" secondItem="MNH-Pa-xzK" secondAttribute="topMargin" constant="-44" id="p6W-O1-7hS"/>
