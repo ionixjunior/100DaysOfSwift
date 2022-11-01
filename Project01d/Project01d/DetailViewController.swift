@@ -14,6 +14,13 @@ class DetailViewController: UIViewController {
         
         if let imageToLoad = selectedImage {
             imageView.image = UIImage(named: imageToLoad)
+            
+            let viewersKey = "viewers_of_\(imageToLoad)"
+            let defaults = UserDefaults.standard
+            var numberOfViewers = defaults.integer(forKey: viewersKey)
+            numberOfViewers += 1
+            defaults.set(numberOfViewers, forKey: viewersKey)
+            viewersLabel.text = "This storm image was shown \(numberOfViewers) time(s)."
         }
     }
     
