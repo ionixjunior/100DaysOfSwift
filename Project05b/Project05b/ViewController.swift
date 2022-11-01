@@ -4,6 +4,7 @@ class ViewController: UITableViewController {
     var allWords = [String]()
     var usedWords = [String]()
     let currentWordKey = "currentWordKey"
+    let usedWordsKey = "usedWordsKey"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +69,7 @@ class ViewController: UITableViewController {
         }
         
         usedWords.insert(lowerAnswer, at: 0)
+        UserDefaults.standard.set(usedWords, forKey: usedWordsKey)
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
     }
@@ -111,9 +113,11 @@ class ViewController: UITableViewController {
     @objc private func startGame() {
         let currentWord = allWords.randomElement()
         UserDefaults.standard.set(currentWord, forKey: currentWordKey)
-        
         title = currentWord
+        
         usedWords.removeAll(keepingCapacity: true)
+        UserDefaults.standard.set(usedWords, forKey: usedWordsKey)
+        
         tableView.reloadData()
     }
     
