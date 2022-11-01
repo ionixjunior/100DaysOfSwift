@@ -129,5 +129,14 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         let paths = FileManager().urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
     }
+    
+    func save() {
+        do {
+            let data = try JSONEncoder().encode(people)
+            UserDefaults.standard.set(data, forKey: "people")
+        } catch {
+            print("Failed to save people")
+        }
+    }
 }
 
