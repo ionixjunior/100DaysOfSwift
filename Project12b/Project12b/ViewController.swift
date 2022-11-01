@@ -8,6 +8,14 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         super.viewDidLoad()
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPersonTapped))
+        
+        do {
+            if let data = UserDefaults.standard.object(forKey: "people") as? Data {
+                people = try JSONDecoder().decode([Person].self, from: data)
+            }
+        } catch {
+            print("Failed to load people")
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
