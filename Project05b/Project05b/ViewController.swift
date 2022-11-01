@@ -3,6 +3,7 @@ import UIKit
 class ViewController: UITableViewController {
     var allWords = [String]()
     var usedWords = [String]()
+    let currentWordKey = "currentWordKey"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,6 +110,8 @@ class ViewController: UITableViewController {
     
     @objc private func startGame() {
         let currentWord = allWords.randomElement()
+        UserDefaults.standard.set(currentWord, forKey: currentWordKey)
+        
         title = currentWord
         usedWords.removeAll(keepingCapacity: true)
         tableView.reloadData()
