@@ -18,7 +18,17 @@ class ViewController: UITableViewController {
             }
         }
         
-        startGame()
+        guard let currentWord = UserDefaults.standard.string(forKey: currentWordKey) else {
+            startGame()
+            return
+        }
+        guard let usedWords = UserDefaults.standard.stringArray(forKey: usedWordsKey) else {
+            startGame()
+            return
+        }
+        
+        title = currentWord
+        self.usedWords = usedWords
     }
     
     @objc func promptForAnswer() {
