@@ -67,7 +67,17 @@ class ViewController: UIViewController {
     
     func checkForTheNextQuestion(action: UIAlertAction) {
         if game.isOver() {
-            let alert = UIAlertController(title: "Game over", message: "Your final score is \(game.score).", preferredStyle: .alert)
+            let highestScoreKey = "highest_score"
+            let defaults = UserDefaults.standard
+            let highestScore = defaults.integer(forKey: highestScoreKey)
+            var message = "Your final score is \(game.score)."
+            
+            if game.score > highestScore {
+                defaults.set(game.score, forKey: highestScoreKey)
+                message += "\n\nCongratulations! Your score beat the previous high!"
+            }
+            
+            let alert = UIAlertController(title: "Game over", message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Restart", style: .default, handler: restart))
             present(alert, animated: true)
         } else {
