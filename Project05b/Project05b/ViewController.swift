@@ -108,7 +108,8 @@ class ViewController: UITableViewController {
     }
     
     @objc private func startGame() {
-        title = allWords.randomElement()
+        let currentWord = allWords.randomElement()
+        title = currentWord
         usedWords.removeAll(keepingCapacity: true)
         tableView.reloadData()
     }
