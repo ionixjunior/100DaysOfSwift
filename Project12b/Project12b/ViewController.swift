@@ -3,6 +3,7 @@ import AVFoundation
 
 class ViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var people = [Person]()
+    let peopleKey = "people"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -10,7 +11,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPersonTapped))
         
         do {
-            if let data = UserDefaults.standard.object(forKey: "people") as? Data {
+            if let data = UserDefaults.standard.object(forKey: peopleKey) as? Data {
                 people = try JSONDecoder().decode([Person].self, from: data)
             }
         } catch {
@@ -144,7 +145,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     func save() {
         do {
             let data = try JSONEncoder().encode(people)
-            UserDefaults.standard.set(data, forKey: "people")
+            UserDefaults.standard.set(data, forKey: peopleKey)
         } catch {
             print("Failed to save people")
         }
