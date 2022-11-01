@@ -1,6 +1,6 @@
 import UIKit
 
-class Person: NSObject {
+class Person: NSObject, Codable {
     var name: String
     var image: String
     
