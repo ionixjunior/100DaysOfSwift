@@ -51,6 +51,10 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if memories.isEmpty {
+            tableView.showEmpty(message: "No memories available!")
+        }
+        
         return memories.count
     }
     
