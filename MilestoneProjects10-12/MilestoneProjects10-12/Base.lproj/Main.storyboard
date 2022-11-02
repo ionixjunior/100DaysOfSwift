@@ -94,9 +94,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="swQ-gI-Clx" firstAttribute="trailing" secondItem="RKS-Gi-f6J" secondAttribute="trailing" constant="16" id="Gtg-NU-2WP"/>
-                            <constraint firstItem="swQ-gI-Clx" firstAttribute="bottom" secondItem="fKG-tV-Q3E" secondAttribute="bottom" id="RPJ-Wh-g31"/>
                             <constraint firstItem="RKS-Gi-f6J" firstAttribute="top" secondItem="swQ-gI-Clx" secondAttribute="top" constant="16" id="Zjj-jX-CNZ"/>
                             <constraint firstItem="swQ-gI-Clx" firstAttribute="trailing" secondItem="fKG-tV-Q3E" secondAttribute="trailing" constant="16" id="bib-e9-eY8"/>
+                            <constraint firstItem="fKG-tV-Q3E" firstAttribute="bottom" secondItem="swQ-gI-Clx" secondAttribute="bottom" id="mUD-Nh-1qL"/>
                             <constraint firstItem="RKS-Gi-f6J" firstAttribute="leading" secondItem="swQ-gI-Clx" secondAttribute="leading" constant="16" id="sJi-XB-wld"/>
                             <constraint firstItem="fKG-tV-Q3E" firstAttribute="leading" secondItem="swQ-gI-Clx" secondAttribute="leading" constant="16" id="tsM-8j-hKI"/>
                             <constraint firstItem="fKG-tV-Q3E" firstAttribute="top" secondItem="RKS-Gi-f6J" secondAttribute="bottom" constant="16" id="vH9-Ti-E2X"/>
