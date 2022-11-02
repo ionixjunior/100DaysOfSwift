@@ -11,4 +11,9 @@ class PhotoCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    func update(filename: String, caption: String) {
+        photoView.image = UIImage(named: filename)
+        captionLabel.text = caption
+    }
 }
