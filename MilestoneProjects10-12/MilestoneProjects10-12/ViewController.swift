@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,7 +11,14 @@ class ViewController: UITableViewController {
     }
     
     @objc func addTapped() {
-        
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.delegate = self
+        present(picker, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
     }
 }
 
