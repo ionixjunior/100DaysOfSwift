@@ -49,6 +49,7 @@
                                         <constraint firstItem="2tu-x0-VoZ" firstAttribute="bottom" secondItem="Qyj-B6-n0u" secondAttribute="bottomMargin" id="yZm-RU-sMx"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="130" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="captionLabel" destination="2tu-x0-VoZ" id="Unk-dw-y6G"/>
                                     <outlet property="photoView" destination="9ef-lG-a69" id="UIh-hy-IY7"/>
