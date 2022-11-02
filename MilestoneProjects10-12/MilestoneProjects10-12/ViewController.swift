@@ -18,7 +18,21 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else { return }
+        
+        let imageName = UUID().uuidString
+        let imagePath = getDocumentsDirectory().appendingPathExtension(imageName)
+        
+        if let jpegData = image.jpegData(compressionQuality: 0.5) {
+            try? jpegData.write(to: imagePath)
+        }
+        
         picker.dismiss(animated: true)
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
     }
 }
 
