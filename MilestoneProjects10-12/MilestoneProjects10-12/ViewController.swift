@@ -27,7 +27,17 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
             try? jpegData.write(to: imagePath)
         }
         
-        picker.dismiss(animated: true)
+        let alert = UIAlertController(title: "What is the name of your memory?", message: nil, preferredStyle: .alert)
+        alert.addTextField()
+        alert.addAction(UIAlertAction(title: "Save", style: .default) {
+            [weak picker, weak alert] _ in
+            
+            let caption = alert?.textFields?.first?.text ?? ""
+            
+            picker?.dismiss(animated: true)
+        })
+        
+        picker.present(alert, animated: true)
     }
     
     func getDocumentsDirectory() -> URL {
