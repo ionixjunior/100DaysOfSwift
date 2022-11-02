@@ -71,7 +71,7 @@
         <!--Detail View Controller-->
         <scene sceneID="KTn-NX-dLn">
             <objects>
-                <viewController id="iAy-fs-PE6" customClass="DetailViewController" customModule="MilestoneProjects10_12" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="iAy-fs-PE6" customClass="DetailViewController" customModule="MilestoneProjects10_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Ba-aw-SRq">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,6 +99,10 @@
                             <constraint firstItem="fKG-tV-Q3E" firstAttribute="top" secondItem="RKS-Gi-f6J" secondAttribute="bottom" constant="16" id="vH9-Ti-E2X"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="captionLabel" destination="RKS-Gi-f6J" id="C8Q-KR-e16"/>
+                        <outlet property="photoView" destination="fKG-tV-Q3E" id="Zu1-Z5-sT2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rot-8h-MRl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
