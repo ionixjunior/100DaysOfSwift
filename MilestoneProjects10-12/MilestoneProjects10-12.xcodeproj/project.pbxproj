@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A26B8832912A8DC00AD203E /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A26B8822912A8DC00AD203E /* PhotoCell.swift */; };
 		7AC4139C2912A10B00FCA435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4139B2912A10B00FCA435 /* AppDelegate.swift */; };
 		7AC4139E2912A10B00FCA435 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4139D2912A10B00FCA435 /* SceneDelegate.swift */; };
 		7AC413A02912A10B00FCA435 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4139F2912A10B00FCA435 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A26B8822912A8DC00AD203E /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		7AC413982912A10B00FCA435 /* MilestoneProjects10-12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MilestoneProjects10-12.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC4139B2912A10B00FCA435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AC4139D2912A10B00FCA435 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				7AC413A62912A10B00FCA435 /* LaunchScreen.storyboard */,
 				7AC413A92912A10B00FCA435 /* Info.plist */,
 				7AC413CB2912A34200FCA435 /* Photo.swift */,
+				7A26B8822912A8DC00AD203E /* PhotoCell.swift */,
 			);
 			path = "MilestoneProjects10-12";
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC413CC2912A34200FCA435 /* Photo.swift in Sources */,
+				7A26B8832912A8DC00AD203E /* PhotoCell.swift in Sources */,
 				7AC413A02912A10B00FCA435 /* ViewController.swift in Sources */,
 				7AC4139C2912A10B00FCA435 /* AppDelegate.swift in Sources */,
 				7AC4139E2912A10B00FCA435 /* SceneDelegate.swift in Sources */,
