@@ -21,7 +21,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
         guard let image = info[.originalImage] as? UIImage else { return }
         
         let imageName = UUID().uuidString
-        let imagePath = getDocumentsDirectory().appendingPathExtension(imageName)
+        let imagePath = getDocumentsDirectory().appending(path: imageName)
         
         if let jpegData = image.jpegData(compressionQuality: 0.5) {
             try? jpegData.write(to: imagePath)
