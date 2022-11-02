@@ -33,6 +33,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
             [weak picker, weak alert] _ in
             
             let caption = alert?.textFields?.first?.text ?? ""
+            let photo = Photo(filename: imagePath.getPath(), caption: caption)
             
             picker?.dismiss(animated: true)
         })
