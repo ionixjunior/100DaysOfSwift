@@ -64,5 +64,13 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let detailViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
+        let photo = memories[indexPath.row]
+        detailViewController.filename = photo.filename
+        detailViewController.caption = photo.caption
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }
 
