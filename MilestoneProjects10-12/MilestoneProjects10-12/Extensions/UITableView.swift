@@ -11,4 +11,8 @@ extension UITableView {
         
         backgroundView = label
     }
+    
+    func removeEmptyMessage() {
+        backgroundView = nil
+    }
 }
