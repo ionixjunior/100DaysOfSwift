@@ -60,5 +60,9 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
         cell.update(filename: photo.filename, caption: photo.caption)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
 }
 
