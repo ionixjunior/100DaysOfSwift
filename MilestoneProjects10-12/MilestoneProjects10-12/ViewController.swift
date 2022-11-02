@@ -81,7 +81,31 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
             self.memories.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
-        return UISwipeActionsConfiguration(actions: [deleteAction])
+        
+        let renameAction = UIContextualAction(style: .normal, title: "Rename") {
+            _, _, completionHandler in
+            
+            var photo = self.memories[indexPath.row]
+            let alert = UIAlertController(title: "What is the name of your memory?", message: nil, preferredStyle: .alert)
+            alert.addTextField()
+            alert.addAction(UIAlertAction(title: "Update", style: .default) {
+                [weak alert, weak self] _ in
+                
+                let caption = alert?.textFields?.first?.text ?? ""
+                photo = Photo(filename: photo.filename, caption: caption)
+                self?.memories[indexPath.row] = photo
+                self?.tableView.reloadRows(at: [indexPath], with: .automatic)
+                
+                completionHandler(true)
+            })
+            alert.addAction(UIAlertAction(title: "Cancel", style: .default) {
+                _ in
+                completionHandler(true)
+            })
+            self.present(alert, animated: true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction, renameAction])
     }
 }
 
