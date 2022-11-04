@@ -4,6 +4,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var intensity: UISlider!
     
+    var currentImage: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Instafilter"
