@@ -100,7 +100,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         
         if status == PHAuthorizationStatus.denied {
             let alert = UIAlertController(title: "Access denied to your photo library", message: "You need to allow access to the photo library to save your images.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Go to settings", style: .default))
+            alert.addAction(UIAlertAction(title: "Go to settings", style: .default) {
+                _ in
+                guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+                UIApplication.shared.open(url)
+            })
             alert.addAction(UIAlertAction(title: "Not now", style: .cancel))
             present(alert, animated: true)
         } else {
