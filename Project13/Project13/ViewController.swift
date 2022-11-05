@@ -6,6 +6,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     @IBOutlet weak var intensity: UISlider!
     
     var currentImage: UIImage!
+    var context: CIContext!
+    var currentFitler: CIFilter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
