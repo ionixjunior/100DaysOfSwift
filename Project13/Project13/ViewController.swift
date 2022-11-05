@@ -90,7 +90,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         
         currentFilter = CIFilter(name: filterName)
         currentFilter.setValue(CIImage(cgImage: cgImage), forKey: kCIInputImageKey)
-        
+        intensity.value = 0.1
         applyProcessing()
     }
     
