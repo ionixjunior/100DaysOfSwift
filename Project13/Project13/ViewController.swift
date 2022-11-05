@@ -7,7 +7,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     
     var currentImage: UIImage!
     var context: CIContext!
-    var currentFitler: CIFilter!
+    var currentFilter: CIFilter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +15,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(importPicture))
         
         context = CIContext()
-        currentFitler = CIFilter(name: "CISepiaTone")
+        currentFilter = CIFilter(name: "CISepiaTone")
     }
     
     @objc func importPicture() {
@@ -31,30 +31,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         currentImage = image
         
         let beginImage = CIImage(image: currentImage)
-        currentFitler.setValue(beginImage, forKey: kCIInputImageKey)
+        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
         applyProcessing()
     }
     
     func applyProcessing() {
-        let inputKeys = currentFitler.inputKeys
+        let inputKeys = currentFilter.inputKeys
         
         if inputKeys.contains(kCIInputIntensityKey) {
-            currentFitler.setValue(intensity.value, forKey: kCIInputIntensityKey)
+            currentFilter.setValue(intensity.value, forKey: kCIInputIntensityKey)
         }
         
         if inputKeys.contains(kCIInputRadiusKey) {
-            currentFitler.setValue(intensity.value * 200, forKey: kCIInputRadiusKey)
+            currentFilter.setValue(intensity.value * 200, forKey: kCIInputRadiusKey)
         }
 
         if inputKeys.contains(kCIInputScaleKey) {
-            currentFitler.setValue(intensity.value * 10, forKey: kCIInputScaleKey)
+            currentFilter.setValue(intensity.value * 10, forKey: kCIInputScaleKey)
         }
 
         if inputKeys.contains(kCIInputCenterKey) {
-            currentFitler.setValue(CIVector(x: currentImage.size.width / 2, y: currentImage.size.height / 2), forKey: kCIInputCenterKey)
+            currentFilter.setValue(CIVector(x: currentImage.size.width / 2, y: currentImage.size.height / 2), forKey: kCIInputCenterKey)
         }
         
-        guard let outputImage = currentFitler.outputImage else { return }
+        guard let outputImage = currentFilter.outputImage else { return }
         
         if let cgImage = context.createCGImage(outputImage, from: outputImage.extent) {
             let processedImage = UIImage(cgImage: cgImage)
@@ -85,9 +85,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         guard currentImage != nil else { return }
         guard let filterName = action.title else { return }
         
-        currentFitler = CIFilter(name: filterName)
+        currentFilter = CIFilter(name: filterName)
         let beginImage = CIImage(image:  currentImage)
-        currentFitler.setValue(beginImage, forKey: kCIInputImageKey)
+        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
         
         applyProcessing()
     }
