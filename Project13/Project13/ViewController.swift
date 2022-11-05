@@ -46,6 +46,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     }
 
     @IBAction func changeFilter(_ sender: Any) {
+        let alert = UIAlertController(title: "Choose filter", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "CIBumpDistortion", style: .default, handler: setFilter))
+        alert.addAction(UIAlertAction(title: "CIGaussianBlur", style: .default, handler: setFilter))
+        alert.addAction(UIAlertAction(title: "CIPixellate", style: .default, handler: setFilter))
+        alert.addAction(UIAlertAction(title: "CISepiaTone", style: .default, handler: setFilter))
+        alert.addAction(UIAlertAction(title: "CITwirlDistortion", style: .default, handler: setFilter))
+        alert.addAction(UIAlertAction(title: "CIUnsharpMask", style: .default, handler: setFilter))
+        alert.addAction(UIAlertAction(title: "CIVignette", style: .default, handler: setFilter))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alert, animated: true)
+    }
+    
+    func setFilter(action: UIAlertAction) {
+        print(action.title)
     }
     
     @IBAction func save(_ sender: Any) {
