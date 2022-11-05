@@ -1,4 +1,5 @@
 import UIKit
+import CoreImage
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
