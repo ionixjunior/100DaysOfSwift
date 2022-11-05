@@ -84,10 +84,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     func setFilter(action: UIAlertAction) {
         guard currentImage != nil else { return }
         guard let filterName = action.title else { return }
+        guard let outputImage = currentFilter.outputImage else { return }
+        guard let cgImage = context.createCGImage(outputImage, from: outputImage.extent) else { return }
         
         currentFilter = CIFilter(name: filterName)
-        let beginImage = CIImage(image:  currentImage)
-        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        currentFilter.setValue(CIImage(cgImage: cgImage), forKey: kCIInputImageKey)
         
         applyProcessing()
     }
