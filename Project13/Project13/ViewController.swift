@@ -36,8 +36,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     }
     
     func applyProcessing() {
+        let inputKeys = currentFitler.inputKeys
+        
+        if inputKeys.contains(kCIInputIntensityKey) {
+            currentFitler.setValue(intensity.value, forKey: kCIInputIntensityKey)
+        }
+        
+        if inputKeys.contains(kCIInputRadiusKey) {
+            currentFitler.setValue(intensity.value * 200, forKey: kCIInputRadiusKey)
+        }
+
+        if inputKeys.contains(kCIInputScaleKey) {
+            currentFitler.setValue(intensity.value * 10, forKey: kCIInputScaleKey)
+        }
+
+        if inputKeys.contains(kCIInputCenterKey) {
+            currentFitler.setValue(CIVector(x: currentImage.size.width / 2, y: currentImage.size.height / 2), forKey: kCIInputCenterKey)
+        }
+        
         guard let outputImage = currentFitler.outputImage else { return }
-        currentFitler.setValue(intensity.value, forKey: kCIInputIntensityKey)
         
         if let cgImage = context.createCGImage(outputImage, from: outputImage.extent) {
             let processedImage = UIImage(cgImage: cgImage)
@@ -65,7 +82,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     }
     
     func setFilter(action: UIAlertAction) {
-        print(action.title)
+        guard currentImage != nil else { return }
+        guard let filterName = action.title else { return }
+        
+        currentFitler = CIFilter(name: filterName)
+        let beginImage = CIImage(image:  currentImage)
+        currentFitler.setValue(beginImage, forKey: kCIInputImageKey)
+        
+        applyProcessing()
     }
     
     @IBAction func save(_ sender: Any) {
