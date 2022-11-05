@@ -29,6 +29,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         guard let image = info[.editedImage] as? UIImage else { return }
         dismiss(animated: true)
         currentImage = image
+        
+        let beginImage = CIImage(image: currentImage)
+        currentFitler.setValue(beginImage, forKey: kCIInputImageKey)
+        applyProcessing()
+    }
+    
+    func applyProcessing() {
+        guard let outputImage = currentFitler.outputImage else { return }
+        currentFitler.setValue(intensity.value, forKey: kCIInputIntensityKey)
+        
+        if let cgImage = context.createCGImage(outputImage, from: outputImage.extent) {
+            let processedImage = UIImage(cgImage: cgImage)
+            imageView.image = processedImage
+        }
     }
 
     @IBAction func changeFilter(_ sender: Any) {
@@ -38,6 +52,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     }
     
     @IBAction func intensityChanged(_ sender: Any) {
+        applyProcessing()
     }
 }
 
