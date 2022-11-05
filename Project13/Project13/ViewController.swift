@@ -45,7 +45,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         }
     }
 
-    @IBAction func changeFilter(_ sender: Any) {
+    @IBAction func changeFilter(_ sender: UIButton) {
         let alert = UIAlertController(title: "Choose filter", message: nil, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "CIBumpDistortion", style: .default, handler: setFilter))
         alert.addAction(UIAlertAction(title: "CIGaussianBlur", style: .default, handler: setFilter))
