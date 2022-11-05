@@ -14,6 +14,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         title = "Instafilter"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(importPicture))
         
+        intensity.value = 0
         context = CIContext()
         currentFilter = CIFilter(name: "CISepiaTone")
     }
