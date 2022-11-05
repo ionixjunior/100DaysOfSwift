@@ -1,5 +1,6 @@
 import UIKit
 import CoreImage
+import Photos
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
@@ -95,8 +96,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     }
     
     @IBAction func save(_ sender: Any) {
-        guard let image = imageView.image else { return }
-        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        let status = PHPhotoLibrary.authorizationStatus(for: .addOnly)
+        
+        if status == PHAuthorizationStatus.denied {
+            let alert = UIAlertController(title: "Access denied to your photo library", message: "You need to allow access to the photo library to save your images.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Go to settings", style: .default))
+            alert.addAction(UIAlertAction(title: "Not now", style: .cancel))
+            present(alert, animated: true)
+        } else {
+            guard let image = imageView.image else { return }
+            UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        }
     }
     
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
