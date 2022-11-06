@@ -112,6 +112,7 @@
                         <outlet property="changeFilterButton" destination="ChE-mG-saL" id="vta-DC-naf"/>
                         <outlet property="imageView" destination="TZk-L9-2jy" id="Z6R-2Y-gz4"/>
                         <outlet property="intensity" destination="kTB-44-tyy" id="C8e-Cb-9Va"/>
+                        <outlet property="intensityView" destination="J1O-uv-wwz" id="hBT-18-SRY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

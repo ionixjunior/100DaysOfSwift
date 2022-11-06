@@ -6,6 +6,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var intensity: UISlider!
     @IBOutlet weak var changeFilterButton: UIButton!
+    @IBOutlet weak var intensityView: UIView!
     
     var currentImage: UIImage!
     var context: CIContext!
