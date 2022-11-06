@@ -19,11 +19,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         title = "Instafilter"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(importPicture))
         
-        intensity.value = 0
+        resetSliderValues()
         context = CIContext()
         let filterName = "CISepiaTone"
         currentFilter = CIFilter(name: filterName)
         changeButtonFilter(title: filterName)
+    }
+    
+    func resetSliderValues() {
+        intensity.value = 0.1
+        radius.value = 0.1
     }
     
     @objc func importPicture() {
@@ -51,7 +56,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         }
         
         if inputKeys.contains(kCIInputRadiusKey) {
-            currentFilter.setValue(intensity.value * 200, forKey: kCIInputRadiusKey)
+            currentFilter.setValue(radius.value * 200, forKey: kCIInputRadiusKey)
         }
 
         if inputKeys.contains(kCIInputScaleKey) {
@@ -97,7 +102,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         
         currentFilter = CIFilter(name: filterName)
         currentFilter.setValue(CIImage(cgImage: cgImage), forKey: kCIInputImageKey)
-        intensity.value = 0.1
+        resetSliderValues()
         applyProcessing()
         changeButtonFilter(title: filterName)
     }
