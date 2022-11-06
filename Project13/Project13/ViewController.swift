@@ -141,7 +141,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         }
     }
     
-    @IBAction func intensityChanged(_ sender: Any) {
+    @IBAction func sliderChanged(_ sender: Any) {
         applyProcessing()
     }
 }
