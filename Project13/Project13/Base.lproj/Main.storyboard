@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="pEI-wo-Tde">
-                                <rect key="frame" x="20" y="539.33333333333337" width="335" height="101"/>
+                                <rect key="frame" x="20" y="539.33333333333337" width="335" height="152"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1O-uv-wwz">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
@@ -105,6 +105,32 @@
                                             <constraint firstItem="RV3-Nm-R1w" firstAttribute="centerY" secondItem="kYq-Wx-wS7" secondAttribute="centerY" id="yff-9f-2qW"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45u-Qx-1me">
+                                        <rect key="frame" x="0.0" y="102" width="335" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSc-Vc-UcB">
+                                                <rect key="frame" x="0.0" y="14.666666666666627" width="46.333333333333336" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="inj-Sp-FKd">
+                                                <rect key="frame" x="86" y="10" width="251" height="31"/>
+                                                <connections>
+                                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="49o-KG-vuV"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6V9-Tn-kmK"/>
+                                            <constraint firstItem="inj-Sp-FKd" firstAttribute="leading" secondItem="45u-Qx-1me" secondAttribute="leadingMargin" constant="80" id="BqR-uK-wz0"/>
+                                            <constraint firstItem="inj-Sp-FKd" firstAttribute="centerY" secondItem="45u-Qx-1me" secondAttribute="centerY" id="XGv-Xb-b4T"/>
+                                            <constraint firstItem="YSc-Vc-UcB" firstAttribute="leading" secondItem="45u-Qx-1me" secondAttribute="leading" id="aWL-ew-Bop"/>
+                                            <constraint firstAttribute="trailing" secondItem="inj-Sp-FKd" secondAttribute="trailing" id="d1V-BD-OM2"/>
+                                            <constraint firstItem="YSc-Vc-UcB" firstAttribute="centerY" secondItem="45u-Qx-1me" secondAttribute="centerY" id="pAv-QI-QVS"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -131,6 +157,8 @@
                         <outlet property="intensityView" destination="J1O-uv-wwz" id="hBT-18-SRY"/>
                         <outlet property="radius" destination="RV3-Nm-R1w" id="2o1-DP-pfp"/>
                         <outlet property="radiusView" destination="kYq-Wx-wS7" id="c7a-FC-Ntl"/>
+                        <outlet property="scale" destination="inj-Sp-FKd" id="CI3-a8-1GC"/>
+                        <outlet property="scaleView" destination="45u-Qx-1me" id="K9a-bI-AVf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

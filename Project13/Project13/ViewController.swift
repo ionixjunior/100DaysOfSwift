@@ -6,9 +6,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var intensity: UISlider!
     @IBOutlet weak var radius: UISlider!
+    @IBOutlet weak var scale: UISlider!
     @IBOutlet weak var changeFilterButton: UIButton!
     @IBOutlet weak var intensityView: UIView!
     @IBOutlet weak var radiusView: UIView!
+    @IBOutlet weak var scaleView: UIView!
     
     var currentImage: UIImage!
     var context: CIContext!
@@ -29,6 +31,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     func resetSliderValues() {
         intensity.value = 0.1
         radius.value = 0.1
+        scale.value = 0.1
     }
     
     @objc func importPicture() {
@@ -66,7 +69,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         }
 
         if inputKeys.contains(kCIInputScaleKey) {
-            currentFilter.setValue(intensity.value * 10, forKey: kCIInputScaleKey)
+            currentFilter.setValue(scale.value * 10, forKey: kCIInputScaleKey)
+            scaleView.isHidden = false
+        } else {
+            scaleView.isHidden = true
         }
 
         if inputKeys.contains(kCIInputCenterKey) {
