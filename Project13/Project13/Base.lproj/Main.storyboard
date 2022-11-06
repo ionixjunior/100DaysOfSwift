@@ -32,32 +32,36 @@
                                     <constraint firstItem="TZk-L9-2jy" firstAttribute="centerY" secondItem="MXc-c0-J3b" secondAttribute="centerY" id="Qq3-0R-TxW"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J1O-uv-wwz">
-                                <rect key="frame" x="16" y="718.66666666666663" width="358" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pEI-wo-Tde">
+                                <rect key="frame" x="16" y="718.66666666666663" width="358" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Intensity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmd-Xr-IT5">
-                                        <rect key="frame" x="0.0" y="4" width="70" height="21"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J1O-uv-wwz">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Intensity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmd-Xr-IT5">
+                                                <rect key="frame" x="0.0" y="4" width="70" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="1oi-Xu-8mZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kTB-44-tyy">
+                                                <rect key="frame" x="76" y="0.0" width="284" height="30"/>
+                                                <connections>
+                                                    <action selector="intensityChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="clv-Tb-8wk"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="1oi-Xu-8mZ"/>
+                                            <constraint firstItem="kTB-44-tyy" firstAttribute="leading" secondItem="Gmd-Xr-IT5" secondAttribute="trailing" constant="8" id="mRK-mn-D4y"/>
+                                            <constraint firstItem="Gmd-Xr-IT5" firstAttribute="centerY" secondItem="kTB-44-tyy" secondAttribute="centerY" id="urW-F4-LFq"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kTB-44-tyy">
-                                        <rect key="frame" x="76" y="0.0" width="284" height="30"/>
-                                        <connections>
-                                            <action selector="intensityChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="clv-Tb-8wk"/>
-                                        </connections>
-                                    </slider>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="kTB-44-tyy" firstAttribute="leading" secondItem="Gmd-Xr-IT5" secondAttribute="trailing" constant="8" id="mRK-mn-D4y"/>
-                                    <constraint firstItem="Gmd-Xr-IT5" firstAttribute="centerY" secondItem="kTB-44-tyy" secondAttribute="centerY" id="urW-F4-LFq"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChE-mG-saL">
                                 <rect key="frame" x="16" y="755.66666666666663" width="130" height="34.333333333333371"/>
                                 <constraints>
