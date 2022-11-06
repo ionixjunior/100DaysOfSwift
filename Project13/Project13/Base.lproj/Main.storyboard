@@ -50,7 +50,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChE-mG-saL">
                                 <rect key="frame" x="16" y="755.66666666666663" width="130" height="34.333333333333371"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="liV-7u-WIc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="liV-7u-WIc"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Change Filter"/>
