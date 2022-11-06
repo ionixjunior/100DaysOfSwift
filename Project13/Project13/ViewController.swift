@@ -108,7 +108,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
             alert.addAction(UIAlertAction(title: "Not now", style: .cancel))
             present(alert, animated: true)
         } else {
-            guard let image = imageView.image else { return }
+            guard let image = imageView.image else {
+                let alert = UIAlertController(title: "Unable to save image", message: "There are no selected images. You need to choose one to save into the photo library", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default))
+                present(alert, animated: true)
+                return
+            }
             UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
         }
     }
