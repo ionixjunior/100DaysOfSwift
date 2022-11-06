@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="pEI-wo-Tde">
-                                <rect key="frame" x="20" y="539.33333333333337" width="335" height="152"/>
+                                <rect key="frame" x="20" y="539.33333333333337" width="335" height="203"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1O-uv-wwz">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
@@ -131,6 +131,32 @@
                                             <constraint firstItem="YSc-Vc-UcB" firstAttribute="centerY" secondItem="45u-Qx-1me" secondAttribute="centerY" id="pAv-QI-QVS"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsi-rh-Gyw">
+                                        <rect key="frame" x="0.0" y="153" width="335" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Center:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOL-4f-d2x">
+                                                <rect key="frame" x="0.0" y="14.666666666666627" width="56.333333333333336" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sQf-6f-OiI">
+                                                <rect key="frame" x="86" y="10" width="251" height="31"/>
+                                                <connections>
+                                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="hf7-NG-6NP"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6Ez-4l-XdV"/>
+                                            <constraint firstAttribute="trailing" secondItem="sQf-6f-OiI" secondAttribute="trailing" id="9rG-LO-Khh"/>
+                                            <constraint firstItem="rOL-4f-d2x" firstAttribute="leading" secondItem="qsi-rh-Gyw" secondAttribute="leading" id="KTI-dj-px3"/>
+                                            <constraint firstItem="sQf-6f-OiI" firstAttribute="leading" secondItem="qsi-rh-Gyw" secondAttribute="leadingMargin" constant="80" id="L52-WS-O1R"/>
+                                            <constraint firstItem="rOL-4f-d2x" firstAttribute="centerY" secondItem="qsi-rh-Gyw" secondAttribute="centerY" id="bqY-yG-vDk"/>
+                                            <constraint firstItem="sQf-6f-OiI" firstAttribute="centerY" secondItem="qsi-rh-Gyw" secondAttribute="centerY" id="xA5-47-tEZ"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -151,6 +177,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="yPm-o2-gvg"/>
                     <connections>
+                        <outlet property="center" destination="sQf-6f-OiI" id="stJ-oV-1Z9"/>
+                        <outlet property="centerView" destination="qsi-rh-Gyw" id="aGV-e3-fkD"/>
                         <outlet property="changeFilterButton" destination="ChE-mG-saL" id="vta-DC-naf"/>
                         <outlet property="imageView" destination="TZk-L9-2jy" id="Z6R-2Y-gz4"/>
                         <outlet property="intensity" destination="kTB-44-tyy" id="C8e-Cb-9Va"/>

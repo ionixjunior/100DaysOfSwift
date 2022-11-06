@@ -7,10 +7,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     @IBOutlet weak var intensity: UISlider!
     @IBOutlet weak var radius: UISlider!
     @IBOutlet weak var scale: UISlider!
+    @IBOutlet weak var center: UISlider!
     @IBOutlet weak var changeFilterButton: UIButton!
     @IBOutlet weak var intensityView: UIView!
     @IBOutlet weak var radiusView: UIView!
     @IBOutlet weak var scaleView: UIView!
+    @IBOutlet weak var centerView: UIView!
     
     var currentImage: UIImage!
     var context: CIContext!
@@ -32,6 +34,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         intensity.value = 0.1
         radius.value = 0.1
         scale.value = 0.1
+        center.value = 0.1
     }
     
     @objc func importPicture() {
@@ -76,7 +79,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         }
 
         if inputKeys.contains(kCIInputCenterKey) {
-            currentFilter.setValue(CIVector(x: currentImage.size.width / 2, y: currentImage.size.height / 2), forKey: kCIInputCenterKey)
+            let x = currentImage.size.width / 2 * CGFloat(center.value)
+            let y = currentImage.size.height / 2 * CGFloat(center.value)
+            currentFilter.setValue(CIVector(x: x, y: y), forKey: kCIInputCenterKey)
+            centerView.isHidden = false
+        } else {
+            centerView.isHidden = true
         }
         
         guard let outputImage = currentFilter.outputImage else { return }
@@ -158,7 +166,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         }
     }
     
-    @IBAction func sliderChanged(_ sender: Any) {
+    @IBAction func sliderChanged(_ sender: UISlider) {
+        print(sender.value)
         applyProcessing()
     }
 }
