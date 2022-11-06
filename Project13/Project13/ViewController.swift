@@ -53,10 +53,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         
         if inputKeys.contains(kCIInputIntensityKey) {
             currentFilter.setValue(intensity.value, forKey: kCIInputIntensityKey)
+            intensityView.isHidden = false
+        } else {
+            intensityView.isHidden = true
         }
         
         if inputKeys.contains(kCIInputRadiusKey) {
             currentFilter.setValue(radius.value * 200, forKey: kCIInputRadiusKey)
+            radiusView.isHidden = false
+        } else {
+            radiusView.isHidden = true
         }
 
         if inputKeys.contains(kCIInputScaleKey) {
