@@ -25,6 +25,8 @@
 		7A9157E429190B2800AA0D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A9157E629190B2900AA0D0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A9157E929190B2900AA0D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A9157F029190CAD00AA0D0D /* whackBad.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whackBad.caf; sourceTree = "<group>"; };
+		7A9157F129190CAD00AA0D0D /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,8 @@
 				7A9157E329190B2800AA0D0D /* Main.storyboard */,
 				7A9157E629190B2900AA0D0D /* Assets.xcassets */,
 				7A9157E829190B2900AA0D0D /* LaunchScreen.storyboard */,
+				7A9157F129190CAD00AA0D0D /* whack.caf */,
+				7A9157F029190CAD00AA0D0D /* whackBad.caf */,
 			);
 			path = Project14;
 			sourceTree = "<group>";
