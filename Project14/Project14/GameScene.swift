@@ -48,6 +48,11 @@ class GameScene: SKScene {
             if whackSlot.isHit { continue }
             whackSlot.hit()
             
+            if let smoke = SKEmitterNode(fileNamed: "Smoke.sks") {
+                smoke.position = whackSlot.position
+                addChild(smoke)
+            }
+            
             if node.name == "charFriend" {
                 score -= 5
                 run(SKAction.playSoundFileNamed("whackBad.caf", waitForCompletion: false))
