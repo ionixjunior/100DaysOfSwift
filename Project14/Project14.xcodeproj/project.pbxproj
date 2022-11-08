@@ -10,6 +10,7 @@
 		7A410CD7291A6559002CEFCB /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7A410CD5291A6558002CEFCB /* whack.caf */; };
 		7A410CD8291A6559002CEFCB /* whackBad.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7A410CD6291A6558002CEFCB /* whackBad.caf */; };
 		7A410CDC291A6A11002CEFCB /* gameOver.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7A410CDB291A6A11002CEFCB /* gameOver.caf */; };
+		7A410CE0291A6F98002CEFCB /* Smoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7A410CDF291A6F98002CEFCB /* Smoke.sks */; };
 		7A9157DA29190B2800AA0D0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9157D929190B2800AA0D0D /* AppDelegate.swift */; };
 		7A9157DC29190B2800AA0D0D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7A9157DB29190B2800AA0D0D /* GameScene.sks */; };
 		7A9157E029190B2800AA0D0D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9157DF29190B2800AA0D0D /* GameScene.swift */; };
@@ -24,6 +25,7 @@
 		7A410CD5291A6558002CEFCB /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 		7A410CD6291A6558002CEFCB /* whackBad.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whackBad.caf; sourceTree = "<group>"; };
 		7A410CDB291A6A11002CEFCB /* gameOver.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameOver.caf; sourceTree = "<group>"; };
+		7A410CDF291A6F98002CEFCB /* Smoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Smoke.sks; sourceTree = "<group>"; };
 		7A9157D629190B2800AA0D0D /* Project14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A9157D929190B2800AA0D0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A9157DB29190B2800AA0D0D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				7A9157DB29190B2800AA0D0D /* GameScene.sks */,
 				7A9157DF29190B2800AA0D0D /* GameScene.swift */,
 				7A9157F229190F2A00AA0D0D /* WhackSlot.swift */,
+				7A410CDF291A6F98002CEFCB /* Smoke.sks */,
 				7A9157E129190B2800AA0D0D /* GameViewController.swift */,
 				7A9157E329190B2800AA0D0D /* Main.storyboard */,
 				7A9157E629190B2900AA0D0D /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				7A9157E729190B2900AA0D0D /* Assets.xcassets in Resources */,
 				7A9157EA29190B2900AA0D0D /* LaunchScreen.storyboard in Resources */,
 				7A410CD8291A6559002CEFCB /* whackBad.caf in Resources */,
+				7A410CE0291A6F98002CEFCB /* Smoke.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
