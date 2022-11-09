@@ -42,6 +42,14 @@ class ViewController: UIViewController {
             case 5:
                 self.imageView.transform = .identity
                 break
+            case 6:
+                self.imageView.alpha = 0.1
+                self.imageView.backgroundColor = .green
+                break
+            case 7:
+                self.imageView.alpha = 1
+                self.imageView.backgroundColor = .clear
+                break
             default:
                 break
             }
