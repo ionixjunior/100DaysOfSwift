@@ -36,6 +36,12 @@ class ViewController: UIViewController {
             case 3:
                 self.imageView.transform = .identity
                 break
+            case 4:
+                self.imageView.transform = CGAffineTransform(rotationAngle: .pi)
+                break
+            case 5:
+                self.imageView.transform = .identity
+                break
             default:
                 break
             }
