@@ -122,7 +122,7 @@ class ViewController: UIViewController {
         
         currentAnswer.text = currentAnswer.text?.appending(buttonTitle)
         activatedButtons.append(sender)
-        sender.isHidden = true
+        change(visibility: false, of: sender)
     }
     
     private func change(visibility: Bool, of button: UIButton) {
@@ -163,7 +163,7 @@ class ViewController: UIViewController {
                 guard let viewController = self else { return }
                 
                 for button in viewController.activatedButtons {
-                    button.isHidden = false
+                    self?.change(visibility: true, of: button)
                 }
                 
                 viewController.currentAnswer.text = ""
@@ -181,13 +181,13 @@ class ViewController: UIViewController {
         loadLevel()
         
         for button in letterButtons {
-            button.isHidden = false
+            change(visibility: true, of: button)
         }
     }
     
     @objc func clearTapped(_ sender: UIButton) {
         for button in activatedButtons {
-            button.isHidden = false
+            change(visibility: true, of: button)
         }
         
         currentAnswer.text = ""
