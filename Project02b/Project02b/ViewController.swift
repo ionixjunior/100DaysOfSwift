@@ -67,6 +67,9 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Continue", style: .default) {
             [weak self] _ in
+            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5) {
+                sender.transform = .identity
+            }
             self?.checkForTheNextQuestion()
         })
         present(alert, animated: true)
