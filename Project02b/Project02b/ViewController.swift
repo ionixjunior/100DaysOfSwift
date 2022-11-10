@@ -65,11 +65,14 @@ class ViewController: UIViewController {
         message += "Your score is \(game.score)."
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: checkForTheNextQuestion))
+        alert.addAction(UIAlertAction(title: "Continue", style: .default) {
+            [weak self] _ in
+            self?.checkForTheNextQuestion()
+        })
         present(alert, animated: true)
     }
     
-    func checkForTheNextQuestion(action: UIAlertAction) {
+    func checkForTheNextQuestion() {
         if game.isOver() {
             let highestScoreKey = "highest_score"
             let defaults = UserDefaults.standard
