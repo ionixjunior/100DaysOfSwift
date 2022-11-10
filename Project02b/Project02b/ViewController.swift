@@ -48,6 +48,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5) {
+            sender.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        }
+        
         var title: String
         var message = ""
         
