@@ -125,6 +125,16 @@ class ViewController: UIViewController {
         sender.isHidden = true
     }
     
+    private func change(visibility: Bool, of button: UIButton) {
+        UIView.animate(withDuration: 1, delay: 0) {
+            if visibility {
+                button.alpha = 1
+            } else {
+                button.alpha = 0
+            }
+        }
+    }
+    
     var correctAnswers = 0
     
     @objc func submitTapped(_ sender: UIButton) {
