@@ -6,6 +6,8 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Countries"
+        
         DispatchQueue.global(qos: .userInteractive).async {
             if let path = Bundle.main.path(forResource: "countries", ofType: "json") {
                 do {
