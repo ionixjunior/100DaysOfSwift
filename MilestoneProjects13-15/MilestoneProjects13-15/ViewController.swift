@@ -7,6 +7,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         
         title = "Countries"
+        navigationController?.navigationBar.prefersLargeTitles = true
         
         DispatchQueue.global(qos: .userInteractive).async {
             if let path = Bundle.main.path(forResource: "countries", ofType: "json") {

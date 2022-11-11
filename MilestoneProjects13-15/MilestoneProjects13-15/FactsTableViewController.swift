@@ -6,6 +6,8 @@ class FactsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.largeTitleDisplayMode = .never
+        
         if let country = country {
             title = country.name
         }
