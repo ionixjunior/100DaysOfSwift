@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A13B76B291F07D40029C65C /* FactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B76A291F07D40029C65C /* FactsTableViewController.swift */; };
 		7AC2736C291E56CC00C40210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC2736B291E56CC00C40210 /* AppDelegate.swift */; };
 		7AC2736E291E56CC00C40210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC2736D291E56CC00C40210 /* SceneDelegate.swift */; };
 		7AC27370291E56CC00C40210 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC2736F291E56CC00C40210 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A13B76A291F07D40029C65C /* FactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsTableViewController.swift; sourceTree = "<group>"; };
 		7AC27368291E56CC00C40210 /* MilestoneProjects13-15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MilestoneProjects13-15.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC2736B291E56CC00C40210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AC2736D291E56CC00C40210 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				7AC2736D291E56CC00C40210 /* SceneDelegate.swift */,
 				7AC2736F291E56CC00C40210 /* ViewController.swift */,
 				7AC27371291E56CC00C40210 /* Main.storyboard */,
+				7A13B76A291F07D40029C65C /* FactsTableViewController.swift */,
 				7AC27374291E56CC00C40210 /* Assets.xcassets */,
 				7AC27376291E56CC00C40210 /* LaunchScreen.storyboard */,
 				7AC27379291E56CC00C40210 /* Info.plist */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A13B76B291F07D40029C65C /* FactsTableViewController.swift in Sources */,
 				7AC27382291E5D9A00C40210 /* Country.swift in Sources */,
 				7AC27370291E56CC00C40210 /* ViewController.swift in Sources */,
 				7AC27386291E5E0B00C40210 /* OfficialLanguage.swift in Sources */,
