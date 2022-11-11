@@ -1,0 +1,85 @@
+{
+    {
+        "name": "Brazil",
+        "facts": [
+            {
+                "capital_city": "Brasília",
+                "official_languages": [
+                    {
+                        "name": "Portuguese"
+                    }
+                ],
+                "size": 8515767,
+                "population": 217240060,
+                "currency": "Real (BRL)"
+            }
+        ]
+    },
+    {
+        "name": "Argentina",
+        "facts": [
+            {
+                "capital_city": "Buenos Aires",
+                "official_languages": [
+                    {
+                        "name": "Spanish"
+                    }
+                ],
+                "size": 2780400,
+                "population": 47327407,
+                "currency": "Argentine peso (ARS)"
+            }
+        ]
+    },
+    {
+        "name": "Spain",
+        "facts": [
+            {
+                "capital_city": "Madrid",
+                "official_languages": [
+                    {
+                        "name": "Spanish"
+                    }
+                ],
+                "size": 505990,
+                "population": 47163418,
+                "currency": "Euro (EUR)"
+            }
+        ]
+    },
+    {
+        "name": "Finland",
+        "facts": [
+            {
+                "capital_city": "Helsinki",
+                "official_languages": [
+                    {
+                        "name": "Finnish"
+                    },
+                    {
+                        "name": "Swedish"
+                    }
+                ],
+                "size": 338455,
+                "population": 5553000,
+                "currency": "Euro (EUR)"
+            }
+        ]
+    },
+    {
+        "name": "Italy",
+        "facts": [
+            {
+                "capital_city": "Rome",
+                "official_languages": [
+                    {
+                        "name": "Italian"
+                    }
+                ],
+                "size": 301230,
+                "population": 61095551,
+                "currency": "Euro (EUR)"
+            }
+        ]
+    }
+}
