@@ -6,6 +6,19 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        DispatchQueue.global(qos: .userInteractive).async {
+            if let path = Bundle.main.path(forResource: "countries", ofType: "json") {
+                do {
+                    if let jsonData = try String(contentsOfFile: path).data(using: .utf8) {
+                        if let countries = try? JSONDecoder().decode([Country].self, from: jsonData) {
+                            self.countries = countries
+                        }
+                    }
+                } catch {
+                    print(error)
+                }
+            }
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
