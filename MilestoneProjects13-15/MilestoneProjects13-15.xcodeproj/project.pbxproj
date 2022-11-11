@@ -14,6 +14,9 @@
 		7AC27375291E56CC00C40210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AC27374291E56CC00C40210 /* Assets.xcassets */; };
 		7AC27378291E56CC00C40210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AC27376291E56CC00C40210 /* LaunchScreen.storyboard */; };
 		7AC27380291E5C1E00C40210 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 7AC2737F291E5C1E00C40210 /* countries.json */; };
+		7AC27382291E5D9A00C40210 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC27381291E5D9A00C40210 /* Country.swift */; };
+		7AC27384291E5DBC00C40210 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC27383291E5DBC00C40210 /* Fact.swift */; };
+		7AC27386291E5E0B00C40210 /* OfficialLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC27385291E5E0B00C40210 /* OfficialLanguage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		7AC27377291E56CC00C40210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AC27379291E56CC00C40210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AC2737F291E5C1E00C40210 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		7AC27381291E5D9A00C40210 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		7AC27383291E5DBC00C40210 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		7AC27385291E5E0B00C40210 /* OfficialLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialLanguage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				7AC27376291E56CC00C40210 /* LaunchScreen.storyboard */,
 				7AC27379291E56CC00C40210 /* Info.plist */,
 				7AC2737F291E5C1E00C40210 /* countries.json */,
+				7AC27381291E5D9A00C40210 /* Country.swift */,
+				7AC27383291E5DBC00C40210 /* Fact.swift */,
+				7AC27385291E5E0B00C40210 /* OfficialLanguage.swift */,
 			);
 			path = "MilestoneProjects13-15";
 			sourceTree = "<group>";
@@ -142,7 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC27382291E5D9A00C40210 /* Country.swift in Sources */,
 				7AC27370291E56CC00C40210 /* ViewController.swift in Sources */,
+				7AC27386291E5E0B00C40210 /* OfficialLanguage.swift in Sources */,
+				7AC27384291E5DBC00C40210 /* Fact.swift in Sources */,
 				7AC2736C291E56CC00C40210 /* AppDelegate.swift in Sources */,
 				7AC2736E291E56CC00C40210 /* SceneDelegate.swift in Sources */,
 			);
