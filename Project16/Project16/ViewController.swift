@@ -16,6 +16,23 @@ class ViewController: UIViewController, MKMapViewDelegate {
         mapView.addAnnotations([london, oslo, paris, rome, washington])
     }
 
-
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard annotation is Capital else { return nil}
+        
+        let identifier = "Capital"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        
+        if annotationView == nil {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+            
+            let button = UIButton(type: .detailDisclosure)
+            annotationView?.rightCalloutAccessoryView = button
+        } else {
+            annotationView?.annotation = annotation
+        }
+        
+        return annotationView
+    }
 }
 
