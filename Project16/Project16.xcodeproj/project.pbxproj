@@ -13,6 +13,7 @@
 		7A25991C292020F200395E53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A25991A292020F200395E53 /* Main.storyboard */; };
 		7A25991E292020F300395E53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A25991D292020F300395E53 /* Assets.xcassets */; };
 		7A259921292020F300395E53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A25991F292020F300395E53 /* LaunchScreen.storyboard */; };
+		7A259929292023D300395E53 /* Capital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A259928292023D300395E53 /* Capital.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7A25991D292020F300395E53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A259920292020F300395E53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A259922292020F300395E53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A259928292023D300395E53 /* Capital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capital.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				7A259914292020F200395E53 /* AppDelegate.swift */,
 				7A259916292020F200395E53 /* SceneDelegate.swift */,
 				7A259918292020F200395E53 /* ViewController.swift */,
+				7A259928292023D300395E53 /* Capital.swift */,
 				7A25991A292020F200395E53 /* Main.storyboard */,
 				7A25991D292020F300395E53 /* Assets.xcassets */,
 				7A25991F292020F300395E53 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				7A259919292020F200395E53 /* ViewController.swift in Sources */,
 				7A259915292020F200395E53 /* AppDelegate.swift in Sources */,
+				7A259929292023D300395E53 /* Capital.swift in Sources */,
 				7A259917292020F200395E53 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
