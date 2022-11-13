@@ -74,7 +74,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
         guard let capital = view.annotation as? Capital else { return }
         
         let placeName = capital.title
-        let placeInfo = capital.info
         
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WebView") as? WebViewController {
             viewController.placeName = placeName
