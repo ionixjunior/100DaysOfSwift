@@ -17,10 +17,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         mapView.addAnnotations([london, oslo, paris, rome, washington])
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Change view", style: .plain, target: self, action: #selector(changeViewTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Change view", style: .plain, target: self, action: #selector(changeViewTapped(sender:)))
     }
     
-    @objc func changeViewTapped() {
+    @objc func changeViewTapped(sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Choose the map type you want to see", message: nil, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Hybrid", style: .default, handler: chooseMapType))
         alert.addAction(UIAlertAction(title: "Hybrid Flyover", style: .default, handler: chooseMapType))
@@ -29,6 +29,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         alert.addAction(UIAlertAction(title: "Standard", style: .default, handler: chooseMapType))
         alert.addAction(UIAlertAction(title: "Muted Standard", style: .default, handler: chooseMapType))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.configurePopoverPresentationController(item: sender)
         present(alert, animated: true)
     }
     
