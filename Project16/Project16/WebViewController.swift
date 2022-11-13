@@ -16,5 +16,7 @@ class WebViewController: UIViewController {
         guard let url = URL(string: "https://en.wikipedia.org/wiki/\(encodedPlaceName)") else { return }
         let request = URLRequest(url: url)
         webView.load(request)
+        
+        navigationController?.isToolbarHidden = false
     }
 }
