@@ -24,10 +24,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let alert = UIAlertController(title: "Choose the map type you want to see", message: nil, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Hybrid", style: .default, handler: chooseMapType))
         alert.addAction(UIAlertAction(title: "Hybrid Flyover", style: .default, handler: chooseMapType))
-        alert.addAction(UIAlertAction(title: "Muted Standard", style: .default, handler: chooseMapType))
         alert.addAction(UIAlertAction(title: "Satellite", style: .default, handler: chooseMapType))
         alert.addAction(UIAlertAction(title: "Satellite Flyover", style: .default, handler: chooseMapType))
         alert.addAction(UIAlertAction(title: "Standard", style: .default, handler: chooseMapType))
+        alert.addAction(UIAlertAction(title: "Muted Standard", style: .default, handler: chooseMapType))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(alert, animated: true)
     }
