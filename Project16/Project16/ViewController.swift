@@ -77,6 +77,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let placeInfo = capital.info
         
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WebView") as? WebViewController {
+            viewController.placeName = placeName
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
