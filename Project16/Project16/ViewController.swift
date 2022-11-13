@@ -16,6 +16,24 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let washington = Capital(coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667), title: "Washington DC", info: "Named after George himself.")
         
         mapView.addAnnotations([london, oslo, paris, rome, washington])
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Change view", style: .plain, target: self, action: #selector(changeViewTapped))
+    }
+    
+    @objc func changeViewTapped() {
+        let alert = UIAlertController(title: "Choose the map type you want to see", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Hybrid", style: .default, handler: chooseMapType))
+        alert.addAction(UIAlertAction(title: "Hybrid Flyover", style: .default, handler: chooseMapType))
+        alert.addAction(UIAlertAction(title: "Muted Standard", style: .default, handler: chooseMapType))
+        alert.addAction(UIAlertAction(title: "Satellite", style: .default, handler: chooseMapType))
+        alert.addAction(UIAlertAction(title: "Satellite Flyover", style: .default, handler: chooseMapType))
+        alert.addAction(UIAlertAction(title: "Standard", style: .default, handler: chooseMapType))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alert, animated: true)
+    }
+    
+    func chooseMapType(action: UIAlertAction) {
+        print(action.title!)
     }
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
