@@ -73,10 +73,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard let capital = view.annotation as? Capital else { return }
         
-        let placeName = capital.title
-        
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WebView") as? WebViewController {
-            viewController.placeName = placeName
+            viewController.placeName = capital.title
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
