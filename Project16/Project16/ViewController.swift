@@ -76,9 +76,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let placeName = capital.title
         let placeInfo = capital.info
         
-        let alert = UIAlertController(title: placeName, message: placeInfo, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default))
-        present(alert, animated: true)
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WebView") as? WebViewController {
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }
 
