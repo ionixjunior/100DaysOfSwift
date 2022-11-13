@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQ7-1b-VGg">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="753"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Mj3-zx-xC8"/>
@@ -28,7 +28,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fQ7-1b-VGg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0mi-tp-56d"/>
+                            <constraint firstItem="fQ7-1b-VGg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0mi-tp-56d"/>
                             <constraint firstItem="fQ7-1b-VGg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="D4w-Ir-Isv"/>
                             <constraint firstItem="fQ7-1b-VGg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D71-bo-FS4"/>
                             <constraint firstAttribute="bottom" secondItem="fQ7-1b-VGg" secondAttribute="bottom" id="kn3-UK-qzM"/>
