@@ -33,7 +33,20 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     func chooseMapType(action: UIAlertAction) {
-        print(action.title!)
+        guard let title = action.title else { return }
+        mapView.mapType = getMapTypeFrom(typeName: title)
+    }
+    
+    func getMapTypeFrom(typeName: String) -> MKMapType {
+        switch typeName {
+        case "Hybrid": return MKMapType.hybrid
+        case "Hybrid Flyover": return MKMapType.hybridFlyover
+        case "Muted Standard": return MKMapType.mutedStandard
+        case "Satellite": return MKMapType.satellite
+        case "Satellite Flyover": return MKMapType.satelliteFlyover
+        case "Standard": return MKMapType.standard
+        default: return MKMapType.standard
+        }
     }
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
