@@ -43,6 +43,40 @@
             </objects>
             <point key="canvasLocation" x="1069.2307692307693" y="-2.1327014218009479"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="YbW-C9-A5M">
+            <objects>
+                <viewController storyboardIdentifier="WebView" id="0gY-cG-Emc" customClass="WebViewController" customModule="Project16" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f5i-MM-y3j">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSi-vJ-wuH">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GKv-Yk-4iR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cSi-vJ-wuH" firstAttribute="top" secondItem="GKv-Yk-4iR" secondAttribute="top" id="0i1-86-k5F"/>
+                            <constraint firstItem="cSi-vJ-wuH" firstAttribute="leading" secondItem="GKv-Yk-4iR" secondAttribute="leading" id="CWG-Zm-TR2"/>
+                            <constraint firstItem="cSi-vJ-wuH" firstAttribute="trailing" secondItem="GKv-Yk-4iR" secondAttribute="trailing" id="acl-gg-t2z"/>
+                            <constraint firstItem="GKv-Yk-4iR" firstAttribute="bottom" secondItem="cSi-vJ-wuH" secondAttribute="bottom" id="g77-af-2xI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="cSi-vJ-wuH" id="l4m-Vr-sgP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bB-eM-rrv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1961.5384615384614" y="-2.1327014218009479"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="kBJ-Vf-5k9">
             <objects>
