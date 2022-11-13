@@ -8,4 +8,16 @@ extension MKMapView {
             return MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
         }
     }
+    
+    func changePin(tintColor: UIColor, of annotation: MKAnnotationView?) {
+        if #available(iOS 11.0, *) {
+            if let annotation = annotation as? MKMarkerAnnotationView {
+                annotation.markerTintColor = tintColor
+            }
+        } else {
+            if let annotation = annotation as? MKPinAnnotationView {
+                annotation.pinTintColor = tintColor
+            }
+        }
+    }
 }

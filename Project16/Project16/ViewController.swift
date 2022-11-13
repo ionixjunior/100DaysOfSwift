@@ -32,6 +32,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             annotationView?.annotation = annotation
         }
         
+        mapView.changePin(tintColor: UIColor.purple, of: annotationView)
         return annotationView
     }
     
