@@ -15,6 +15,7 @@
 		7A259921292020F300395E53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A25991F292020F300395E53 /* LaunchScreen.storyboard */; };
 		7A259929292023D300395E53 /* Capital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A259928292023D300395E53 /* Capital.swift */; };
 		7A25992C292028F500395E53 /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A25992B292028F500395E53 /* MKMapViewExtension.swift */; };
+		7ABFB52A29212A56001E9C2C /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABFB52929212A56001E9C2C /* UIAlertControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7A259922292020F300395E53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A259928292023D300395E53 /* Capital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capital.swift; sourceTree = "<group>"; };
 		7A25992B292028F500395E53 /* MKMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
+		7ABFB52929212A56001E9C2C /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				7A25992B292028F500395E53 /* MKMapViewExtension.swift */,
+				7ABFB52929212A56001E9C2C /* UIAlertControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				7A25992C292028F500395E53 /* MKMapViewExtension.swift in Sources */,
 				7A259919292020F200395E53 /* ViewController.swift in Sources */,
+				7ABFB52A29212A56001E9C2C /* UIAlertControllerExtension.swift in Sources */,
 				7A259915292020F200395E53 /* AppDelegate.swift in Sources */,
 				7A259929292023D300395E53 /* Capital.swift in Sources */,
 				7A259917292020F200395E53 /* SceneDelegate.swift in Sources */,
