@@ -9,8 +9,11 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let placeName = placeName {
-            title = placeName
-        }
+        guard let placeName = placeName else { return }
+        title = placeName
+        
+        guard let url = URL(string: "https://en.wikipedia.org/wiki/\(placeName)") else { return }
+        let request = URLRequest(url: url)
+        webView.load(request)
     }
 }
