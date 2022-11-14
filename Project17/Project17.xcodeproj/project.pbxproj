@@ -15,6 +15,8 @@
 		7A32DA3F29224AE100F9100C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A32DA3D29224AE100F9100C /* Main.storyboard */; };
 		7A32DA4129224AE200F9100C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A32DA4029224AE200F9100C /* Assets.xcassets */; };
 		7A32DA4429224AE200F9100C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A32DA4229224AE200F9100C /* LaunchScreen.storyboard */; };
+		7A32DA4C29224B5500F9100C /* explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7A32DA4A29224B5500F9100C /* explosion.sks */; };
+		7A32DA4D29224B5500F9100C /* starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7A32DA4B29224B5500F9100C /* starfield.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		7A32DA3E29224AE100F9100C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A32DA4029224AE200F9100C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A32DA4329224AE200F9100C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A32DA4A29224B5500F9100C /* explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explosion.sks; sourceTree = "<group>"; };
+		7A32DA4B29224B5500F9100C /* starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = starfield.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				7A32DA3D29224AE100F9100C /* Main.storyboard */,
 				7A32DA4029224AE200F9100C /* Assets.xcassets */,
 				7A32DA4229224AE200F9100C /* LaunchScreen.storyboard */,
+				7A32DA4A29224B5500F9100C /* explosion.sks */,
+				7A32DA4B29224B5500F9100C /* starfield.sks */,
 			);
 			path = Project17;
 			sourceTree = "<group>";
@@ -132,8 +138,10 @@
 				7A32DA3F29224AE100F9100C /* Main.storyboard in Resources */,
 				7A32DA3629224AE100F9100C /* GameScene.sks in Resources */,
 				7A32DA4129224AE200F9100C /* Assets.xcassets in Resources */,
+				7A32DA4C29224B5500F9100C /* explosion.sks in Resources */,
 				7A32DA4429224AE200F9100C /* LaunchScreen.storyboard in Resources */,
 				7A32DA3829224AE100F9100C /* Actions.sks in Resources */,
+				7A32DA4D29224B5500F9100C /* starfield.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
