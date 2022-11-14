@@ -61,6 +61,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        for node in children {
+            if node.position.x < -300 {
+                node.removeFromParent()
+            }
+        }
+        
+        if !isGameOver {
+            score += 1
+        }
     }
 }
