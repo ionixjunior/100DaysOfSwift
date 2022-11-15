@@ -114,10 +114,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     @objc func moveLeft() {
         plane.position.x = plane.position.x - 1
+        
+        if (plane.position.x < 113) {
+            let planeExplosion = SKEmitterNode(fileNamed: "explosion")!
+            planeExplosion.position = plane.position
+            addChild(planeExplosion)
+            plane.removeFromParent()
+        }
     }
     
     @objc func moveRight() {
         plane.position.x = plane.position.x + 1
+        
+        if (plane.position.x > 644) {
+            let planeExplosion = SKEmitterNode(fileNamed: "explosion")!
+            planeExplosion.position = plane.position
+            addChild(planeExplosion)
+            plane.removeFromParent()
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
