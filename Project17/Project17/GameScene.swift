@@ -53,11 +53,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var totalOfEnemies = 0
     
+    fileprivate func canDecreaseTimer() -> Bool {
+        return totalOfEnemies > 1 && totalOfEnemies % 20 == 1
+    }
+    
     @objc func createEnemy() {
         guard let enemy = possibleEnemies.randomElement() else { return }
         
         totalOfEnemies += 1
-        if totalOfEnemies > 1 && totalOfEnemies % 20 == 1 {
+        if canDecreaseTimer() {
             timeInterval -= 0.1
             gameTimer?.invalidate()
             gameTimer = createTimerWith(timeInterval: timeInterval)
