@@ -60,6 +60,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             addChild(objectExplosion)
             nodeA.removeFromParent()
             nodeB.removeFromParent()
+            gameOver()
         }
     }
     
@@ -120,6 +121,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             planeExplosion.position = plane.position
             addChild(planeExplosion)
             plane.removeFromParent()
+            gameOver()
         }
     }
     
@@ -131,6 +133,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             planeExplosion.position = plane.position
             addChild(planeExplosion)
             plane.removeFromParent()
+            gameOver()
         }
     }
     
@@ -144,5 +147,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 node.removeFromParent()
             }
         }
+    }
+    
+    func gameOver() {
+        planeTimer?.invalidate()
+        gameTimer?.invalidate()
     }
 }
