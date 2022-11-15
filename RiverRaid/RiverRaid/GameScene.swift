@@ -12,10 +12,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         background.position = CGPoint(x: 375, y: 667)
         background.blendMode = .replace
         background.zPosition = -1
+        background.isUserInteractionEnabled = false
         addChild(background)
         
         plane = SKSpriteNode(imageNamed: "plane")
         plane.name = "plane"
+        plane.isUserInteractionEnabled = false
         plane.position = CGPoint(x: 375, y: 100)
         plane.physicsBody = SKPhysicsBody(texture: plane.texture!, size: plane.size)
         plane.physicsBody?.affectedByGravity = false
@@ -23,17 +25,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let leftButton = SKSpriteNode(imageNamed: "left")
         leftButton.name = "left"
-        leftButton.position = CGPoint(x: 50, y: 50)
+        leftButton.position = CGPoint(x: 100, y: 50)
+        leftButton.zPosition = 1
         addChild(leftButton)
         
         let rightButton = SKSpriteNode(imageNamed: "right")
         rightButton.name = "right"
-        rightButton.position = CGPoint(x: 150, y: 50)
+        rightButton.position = CGPoint(x: 250, y: 50)
+        rightButton.zPosition = 1
         addChild(rightButton)
         
         let fireButton = SKSpriteNode(imageNamed: "fire")
         fireButton.name = "fire"
         fireButton.position = CGPoint(x: 700, y: 50)
+        fireButton.zPosition = 1
         addChild(fireButton)
         
         physicsWorld.contactDelegate = self
