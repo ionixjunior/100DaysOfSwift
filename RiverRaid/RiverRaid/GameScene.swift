@@ -59,7 +59,7 @@ class GameScene: SKScene {
         if node.name == "left" {
             planeTimer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(moveLeft), userInfo: nil, repeats: true)
         } else if node.name == "right" {
-            print("right")
+            planeTimer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(moveRight), userInfo: nil, repeats: true)
         } else if node.name == "fire" {
             print("fire")
         }
@@ -73,7 +73,7 @@ class GameScene: SKScene {
         if node.name == "left" {
             planeTimer?.invalidate()
         } else if node.name == "right" {
-            print("right")
+            planeTimer?.invalidate()
         } else if node.name == "fire" {
             print("fire")
         }
@@ -81,6 +81,10 @@ class GameScene: SKScene {
     
     @objc func moveLeft() {
         plane.position.x = plane.position.x - 1
+    }
+    
+    @objc func moveRight() {
+        plane.position.x = plane.position.x + 1
     }
     
     override func update(_ currentTime: TimeInterval) {
