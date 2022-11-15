@@ -113,6 +113,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         player.removeFromParent()
         isGameOver = true
+        gameTimer?.invalidate()
     }
     
     var canMovePlayer = false
