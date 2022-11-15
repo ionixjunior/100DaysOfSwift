@@ -107,11 +107,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
-        let explosion = SKEmitterNode(fileNamed: "explosion")!
-        explosion.position = player.position
-        addChild(explosion)
-        
+        let playerExplosion = SKEmitterNode(fileNamed: "explosion")!
+        playerExplosion.position = player.position
+        addChild(playerExplosion)
         player.removeFromParent()
+        
+        if let objectNode = contact.bodyB.node {
+            let objectExplosion = SKEmitterNode(fileNamed: "explosion")!
+            objectExplosion.position = objectNode.position
+            addChild(objectExplosion)
+            objectNode.removeFromParent()
+        }
+        
         isGameOver = true
         gameTimer?.invalidate()
     }
