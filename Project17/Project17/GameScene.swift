@@ -9,6 +9,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var possibleEnemies = ["ball", "hammer", "tv"]
     var gameTimer: Timer?
     var isGameOver = false
+    var timeInterval = 1.0
     
     var score = 0 {
         didSet {
@@ -52,6 +53,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         guard let enemy = possibleEnemies.randomElement() else { return }
         
         totalOfEnemies += 1
+        if totalOfEnemies > 1 && totalOfEnemies % 20 == 1 {
+            timeInterval -= 0.1
+            gameTimer?.invalidate()
+            gameTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
+        }
+        
         let sprite = SKSpriteNode(imageNamed: enemy)
         sprite.position = CGPoint(x: 1200, y: Int.random(in: 50...736))
         addChild(sprite)
