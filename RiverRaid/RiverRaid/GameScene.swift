@@ -1,6 +1,7 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    var plane: SKSpriteNode!
     
     var gameTimer: Timer?
     var objects = ["helicopter", "ship"]
@@ -12,7 +13,7 @@ class GameScene: SKScene {
         background.zPosition = -1
         addChild(background)
         
-        let plane = SKSpriteNode(imageNamed: "plane")
+        plane = SKSpriteNode(imageNamed: "plane")
         plane.position = CGPoint(x: 375, y: 100)
         plane.physicsBody = SKPhysicsBody(texture: plane.texture!, size: plane.size)
         plane.physicsBody?.affectedByGravity = false
