@@ -24,12 +24,12 @@ class GameScene: SKScene {
         addChild(leftButton)
         
         let rightButton = SKSpriteNode(imageNamed: "right")
-        leftButton.name = "right"
+        rightButton.name = "right"
         rightButton.position = CGPoint(x: 150, y: 50)
         addChild(rightButton)
         
         let fireButton = SKSpriteNode(imageNamed: "fire")
-        leftButton.name = "fire"
+        fireButton.name = "fire"
         fireButton.position = CGPoint(x: 700, y: 50)
         addChild(fireButton)
         
@@ -47,6 +47,20 @@ class GameScene: SKScene {
 
     func touchMoved(toPoint pos : CGPoint) {
         
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let location = touch.location(in: self)
+        let node = atPoint(location)
+        
+        if node.name == "left" {
+            print("left")
+        } else if node.name == "right" {
+            print("right")
+        } else if node.name == "fire" {
+            print("fire")
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
