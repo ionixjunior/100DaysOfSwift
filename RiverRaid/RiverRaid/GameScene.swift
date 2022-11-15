@@ -63,7 +63,7 @@ class GameScene: SKScene {
         } else if node.name == "fire" {
             let sprite = SKSpriteNode(imageNamed: "bullet")
             sprite.name = "bullet"
-            sprite.position = CGPoint(x: plane.position.x, y: 190)
+            sprite.position = CGPoint(x: plane.position.x, y: 200)
             sprite.physicsBody = SKPhysicsBody(texture: sprite.texture!, size: sprite.size)
             addChild(sprite)
             sprite.run(SKAction.moveTo(y: 1500, duration: 1))
