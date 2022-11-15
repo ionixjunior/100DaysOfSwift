@@ -3,7 +3,11 @@ import SpriteKit
 class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
-        backgroundColor = UIColor(hex: "#619030ff")!
+        let background = SKSpriteNode(imageNamed: "background")
+        background.position = CGPoint(x: 375, y: 667)
+        background.blendMode = .replace
+        background.zPosition = -1
+        addChild(background)
     }
 
     func touchMoved(toPoint pos : CGPoint) {
