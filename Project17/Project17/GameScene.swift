@@ -44,7 +44,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.gravity = .zero
         physicsWorld.contactDelegate = self
         
-        gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
+        gameTimer = createTimerWith(timeInterval: timeInterval)
+    }
+    
+    func createTimerWith(timeInterval: TimeInterval) -> Timer {
+        return Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
     }
     
     var totalOfEnemies = 0
@@ -56,7 +60,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if totalOfEnemies > 1 && totalOfEnemies % 20 == 1 {
             timeInterval -= 0.1
             gameTimer?.invalidate()
-            gameTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
+            gameTimer = createTimerWith(timeInterval: timeInterval)
         }
         
         let sprite = SKSpriteNode(imageNamed: enemy)
