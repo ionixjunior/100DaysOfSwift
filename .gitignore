@@ -9,3 +9,8 @@ MilestoneProjects*/*.xcodeproj/*
 !MilestoneProjects*/*.xcodeproj/project.pbxproj
 !MilestoneProjects*/*.xcodeproj/*.xcworkspace/xcshareddata/
 !MilestoneProjects*/*.xcodeproj/*.xcworkspace/contents.xcworkspacedata
+
+RiverRaid*/*.xcodeproj/*
+!RiverRaid*/*.xcodeproj/project.pbxproj
+!RiverRaid*/*.xcodeproj/*.xcworkspace/xcshareddata/
+!RiverRaid*/*.xcodeproj/*.xcworkspace/contents.xcworkspacedata
