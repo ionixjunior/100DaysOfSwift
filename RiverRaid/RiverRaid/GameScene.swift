@@ -18,6 +18,21 @@ class GameScene: SKScene {
         plane.physicsBody?.affectedByGravity = false
         addChild(plane)
         
+        let leftButton = SKSpriteNode(imageNamed: "left")
+        leftButton.name = "left"
+        leftButton.position = CGPoint(x: 50, y: 50)
+        addChild(leftButton)
+        
+        let rightButton = SKSpriteNode(imageNamed: "right")
+        leftButton.name = "right"
+        rightButton.position = CGPoint(x: 150, y: 50)
+        addChild(rightButton)
+        
+        let fireButton = SKSpriteNode(imageNamed: "fire")
+        leftButton.name = "fire"
+        fireButton.position = CGPoint(x: 700, y: 50)
+        addChild(fireButton)
+        
         gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(createObject), userInfo: nil, repeats: true)
     }
     
