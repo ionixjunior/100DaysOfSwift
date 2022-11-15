@@ -26,6 +26,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(starfield)
         
         player = SKSpriteNode(imageNamed: "player")
+        player.name = "player"
         player.position = CGPoint(x: 100, y: 384)
         player.physicsBody = SKPhysicsBody(texture: player.texture!, size: player.size)
         player.physicsBody?.contactTestBitMask = 1
@@ -82,7 +83,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             location.y = 668
         }
         
-        player.position = location
+        if canMovePlayer {
+            player.position = location
+        }
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -92,5 +95,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         player.removeFromParent()
         isGameOver = true
+    }
+    
+    var canMovePlayer = false
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let location = touch.location(in: self)
+        
+        let node = self.atPoint(location)
+        canMovePlayer = node.name == "player" ? true : false
     }
 }
