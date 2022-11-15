@@ -14,6 +14,7 @@
 		7A8FFAB62923FF30004AE15F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8FFAB42923FF30004AE15F /* Main.storyboard */; };
 		7A8FFAB82923FF31004AE15F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8FFAB72923FF31004AE15F /* Assets.xcassets */; };
 		7A8FFABB2923FF31004AE15F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8FFAB92923FF31004AE15F /* LaunchScreen.storyboard */; };
+		7A8FFAC329240319004AE15F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FFAC229240319004AE15F /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		7A8FFAB52923FF30004AE15F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A8FFAB72923FF31004AE15F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A8FFABA2923FF31004AE15F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A8FFAC229240319004AE15F /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		7A8FFAA92923FF30004AE15F /* RiverRaid */ = {
 			isa = PBXGroup;
 			children = (
+				7A8FFAC129240309004AE15F /* Extensions */,
 				7A8FFAAA2923FF30004AE15F /* AppDelegate.swift */,
 				7A8FFAAC2923FF30004AE15F /* GameScene.sks */,
 				7A8FFAB02923FF30004AE15F /* GameScene.swift */,
@@ -66,6 +69,14 @@
 				7A8FFAB92923FF31004AE15F /* LaunchScreen.storyboard */,
 			);
 			path = RiverRaid;
+			sourceTree = "<group>";
+		};
+		7A8FFAC129240309004AE15F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A8FFAC229240319004AE15F /* UIColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 				7A8FFAB12923FF30004AE15F /* GameScene.swift in Sources */,
 				7A8FFAB32923FF30004AE15F /* GameViewController.swift in Sources */,
 				7A8FFAAB2923FF30004AE15F /* AppDelegate.swift in Sources */,
+				7A8FFAC329240319004AE15F /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
