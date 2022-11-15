@@ -35,6 +35,10 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        
+        for node in children {
+            if node.position.y < -300 {
+                node.removeFromParent()
+            }
+        }
     }
 }
