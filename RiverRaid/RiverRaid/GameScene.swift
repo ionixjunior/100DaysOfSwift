@@ -40,7 +40,7 @@ class GameScene: SKScene {
     
     @objc func createObject() {
         guard let object = objects.randomElement() else { return }
-        
+
         let sprite = SKSpriteNode(imageNamed: object)
         sprite.position = CGPoint(x: Int.random(in: 200...550), y: 1400)
         sprite.physicsBody = SKPhysicsBody(texture: sprite.texture!, size: sprite.size)
@@ -61,7 +61,12 @@ class GameScene: SKScene {
         } else if node.name == "right" {
             planeTimer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(moveRight), userInfo: nil, repeats: true)
         } else if node.name == "fire" {
-            print("fire")
+            let sprite = SKSpriteNode(imageNamed: "bullet")
+            sprite.name = "bullet"
+            sprite.position = CGPoint(x: plane.position.x, y: 190)
+            sprite.physicsBody = SKPhysicsBody(texture: sprite.texture!, size: sprite.size)
+            addChild(sprite)
+            sprite.run(SKAction.moveTo(y: 1500, duration: 1))
         }
     }
     
@@ -90,6 +95,10 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         for node in children {
             if node.position.y < -300 {
+                node.removeFromParent()
+            }
+            
+            if node.position.y > 1400 {
                 node.removeFromParent()
             }
         }
