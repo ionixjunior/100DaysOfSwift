@@ -1,6 +1,6 @@
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     var plane: SKSpriteNode!
     
     var gameTimer: Timer?
@@ -15,6 +15,7 @@ class GameScene: SKScene {
         addChild(background)
         
         plane = SKSpriteNode(imageNamed: "plane")
+        plane.name = "plane"
         plane.position = CGPoint(x: 375, y: 100)
         plane.physicsBody = SKPhysicsBody(texture: plane.texture!, size: plane.size)
         plane.physicsBody?.affectedByGravity = false
@@ -35,15 +36,41 @@ class GameScene: SKScene {
         fireButton.position = CGPoint(x: 700, y: 50)
         addChild(fireButton)
         
+        physicsWorld.contactDelegate = self
+        
         gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(createObject), userInfo: nil, repeats: true)
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        guard let nodeA = contact.bodyA.node else { return }
+        guard let nodeB = contact.bodyB.node else { return }
+        
+        if nodeA.name == "object" {
+            let objectExplosion = SKEmitterNode(fileNamed: "explosion")!
+            objectExplosion.position = nodeA.position
+            addChild(objectExplosion)
+            nodeA.removeFromParent()
+            nodeB.removeFromParent()
+        } else if nodeA.name == "plane" {
+            let planeExplosion = SKEmitterNode(fileNamed: "explosion")!
+            planeExplosion.position = nodeA.position
+            let objectExplosion = SKEmitterNode(fileNamed: "explosion")!
+            objectExplosion.position = nodeB.position
+            addChild(planeExplosion)
+            addChild(objectExplosion)
+            nodeA.removeFromParent()
+            nodeB.removeFromParent()
+        }
     }
     
     @objc func createObject() {
         guard let object = objects.randomElement() else { return }
 
         let sprite = SKSpriteNode(imageNamed: object)
+        sprite.name = "object"
         sprite.position = CGPoint(x: Int.random(in: 200...550), y: 1400)
         sprite.physicsBody = SKPhysicsBody(texture: sprite.texture!, size: sprite.size)
+        sprite.physicsBody?.contactTestBitMask = 1
         addChild(sprite)
     }
 
@@ -65,6 +92,7 @@ class GameScene: SKScene {
             sprite.name = "bullet"
             sprite.position = CGPoint(x: plane.position.x, y: 200)
             sprite.physicsBody = SKPhysicsBody(texture: sprite.texture!, size: sprite.size)
+            sprite.physicsBody?.contactTestBitMask = 1
             addChild(sprite)
             sprite.run(SKAction.moveTo(y: 1500, duration: 1))
         }
