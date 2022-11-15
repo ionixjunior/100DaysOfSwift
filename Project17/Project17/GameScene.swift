@@ -46,9 +46,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
     }
     
+    var totalOfEnemies = 0
+    
     @objc func createEnemy() {
         guard let enemy = possibleEnemies.randomElement() else { return }
         
+        totalOfEnemies += 1
         let sprite = SKSpriteNode(imageNamed: enemy)
         sprite.position = CGPoint(x: 1200, y: Int.random(in: 50...736))
         addChild(sprite)
