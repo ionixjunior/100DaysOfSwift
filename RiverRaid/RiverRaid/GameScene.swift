@@ -4,6 +4,7 @@ class GameScene: SKScene {
     var plane: SKSpriteNode!
     
     var gameTimer: Timer?
+    var planeTimer: Timer?
     var objects = ["helicopter", "ship"]
     
     override func didMove(to view: SKView) {
@@ -56,12 +57,30 @@ class GameScene: SKScene {
         let node = atPoint(location)
         
         if node.name == "left" {
-            print("left")
+            planeTimer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(moveLeft), userInfo: nil, repeats: true)
         } else if node.name == "right" {
             print("right")
         } else if node.name == "fire" {
             print("fire")
         }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let location = touch.location(in: self)
+        let node = atPoint(location)
+        
+        if node.name == "left" {
+            planeTimer?.invalidate()
+        } else if node.name == "right" {
+            print("right")
+        } else if node.name == "fire" {
+            print("fire")
+        }
+    }
+    
+    @objc func moveLeft() {
+        plane.position.x = plane.position.x - 1
     }
     
     override func update(_ currentTime: TimeInterval) {
