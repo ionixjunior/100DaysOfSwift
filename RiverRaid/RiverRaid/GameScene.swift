@@ -25,19 +25,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let leftButton = SKSpriteNode(imageNamed: "left")
         leftButton.name = "left"
-        leftButton.position = CGPoint(x: 100, y: 50)
+        leftButton.size = CGSize(width: 150, height: 150)
+        leftButton.position = CGPoint(x: 80, y: 100)
+        leftButton.alpha = 0.1
         leftButton.zPosition = 1
         addChild(leftButton)
         
         let rightButton = SKSpriteNode(imageNamed: "right")
         rightButton.name = "right"
-        rightButton.position = CGPoint(x: 250, y: 50)
+        rightButton.size = CGSize(width: 150, height: 150)
+        rightButton.position = CGPoint(x: 300, y: 100)
+        rightButton.alpha = 0.1
         rightButton.zPosition = 1
         addChild(rightButton)
         
         let fireButton = SKSpriteNode(imageNamed: "fire")
         fireButton.name = "fire"
-        fireButton.position = CGPoint(x: 700, y: 50)
+        fireButton.size = CGSize(width: 150, height: 150)
+        fireButton.position = CGPoint(x: 650, y: 100)
+        fireButton.alpha = 0.1
         fireButton.zPosition = 1
         addChild(fireButton)
         
