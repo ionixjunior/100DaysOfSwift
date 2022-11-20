@@ -53,7 +53,7 @@ class ActionViewController: UIViewController {
         if notification.name == UIResponder.keyboardWillHideNotification {
             script.contentInset = .zero
         } else {
-            script.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height, right: 0)
+            script.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
         }
         
         script.scrollIndicatorInsets = script.contentInset
