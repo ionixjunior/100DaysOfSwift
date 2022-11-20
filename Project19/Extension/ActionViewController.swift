@@ -5,6 +5,9 @@ import UniformTypeIdentifiers
 class ActionViewController: UIViewController {
 
     @IBOutlet weak var script: UITextView!
+    
+    var pageTitle = ""
+    var pageURL = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +18,13 @@ class ActionViewController: UIViewController {
                     [weak self] (dict, errors) in
                     guard let itemDictionary = dict as? NSDictionary else { return }
                     guard let javaScriptValues = itemDictionary[NSExtensionJavaScriptPreprocessingResultsKey] as? NSDictionary else { return }
-                    print(javaScriptValues)
+                    
+                    self?.pageTitle = javaScriptValues["title"] as? String ?? ""
+                    self?.pageURL = javaScriptValues["URL"] as? String ?? ""
+                    
+                    DispatchQueue.main.async {
+                        self?.title = self?.pageTitle
+                    }
                 }
             }
         }
