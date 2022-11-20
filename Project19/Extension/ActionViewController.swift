@@ -12,6 +12,8 @@ class ActionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(done))
+        
         if let inputItem = extensionContext?.inputItems.first as? NSExtensionItem {
             if let itemProvider = inputItem.attachments?.first {
                 itemProvider.loadItem(forTypeIdentifier: kUTTypePropertyList as String) {
@@ -30,7 +32,7 @@ class ActionViewController: UIViewController {
         }
     }
 
-    @IBAction func done() {
+    @objc func done() {
         // Return any edited content to the host app.
         // This template doesn't do anything, so we just echo the passed in items.
         self.extensionContext!.completeRequest(returningItems: self.extensionContext!.inputItems, completionHandler: nil)
