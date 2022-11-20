@@ -4,6 +4,7 @@ import UniformTypeIdentifiers
 
 class ActionViewController: UIViewController {
 
+    @IBOutlet weak var script: UITextView!
     @IBOutlet weak var imageView: UIImageView!
 
     override func viewDidLoad() {
