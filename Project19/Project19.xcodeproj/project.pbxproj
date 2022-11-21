@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A65410F292B8C5F007D3FB2 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65410E292B8C5F007D3FB2 /* UIAlertControllerExtension.swift */; };
 		7AD6B78129290501006824C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD6B78029290501006824C7 /* AppDelegate.swift */; };
 		7AD6B78329290501006824C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD6B78229290501006824C7 /* SceneDelegate.swift */; };
 		7AD6B78529290501006824C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD6B78429290501006824C7 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A65410E292B8C5F007D3FB2 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		7AD6B77D29290501006824C7 /* Project19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD6B78029290501006824C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AD6B78229290501006824C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A65410D292B8C4A007D3FB2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A65410E292B8C5F007D3FB2 /* UIAlertControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		7AD6B77429290501006824C7 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 		7AD6B79C292905F0006824C7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7A65410D292B8C4A007D3FB2 /* Extensions */,
 				7AD6B79D292905F0006824C7 /* Media.xcassets */,
 				7AD6B79F292905F0006824C7 /* ActionViewController.swift */,
 				7AD6B7A1292905F0006824C7 /* MainInterface.storyboard */,
@@ -249,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A65410F292B8C5F007D3FB2 /* UIAlertControllerExtension.swift in Sources */,
 				7AD6B7A0292905F0006824C7 /* ActionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
