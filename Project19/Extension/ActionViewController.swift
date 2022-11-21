@@ -62,7 +62,7 @@ class ActionViewController: UIViewController {
 
     @objc func done() {
         let item = NSExtensionItem()
-        let argument: NSDictionary = ["customJavaScript": script.text]
+        let argument: NSDictionary = ["customJavaScript": script.text ?? ""]
         let webDictionary: NSDictionary = [NSExtensionJavaScriptFinalizeArgumentKey: argument]
         let customJavaScript = NSItemProvider(item: webDictionary, typeIdentifier: Constants.itemProviderTypeIdentifier)
         item.attachments = [customJavaScript]
