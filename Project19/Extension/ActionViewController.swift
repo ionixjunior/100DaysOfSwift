@@ -12,6 +12,7 @@ class ActionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Scripts", style: .plain, target: self, action: #selector(showScripts(sender:)))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(done))
         
         let notificationCenter = NotificationCenter.default
@@ -34,6 +35,31 @@ class ActionViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @objc func showScripts(sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Choose a script", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Say \"Hello World\"", style: .default) {
+            [weak self] _ in
+            self?.script.text = """
+                alert("Hello world!")
+            """
+        })
+        alert.addAction(UIAlertAction(title: "Change background color to red", style: .default) {
+            [weak self] _ in
+            self?.script.text = """
+                document.body.style.backgroundColor = "red"
+            """
+        })
+        alert.addAction(UIAlertAction(title: "Replace all content 👀", style: .default) {
+            [weak self] _ in
+            self?.script.text = """
+                document.body.innerHTML = "What's going on?"
+            """
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.configurePopoverPresentationController(item: sender)
+        present(alert, animated: true)
     }
 
     @objc func done() {
