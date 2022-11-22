@@ -14,6 +14,8 @@
 		7AE02591292CDBF1009AA2F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE0258F292CDBF1009AA2F4 /* Main.storyboard */; };
 		7AE02593292CDBF2009AA2F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AE02592292CDBF2009AA2F4 /* Assets.xcassets */; };
 		7AE02596292CDBF2009AA2F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE02594292CDBF2009AA2F4 /* LaunchScreen.storyboard */; };
+		7AE0259E292CDD48009AA2F4 /* explode.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7AE0259C292CDD47009AA2F4 /* explode.sks */; };
+		7AE0259F292CDD48009AA2F4 /* fuse.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7AE0259D292CDD47009AA2F4 /* fuse.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		7AE02590292CDBF1009AA2F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7AE02592292CDBF2009AA2F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AE02595292CDBF2009AA2F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7AE0259C292CDD47009AA2F4 /* explode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explode.sks; sourceTree = "<group>"; };
+		7AE0259D292CDD47009AA2F4 /* fuse.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fuse.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				7AE0258F292CDBF1009AA2F4 /* Main.storyboard */,
 				7AE02592292CDBF2009AA2F4 /* Assets.xcassets */,
 				7AE02594292CDBF2009AA2F4 /* LaunchScreen.storyboard */,
+				7AE0259C292CDD47009AA2F4 /* explode.sks */,
+				7AE0259D292CDD47009AA2F4 /* fuse.sks */,
 			);
 			path = Project20;
 			sourceTree = "<group>";
@@ -128,7 +134,9 @@
 			files = (
 				7AE02591292CDBF1009AA2F4 /* Main.storyboard in Resources */,
 				7AE02588292CDBF1009AA2F4 /* GameScene.sks in Resources */,
+				7AE0259F292CDD48009AA2F4 /* fuse.sks in Resources */,
 				7AE02593292CDBF2009AA2F4 /* Assets.xcassets in Resources */,
+				7AE0259E292CDD48009AA2F4 /* explode.sks in Resources */,
 				7AE02596292CDBF2009AA2F4 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
