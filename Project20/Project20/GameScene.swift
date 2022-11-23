@@ -9,6 +9,8 @@ class GameScene: SKScene {
     let leftEdge = -22
     let bottomEdge = -22
     let rightEdge = 1024 + 22
+    var numberOfLaunchedFireworks = 0
+    var limitOfLaunchedFireworks = 25
     
     var score = 0 {
         didSet {
@@ -33,6 +35,11 @@ class GameScene: SKScene {
     }
     
     @objc func launchFireworks() {
+        if numberOfLaunchedFireworks == limitOfLaunchedFireworks {
+            gameTimer?.invalidate()
+            return
+        }
+        
         let movementAmount: CGFloat = 1800
         
         switch Int.random(in: 0...3) {
@@ -66,6 +73,8 @@ class GameScene: SKScene {
     }
     
     func createFirework(xMovement: CGFloat, x: Int, y: Int) {
+        numberOfLaunchedFireworks += 1
+        
         let node = SKNode()
         node.position = CGPoint(x: x, y: y)
         
