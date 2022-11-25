@@ -23,6 +23,13 @@ class ViewController: UIViewController {
         showQuestion(options: options)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score", style: .plain, target: self, action: #selector(showScore))
+        
+        removeAllPendingNotifications()
+    }
+    
+    func removeAllPendingNotifications() {
+        let notification = UNUserNotificationCenter.current()
+        notification.removeAllPendingNotificationRequests()
     }
     
     @objc func showScore() {
