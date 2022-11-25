@@ -26,8 +26,8 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         registerCategories()
         
         let content = UNMutableNotificationContent()
-        content.title = "Late wake up call"
-        content.body = "The early bird catches the worm, but the second mouse get the cheese."
+        content.title = "Lorem notification"
+        content.body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut nisl sapien."
         content.categoryIdentifier = "alarm"
         content.userInfo = ["customData": "test"]
         content.sound = .default
@@ -50,7 +50,8 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         center.delegate = self
         
         let show = UNNotificationAction(identifier: "show", title: "Tell me more...", options: .foreground)
-        let category = UNNotificationCategory(identifier: "alarm", actions: [show], intentIdentifiers: [], options: [])
+        let ignore = UNNotificationAction(identifier: "ignore", title: "Ignore", options: .destructive)
+        let category = UNNotificationCategory(identifier: "alarm", actions: [show, ignore], intentIdentifiers: [], options: [])
         
         center.setNotificationCategories([category])
     }
@@ -66,6 +67,8 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
                 print("Default identifier")
             case "show":
                 print("show identifier")
+            case "ignore":
+                print("ignore identifier")
             default:
                 break
             }
