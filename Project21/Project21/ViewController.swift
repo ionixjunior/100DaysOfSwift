@@ -60,13 +60,15 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         let userInfo = response.notification.request.content.userInfo
         
         if let customData = userInfo["customData"] as? String {
-            print("The custom data is \(customData)")
-            
             switch response.actionIdentifier {
             case UNNotificationDefaultActionIdentifier:
-                print("Default identifier")
+                let alert = UIAlertController(title: "Default identifider", message: "The custom data is \(customData)", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default))
+                present(alert, animated: true)
             case "show":
-                print("show identifier")
+                let alert = UIAlertController(title: "Show identifider", message: "The custom data is \(customData)", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default))
+                present(alert, animated: true)
             case "ignore":
                 print("ignore identifier")
             default:
