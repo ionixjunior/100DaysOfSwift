@@ -24,7 +24,13 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
     
     @objc func scheduleLocal() {
         registerCategories()
-        
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+        createInstantNotification()
+        createScheduleNotification()
+    }
+    
+    func createInstantNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Lorem notification"
         content.body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut nisl sapien."
@@ -32,16 +38,27 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         content.userInfo = ["customData": "test"]
         content.sound = .default
         
-        var dateComponents = DateComponents()
-        dateComponents.hour = 10
-        dateComponents.minute = 30
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         let center = UNUserNotificationCenter.current()
-        center.removeAllPendingNotificationRequests()
+        center.add(request)
+    }
+    
+    func createScheduleNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Schedule notification"
+        content.body = "This notification was schedule"
+        content.categoryIdentifier = "alarm"
+        content.userInfo = ["customData": "every day"]
+        content.sound = .default
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = 7
+        dateComponents.minute = 30
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        let center = UNUserNotificationCenter.current()
         center.add(request)
     }
     
