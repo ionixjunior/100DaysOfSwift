@@ -25,11 +25,49 @@ class ViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score", style: .plain, target: self, action: #selector(showScore))
         
         removeAllPendingNotifications()
+        addNotificationToRememberUser()
     }
     
     func removeAllPendingNotifications() {
         let notification = UNUserNotificationCenter.current()
         notification.removeAllPendingNotificationRequests()
+    }
+    
+    func addNotificationToRememberUser() {
+        let notification = UNUserNotificationCenter.current()
+        notification.requestAuthorization(options: [.alert, .sound, .badge]) {
+            granted, error in
+            if granted == false {
+                let alert = UIAlertController(title: "Notification permission needed", message: "You need to enable notifications to be reminded to play again in the future.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Go settings", style: .default) {
+                    _ in
+                    if let url = URL(string: UIApplication.openSettingsURLString) {
+                        if UIApplication.shared.canOpenURL(url) {
+                            UIApplication.shared.open(url)
+                        }
+                    }
+                })
+                alert.addAction(UIAlertAction(title: "Ignore", style: .destructive))
+                
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true)
+                }
+                return
+            }
+            
+            let content = UNMutableNotificationContent()
+            content.title = "Join us in this amazing game"
+            content.body = "Don't forget to play again and continue to improve your knowledge about the flags of the countries!"
+            content.sound = .default
+            content.categoryIdentifier = "remember"
+            
+            var dateComponents = DateComponents()
+            dateComponents.hour = 7
+            dateComponents.minute = 30
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            notification.add(request)
+        }
     }
     
     @objc func showScore() {
