@@ -1,7 +1,8 @@
 import UIKit
 
 class FoldersViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Folders"

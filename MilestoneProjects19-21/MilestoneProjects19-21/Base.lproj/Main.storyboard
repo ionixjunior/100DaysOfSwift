@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zd3-fo-dmE">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,12 +13,27 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FoldersViewController" customModule="MilestoneProjects19_21" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pG4-JT-Nyc">
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pG4-JT-Nyc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="88D-Wu-htj"/>
+                            <constraint firstItem="pG4-JT-Nyc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8z6-Zc-2Z6"/>
+                            <constraint firstItem="pG4-JT-Nyc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CKV-Qh-ea8"/>
+                            <constraint firstItem="pG4-JT-Nyc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ke5-TH-g7z"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RfX-zP-vWg"/>
+                    <connections>
+                        <outlet property="tableView" destination="pG4-JT-Nyc" id="2tX-iB-xTJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,7 +45,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zd3-fo-dmE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nsu-Bj-fb8">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
