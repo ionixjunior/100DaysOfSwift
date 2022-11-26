@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pG4-JT-Nyc">
-                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
+                                <rect key="frame" x="16" y="91" width="358" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Folder" textLabel="vdS-eF-1Hs" detailTextLabel="fBS-xS-CHh" imageView="qBW-UP-lca" style="IBUITableViewCellStyleValue1" id="tKF-0j-fAI">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="358" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tKF-0j-fAI" id="bgX-gv-Xdi">
-                                            <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="327.66666666666669" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vdS-eF-1Hs">
@@ -36,7 +36,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fBS-xS-CHh">
-                                                    <rect key="frame" x="319" y="15" width="32.666666666666664" height="14.333333333333334"/>
+                                                    <rect key="frame" x="287" y="15" width="32.666666666666664" height="14.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -57,8 +57,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pG4-JT-Nyc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="88D-Wu-htj"/>
-                            <constraint firstItem="pG4-JT-Nyc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8z6-Zc-2Z6"/>
-                            <constraint firstItem="pG4-JT-Nyc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CKV-Qh-ea8"/>
+                            <constraint firstItem="pG4-JT-Nyc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8z6-Zc-2Z6"/>
+                            <constraint firstItem="pG4-JT-Nyc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="CKV-Qh-ea8"/>
                             <constraint firstItem="pG4-JT-Nyc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ke5-TH-g7z"/>
                         </constraints>
                     </view>
