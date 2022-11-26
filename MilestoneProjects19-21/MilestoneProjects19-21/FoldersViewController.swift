@@ -6,6 +6,10 @@ class FoldersViewController: UIViewController {
         super.viewDidLoad()
         title = "Folders"
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let searchController = UISearchController()
+        searchController.searchBar.placeholder = "Search"
+        navigationItem.searchController = searchController
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editTapped))
     }
     
