@@ -17,6 +17,7 @@
 		7ABE47FB2932358800F8C8DD /* MilestoneProjects19_21UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABE47FA2932358800F8C8DD /* MilestoneProjects19_21UITests.swift */; };
 		7ABE47FD2932358800F8C8DD /* MilestoneProjects19_21UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABE47FC2932358800F8C8DD /* MilestoneProjects19_21UITestsLaunchTests.swift */; };
 		7ABE480A29323A7800F8C8DD /* folders.json in Resources */ = {isa = PBXBuildFile; fileRef = 7ABE480929323A7800F8C8DD /* folders.json */; };
+		7ABE480C2932401700F8C8DD /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABE480B2932401700F8C8DD /* Folder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		7ABE47FA2932358800F8C8DD /* MilestoneProjects19_21UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects19_21UITests.swift; sourceTree = "<group>"; };
 		7ABE47FC2932358800F8C8DD /* MilestoneProjects19_21UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects19_21UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7ABE480929323A7800F8C8DD /* folders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = folders.json; sourceTree = "<group>"; };
+		7ABE480B2932401700F8C8DD /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				7ABE47E42932358800F8C8DD /* LaunchScreen.storyboard */,
 				7ABE47E72932358800F8C8DD /* Info.plist */,
 				7ABE480929323A7800F8C8DD /* folders.json */,
+				7ABE480B2932401700F8C8DD /* Folder.swift */,
 			);
 			path = "MilestoneProjects19-21";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				7ABE47DE2932358800F8C8DD /* FoldersViewController.swift in Sources */,
 				7ABE47DA2932358800F8C8DD /* AppDelegate.swift in Sources */,
 				7ABE47DC2932358800F8C8DD /* SceneDelegate.swift in Sources */,
+				7ABE480C2932401700F8C8DD /* Folder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
