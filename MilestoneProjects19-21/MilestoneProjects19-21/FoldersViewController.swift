@@ -46,7 +46,15 @@ class FoldersViewController: UIViewController, UITableViewDataSource {
         var content = cell.defaultContentConfiguration()
         content.text = folder.name
         content.secondaryText = folder.totalNotes.description
-        content.image = UIImage(systemName: "folder")
+        
+        var imageName = "folder"
+        if folder.type == .Smart {
+            imageName = "gearshape"
+        } else if folder.type == .Deleted {
+            imageName = "trash"
+        }
+        
+        content.image = UIImage(systemName: imageName)
         cell.contentConfiguration = content
         
         return cell
