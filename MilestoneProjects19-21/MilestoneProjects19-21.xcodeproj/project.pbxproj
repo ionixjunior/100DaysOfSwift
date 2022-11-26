@@ -19,6 +19,7 @@
 		7ABE480A29323A7800F8C8DD /* folders.json in Resources */ = {isa = PBXBuildFile; fileRef = 7ABE480929323A7800F8C8DD /* folders.json */; };
 		7ABE480C2932401700F8C8DD /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABE480B2932401700F8C8DD /* Folder.swift */; };
 		7ABE480F2932409B00F8C8DD /* FolderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABE480E2932409B00F8C8DD /* FolderExtension.swift */; };
+		7ABE48112932411800F8C8DD /* FolderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABE48102932411800F8C8DD /* FolderType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		7ABE480929323A7800F8C8DD /* folders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = folders.json; sourceTree = "<group>"; };
 		7ABE480B2932401700F8C8DD /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 		7ABE480E2932409B00F8C8DD /* FolderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderExtension.swift; sourceTree = "<group>"; };
+		7ABE48102932411800F8C8DD /* FolderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				7ABE47E72932358800F8C8DD /* Info.plist */,
 				7ABE480929323A7800F8C8DD /* folders.json */,
 				7ABE480B2932401700F8C8DD /* Folder.swift */,
+				7ABE48102932411800F8C8DD /* FolderType.swift */,
 			);
 			path = "MilestoneProjects19-21";
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				7ABE47DE2932358800F8C8DD /* FoldersViewController.swift in Sources */,
 				7ABE480F2932409B00F8C8DD /* FolderExtension.swift in Sources */,
 				7ABE47DA2932358800F8C8DD /* AppDelegate.swift in Sources */,
+				7ABE48112932411800F8C8DD /* FolderType.swift in Sources */,
 				7ABE47DC2932358800F8C8DD /* SceneDelegate.swift in Sources */,
 				7ABE480C2932401700F8C8DD /* Folder.swift in Sources */,
 			);
