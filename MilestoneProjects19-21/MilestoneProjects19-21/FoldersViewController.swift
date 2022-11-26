@@ -15,6 +15,7 @@ class FoldersViewController: UIViewController, UITableViewDataSource {
         navigationItem.searchController = searchController
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editTapped))
         
+        tableView.layer.cornerRadius = 10
         tableView.dataSource = self
         loadFolders()
     }
