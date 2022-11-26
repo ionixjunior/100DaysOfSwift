@@ -1,0 +1,42 @@
+[
+    {
+        "location": "iCloud",
+        "data": [
+            {
+                "name": "Quick Notes",
+                "total_notes": 0,
+                "type": 2
+            },
+            {
+                "name": "All iCloud",
+                "total_notes": 961,
+                "type": 2
+            },
+            {
+                "name": "Notes",
+                "total_notes": 261,
+                "type": 2
+            },
+            {
+                "name": "Articles",
+                "total_notes": 1,
+                "type": 2
+            },
+            {
+                "name": "Books",
+                "total_notes": 10,
+                "type": 2
+            },
+            {
+                "name": "Smart Folder",
+                "total_notes": 2,
+                "type": 3
+            },
+            {
+                "name": "Recently Deleted",
+                "total_notes": 5,
+                "type": 1
+            }
+        ]
+    }
+]

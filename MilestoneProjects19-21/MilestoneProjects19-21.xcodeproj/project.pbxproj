@@ -16,6 +16,7 @@
 		7ABE47F12932358800F8C8DD /* MilestoneProjects19_21Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABE47F02932358800F8C8DD /* MilestoneProjects19_21Tests.swift */; };
 		7ABE47FB2932358800F8C8DD /* MilestoneProjects19_21UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABE47FA2932358800F8C8DD /* MilestoneProjects19_21UITests.swift */; };
 		7ABE47FD2932358800F8C8DD /* MilestoneProjects19_21UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABE47FC2932358800F8C8DD /* MilestoneProjects19_21UITestsLaunchTests.swift */; };
+		7ABE480A29323A7800F8C8DD /* folders.json in Resources */ = {isa = PBXBuildFile; fileRef = 7ABE480929323A7800F8C8DD /* folders.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7ABE47F62932358800F8C8DD /* MilestoneProjects19-21UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MilestoneProjects19-21UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ABE47FA2932358800F8C8DD /* MilestoneProjects19_21UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects19_21UITests.swift; sourceTree = "<group>"; };
 		7ABE47FC2932358800F8C8DD /* MilestoneProjects19_21UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects19_21UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7ABE480929323A7800F8C8DD /* folders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = folders.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				7ABE47E22932358800F8C8DD /* Assets.xcassets */,
 				7ABE47E42932358800F8C8DD /* LaunchScreen.storyboard */,
 				7ABE47E72932358800F8C8DD /* Info.plist */,
+				7ABE480929323A7800F8C8DD /* folders.json */,
 			);
 			path = "MilestoneProjects19-21";
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				7ABE47E62932358800F8C8DD /* LaunchScreen.storyboard in Resources */,
 				7ABE47E32932358800F8C8DD /* Assets.xcassets in Resources */,
 				7ABE47E12932358800F8C8DD /* Main.storyboard in Resources */,
+				7ABE480A29323A7800F8C8DD /* folders.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
