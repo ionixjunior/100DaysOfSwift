@@ -6,8 +6,11 @@ class FoldersViewController: UIViewController {
         super.viewDidLoad()
         title = "Folders"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editTapped))
     }
-
-
+    
+    @objc func editTapped() {
+        
+    }
 }
 
