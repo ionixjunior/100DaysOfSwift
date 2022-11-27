@@ -13,6 +13,7 @@
 		7AE960EC2933A13600A1DD96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE960EA2933A13600A1DD96 /* Main.storyboard */; };
 		7AE960EE2933A13700A1DD96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AE960ED2933A13700A1DD96 /* Assets.xcassets */; };
 		7AE960F12933A13700A1DD96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE960EF2933A13700A1DD96 /* LaunchScreen.storyboard */; };
+		7AE960FA2933AE8900A1DD96 /* CLLocationManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE960F92933AE8900A1DD96 /* CLLocationManagerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7AE960ED2933A13700A1DD96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AE960F02933A13700A1DD96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AE960F22933A13700A1DD96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AE960F92933AE8900A1DD96 /* CLLocationManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationManagerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		7AE960E32933A13600A1DD96 /* Project22 */ = {
 			isa = PBXGroup;
 			children = (
+				7AE960F82933AE6A00A1DD96 /* Extensions */,
 				7AE960E42933A13600A1DD96 /* AppDelegate.swift */,
 				7AE960E62933A13600A1DD96 /* SceneDelegate.swift */,
 				7AE960E82933A13600A1DD96 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				7AE960F22933A13700A1DD96 /* Info.plist */,
 			);
 			path = Project22;
+			sourceTree = "<group>";
+		};
+		7AE960F82933AE6A00A1DD96 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7AE960F92933AE8900A1DD96 /* CLLocationManagerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				7AE960E92933A13600A1DD96 /* ViewController.swift in Sources */,
 				7AE960E52933A13600A1DD96 /* AppDelegate.swift in Sources */,
+				7AE960FA2933AE8900A1DD96 /* CLLocationManagerExtension.swift in Sources */,
 				7AE960E72933A13600A1DD96 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
