@@ -11,6 +11,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         locationManager = CLLocationManager()
         locationManager?.delegate = self
+        locationManager?.requestAlwaysAuthorization()
     }
 
 
