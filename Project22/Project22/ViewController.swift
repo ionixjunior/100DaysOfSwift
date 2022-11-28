@@ -3,6 +3,7 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var distanceReading: UILabel!
+    @IBOutlet weak var beaconName: UILabel!
     
     var locationManager: CLLocationManager?
     

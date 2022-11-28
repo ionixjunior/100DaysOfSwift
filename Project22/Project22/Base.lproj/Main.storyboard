@@ -23,15 +23,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beacon name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeS-hI-dPF">
+                                <rect key="frame" x="145" y="469.66666666666669" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="xeS-hI-dPF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0ZN-Cu-pNF"/>
                             <constraint firstItem="bEW-eE-vw6" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="S8R-Qc-Emj"/>
                             <constraint firstItem="bEW-eE-vw6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UvN-b7-Vj6"/>
+                            <constraint firstItem="xeS-hI-dPF" firstAttribute="top" secondItem="bEW-eE-vw6" secondAttribute="bottom" constant="7.3300000000000001" id="vo6-km-NLC"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="beaconName" destination="xeS-hI-dPF" id="egR-xj-Zyk"/>
                         <outlet property="distanceReading" destination="bEW-eE-vw6" id="qt8-vs-Uct"/>
                     </connections>
                 </viewController>
