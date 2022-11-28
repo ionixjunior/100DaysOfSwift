@@ -6,6 +6,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var beaconName: UILabel!
     
     var locationManager: CLLocationManager?
+    var beacons: [(uuidString: String, major: CLBeaconMajorValue, minor: CLBeaconMajorValue, identifier: String)] = [
+        (uuidString: "2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6", major: 123, minor: 456, identifier: "Left Beacon")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +43,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func startScanning() {
-        guard let uuid = UUID(uuidString: "2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6") else { return }
-        locationManager?.start(uuid: uuid, major: 123, minor: 456, identifier: "MyBeacon")
+        for beacon in beacons {
+            guard let uuid = UUID(uuidString: beacon.uuidString) else { return }
+            locationManager?.start(uuid: uuid, major: beacon.major, minor: beacon.minor, identifier: beacon.identifier)
+        }
     }
     
     func update(distance: CLProximity) {
