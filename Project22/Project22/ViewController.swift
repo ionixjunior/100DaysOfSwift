@@ -65,10 +65,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    var lastBeacon: UUID?
+    
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         if let beacon = beacons.first {
+            if lastBeacon == nil {
+                let alert = UIAlertController(title: "New beacon detected", message: "You are nearby a beacon!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default))
+                present(alert, animated: true)
+            }
+            
+            lastBeacon = beacon.uuid
             update(distance: beacon.proximity)
         } else {
+            lastBeacon = nil
             update(distance: .unknown)
         }
     }
