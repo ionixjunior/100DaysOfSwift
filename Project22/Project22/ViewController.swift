@@ -7,11 +7,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var locationManager: CLLocationManager?
     var beacons: [(uuidString: String, major: CLBeaconMajorValue, minor: CLBeaconMajorValue, identifier: String)] = [
-        (uuidString: "2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6", major: 123, minor: 456, identifier: "Left Beacon")
+        (uuidString: "2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6", major: 123, minor: 456, identifier: "Left Beacon"),
+        (uuidString: "92AB49BE-4127-42F4-B532-90FAF1E26491", major: 101, minor: 200, identifier: "Right Beacon")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        distanceReading.text = "UNKNOWN"
+        beaconName.text = ""
         
         locationManager = CLLocationManager()
         locationManager?.delegate = self
@@ -49,43 +53,36 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    func update(distance: CLProximity) {
+    func update(distance: CLProximity, identifier: String) {
         UIView.animate(withDuration: 1) {
             switch distance {
             case .far:
                 self.view.backgroundColor = .blue
                 self.distanceReading.text = "FAR"
+                self.beaconName.text = identifier
                 
             case .near:
                 self.view.backgroundColor = .orange
                 self.distanceReading.text = "NEAR"
+                self.beaconName.text = identifier
                 
             case .immediate:
                 self.view.backgroundColor = .red
                 self.distanceReading.text = "RIGHT HERE"
+                self.beaconName.text = identifier
                 
             default:
                 self.view.backgroundColor = .gray
                 self.distanceReading.text = "UNKNOWN"
+                self.beaconName.text = ""
             }
         }
     }
     
-    var lastBeacon: UUID?
-    
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         if let beacon = beacons.first {
-            if lastBeacon == nil {
-                let alert = UIAlertController(title: "New beacon detected", message: "You are nearby a beacon!", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default))
-                present(alert, animated: true)
-            }
-            
-            lastBeacon = beacon.uuid
-            update(distance: beacon.proximity)
-        } else {
-            lastBeacon = nil
-            update(distance: .unknown)
+            let beaconIdentifier = self.beacons.first(where: { $0.uuidString == beacon.uuid.uuidString })?.identifier ?? ""
+            update(distance: beacon.proximity, identifier: beaconIdentifier)
         }
     }
 }
