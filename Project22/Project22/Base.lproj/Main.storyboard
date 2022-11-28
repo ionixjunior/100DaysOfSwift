@@ -17,6 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FyX-6N-auP">
+                                <rect key="frame" x="68.666666666666686" y="298" width="256" height="256"/>
+                                <color key="backgroundColor" red="0.72611186029783148" green="0.86781723949558243" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="0jW-xq-nXE"/>
+                                    <constraint firstAttribute="height" constant="256" id="yZ5-ls-nmk"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNKNOWN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEW-eE-vw6">
                                 <rect key="frame" x="100.66666666666669" y="414.66666666666669" width="192" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
@@ -35,13 +43,16 @@
                         <constraints>
                             <constraint firstItem="xeS-hI-dPF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0ZN-Cu-pNF"/>
                             <constraint firstItem="bEW-eE-vw6" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="S8R-Qc-Emj"/>
+                            <constraint firstItem="FyX-6N-auP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TVs-LB-rRa"/>
                             <constraint firstItem="bEW-eE-vw6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UvN-b7-Vj6"/>
+                            <constraint firstItem="FyX-6N-auP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nwg-Hd-MRv"/>
                             <constraint firstItem="xeS-hI-dPF" firstAttribute="top" secondItem="bEW-eE-vw6" secondAttribute="bottom" constant="7.3300000000000001" id="vo6-km-NLC"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="beaconName" destination="xeS-hI-dPF" id="egR-xj-Zyk"/>
                         <outlet property="distanceReading" destination="bEW-eE-vw6" id="qt8-vs-Uct"/>
+                        <outlet property="distanceView" destination="FyX-6N-auP" id="pZ5-wP-gNF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
