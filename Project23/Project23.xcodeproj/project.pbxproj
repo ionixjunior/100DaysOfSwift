@@ -25,6 +25,14 @@
 		7A3C093429360CDE00D0AF2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A3C093629360CDF00D0AF2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A3C093929360CDF00D0AF2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A3C094029360D7A00D0AF2F /* swoosh2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swoosh2.caf; sourceTree = "<group>"; };
+		7A3C094129360D7B00D0AF2F /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
+		7A3C094229360D7B00D0AF2F /* sliceBombFuse.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sliceBombFuse.caf; sourceTree = "<group>"; };
+		7A3C094329360D7B00D0AF2F /* wrong.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = wrong.caf; sourceTree = "<group>"; };
+		7A3C094429360D7B00D0AF2F /* swoosh1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swoosh1.caf; sourceTree = "<group>"; };
+		7A3C094529360D7B00D0AF2F /* explosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = explosion.caf; sourceTree = "<group>"; };
+		7A3C094629360D7B00D0AF2F /* swoosh3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swoosh3.caf; sourceTree = "<group>"; };
+		7A3C094729360D7B00D0AF2F /* launch.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = launch.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,14 @@
 				7A3C093329360CDE00D0AF2F /* Main.storyboard */,
 				7A3C093629360CDF00D0AF2F /* Assets.xcassets */,
 				7A3C093829360CDF00D0AF2F /* LaunchScreen.storyboard */,
+				7A3C094529360D7B00D0AF2F /* explosion.caf */,
+				7A3C094729360D7B00D0AF2F /* launch.caf */,
+				7A3C094229360D7B00D0AF2F /* sliceBombFuse.caf */,
+				7A3C094429360D7B00D0AF2F /* swoosh1.caf */,
+				7A3C094029360D7A00D0AF2F /* swoosh2.caf */,
+				7A3C094629360D7B00D0AF2F /* swoosh3.caf */,
+				7A3C094129360D7B00D0AF2F /* whack.caf */,
+				7A3C094329360D7B00D0AF2F /* wrong.caf */,
 			);
 			path = Project23;
 			sourceTree = "<group>";
