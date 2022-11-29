@@ -206,4 +206,20 @@ class GameScene: SKScene {
         addChild(enemy)
         activeEnemies.append(enemy)
     }
+    
+    override func update(_ currentTime: TimeInterval) {
+        var bombCount = 0
+        
+        for node in activeEnemies {
+            if node.name == "bombContainer" {
+                bombCount += 1
+                break
+            }
+        }
+        
+        if bombCount == 0 {
+            bombSoundEffect?.stop()
+            bombSoundEffect = nil
+        }
+    }
 }
