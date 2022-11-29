@@ -9,5 +9,8 @@ class GameScene: SKScene {
         background.position = CGPoint(x: 512, y: 384)
         background.zPosition = -1
         addChild(background)
+        
+        physicsWorld.gravity = CGVector(dx: 0, dy: -6)
+        physicsWorld.speed = 0.85
     }
 }
