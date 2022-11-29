@@ -10,6 +10,9 @@ class GameScene: SKScene {
         }
     }
     
+    var livesImages = [SKSpriteNode]()
+    var lives = 3
+    
     override func didMove(to view: SKView) {
         let background = SKSpriteNode(imageNamed: "sliceBackground")
         background.blendMode = .replace
@@ -21,6 +24,7 @@ class GameScene: SKScene {
         physicsWorld.speed = 0.85
         
         createScore()
+        createLives()
     }
     
     func createScore() {
@@ -30,5 +34,14 @@ class GameScene: SKScene {
         gameScore.position = CGPoint(x: 8, y: 8)
         score = 0
         addChild(gameScore)
+    }
+    
+    func createLives() {
+        for i in 0..<3 {
+            let spriteNode = SKSpriteNode(imageNamed: "sliceLife")
+            spriteNode.position = CGPoint(x: CGFloat(834 + (i * 70)), y: 720)
+            addChild(spriteNode)
+            livesImages.append(spriteNode)
+        }
     }
 }
