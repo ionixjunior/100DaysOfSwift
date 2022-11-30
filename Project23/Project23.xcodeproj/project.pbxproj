@@ -26,6 +26,7 @@
 		7A3C0962293615F100D0AF2F /* sliceFuse.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7A3C095F293615F100D0AF2F /* sliceFuse.sks */; };
 		7A3C0963293615F100D0AF2F /* sliceHitEnemy.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7A3C0960293615F100D0AF2F /* sliceHitEnemy.sks */; };
 		7A3C09652936168700D0AF2F /* ForceBomb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3C09642936168700D0AF2F /* ForceBomb.swift */; };
+		7A46171F2937606300FBAAFE /* SequenceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A46171E2937606300FBAAFE /* SequenceType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		7A3C095F293615F100D0AF2F /* sliceFuse.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sliceFuse.sks; sourceTree = "<group>"; };
 		7A3C0960293615F100D0AF2F /* sliceHitEnemy.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sliceHitEnemy.sks; sourceTree = "<group>"; };
 		7A3C09642936168700D0AF2F /* ForceBomb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceBomb.swift; sourceTree = "<group>"; };
+		7A46171E2937606300FBAAFE /* SequenceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				7A3C095E293615F100D0AF2F /* sliceHitBomb.sks */,
 				7A3C0960293615F100D0AF2F /* sliceHitEnemy.sks */,
 				7A3C09642936168700D0AF2F /* ForceBomb.swift */,
+				7A46171E2937606300FBAAFE /* SequenceType.swift */,
 			);
 			path = Project23;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A46171F2937606300FBAAFE /* SequenceType.swift in Sources */,
 				7A3C093029360CDE00D0AF2F /* GameScene.swift in Sources */,
 				7A3C09652936168700D0AF2F /* ForceBomb.swift in Sources */,
 				7A3C093229360CDE00D0AF2F /* GameViewController.swift in Sources */,
