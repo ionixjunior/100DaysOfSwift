@@ -229,6 +229,8 @@ class GameScene: SKScene {
         activeSliceFG.path = path.cgPath
     }
     
+    let firstEnemyType = 0
+    let lastEnemyType = 6
     let minXPosition = 64
     let maxXPosition = 960
     let nearStartXPosition = CGFloat(256)
@@ -249,7 +251,7 @@ class GameScene: SKScene {
     func createEnemy(forceBomb: ForceBomb = .random) {
         let enemy: SKSpriteNode
         
-        var enemyType = Int.random(in: 0...6)
+        var enemyType = Int.random(in: firstEnemyType...lastEnemyType)
         
         if forceBomb == .never {
             enemyType = 1
