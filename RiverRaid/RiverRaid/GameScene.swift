@@ -163,5 +163,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func gameOver() {
         planeTimer?.invalidate()
         gameTimer?.invalidate()
+        physicsWorld.speed = 0
+        isUserInteractionEnabled = false
     }
 }
