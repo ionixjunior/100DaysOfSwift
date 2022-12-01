@@ -231,6 +231,8 @@ class GameScene: SKScene {
     
     let firstEnemyType = 0
     let lastEnemyType = 6
+    let bombEnemyType = 0
+    let penguinEnemyType = 1
     let minXPosition = 64
     let maxXPosition = 960
     let nearStartXPosition = CGFloat(256)
@@ -254,12 +256,12 @@ class GameScene: SKScene {
         var enemyType = Int.random(in: firstEnemyType...lastEnemyType)
         
         if forceBomb == .never {
-            enemyType = 1
+            enemyType = penguinEnemyType
         } else if forceBomb == .always {
-            enemyType = 0
+            enemyType = bombEnemyType
         }
         
-        if enemyType == 0 {
+        if enemyType == bombEnemyType {
             enemy = SKSpriteNode()
             enemy.zPosition = 1
             enemy.name = "bombContainer"
