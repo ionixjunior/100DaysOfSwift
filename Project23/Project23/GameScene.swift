@@ -229,6 +229,10 @@ class GameScene: SKScene {
         activeSliceFG.path = path.cgPath
     }
     
+    let minXPosition = 64
+    let maxXPosition = 960
+    let startYPosition = -128
+    
     func createEnemy(forceBomb: ForceBomb = .random) {
         let enemy: SKSpriteNode
         
@@ -271,7 +275,7 @@ class GameScene: SKScene {
             enemy.name = "enemy"
         }
         
-        let randomPosition = CGPoint(x: Int.random(in: 64...960), y: -128)
+        let randomPosition = CGPoint(x: Int.random(in: minXPosition...maxXPosition), y: startYPosition)
         enemy.position = randomPosition
         
         let randomAngularVelocity = CGFloat.random(in: -3...3)
