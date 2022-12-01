@@ -239,6 +239,10 @@ class GameScene: SKScene {
     let maxAngularVelocity = CGFloat(3)
     let sliceFuseXPosition = 76
     let sliceFuseYPosition = 64
+    let minLowerXVelocity = 3
+    let maxLowerXVelocity = 5
+    let minBiggestXVelocity = 8
+    let maxBiggestXVelocity = 15
     
     func createEnemy(forceBomb: ForceBomb = .random) {
         let enemy: SKSpriteNode
@@ -289,13 +293,13 @@ class GameScene: SKScene {
         let randomXVelocity: Int
         
         if randomPosition.x < nearStartXPosition {
-            randomXVelocity = Int.random(in: 8...15)
+            randomXVelocity = Int.random(in: minBiggestXVelocity...maxBiggestXVelocity)
         } else if randomPosition.x < nearMiddleXPosition {
-            randomXVelocity = Int.random(in: 3...5)
+            randomXVelocity = Int.random(in: minLowerXVelocity...maxLowerXVelocity)
         } else if randomPosition.x < nearEndXPosition {
-            randomXVelocity = -Int.random(in: 3...5)
+            randomXVelocity = -Int.random(in: minLowerXVelocity...maxLowerXVelocity)
         } else {
-            randomXVelocity = -Int.random(in: 8...15)
+            randomXVelocity = -Int.random(in: minBiggestXVelocity...maxBiggestXVelocity)
         }
         
         let randomYVelocity = Int.random(in: 24...32)
