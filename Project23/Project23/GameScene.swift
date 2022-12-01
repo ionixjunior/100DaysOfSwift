@@ -231,6 +231,9 @@ class GameScene: SKScene {
     
     let minXPosition = 64
     let maxXPosition = 960
+    let nearStartXPosition = CGFloat(256)
+    let nearMiddleXPosition = CGFloat(512)
+    let nearEndXPosition = CGFloat(768)
     let startYPosition = -128
     let minAngularVelocity = CGFloat(-3)
     let maxAngularVelocity = CGFloat(3)
@@ -285,11 +288,11 @@ class GameScene: SKScene {
         let randomAngularVelocity = CGFloat.random(in: minAngularVelocity...maxAngularVelocity)
         let randomXVelocity: Int
         
-        if randomPosition.x < 256 {
+        if randomPosition.x < nearStartXPosition {
             randomXVelocity = Int.random(in: 8...15)
-        } else if randomPosition.x < 512 {
+        } else if randomPosition.x < nearMiddleXPosition {
             randomXVelocity = Int.random(in: 3...5)
-        } else if randomPosition.x < 768 {
+        } else if randomPosition.x < nearEndXPosition {
             randomXVelocity = -Int.random(in: 3...5)
         } else {
             randomXVelocity = -Int.random(in: 8...15)
