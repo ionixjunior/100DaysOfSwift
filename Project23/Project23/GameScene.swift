@@ -106,10 +106,16 @@ class GameScene: SKScene {
         let nodesAtPoint = nodes(at: location)
         
         for case let node as SKSpriteNode in nodesAtPoint {
-            if node.name == "enemy" {
+            if node.name == "enemy" || node.name == "red_enemy" {
                 if let emitter = SKEmitterNode(fileNamed: "sliceHitEnemy") {
                     emitter.position = node.position
                     addChild(emitter)
+                }
+                
+                if node.name == "red_enemy" {
+                    score += 3
+                } else {
+                    score += 1
                 }
                 
                 node.name = ""
@@ -121,8 +127,6 @@ class GameScene: SKScene {
                 
                 let seq = SKAction.sequence([group, .removeFromParent()])
                 node.run(seq)
-                
-                score += 1
                 
                 if let index = activeEnemies.firstIndex(of: node) {
                     activeEnemies.remove(at: index)
@@ -233,6 +237,7 @@ class GameScene: SKScene {
     let lastEnemyType = 6
     let bombEnemyType = 0
     let penguinEnemyType = 1
+    let redPenguinEnemyType = 2
     let minXPosition = 64
     let maxXPosition = 960
     let nearStartXPosition = CGFloat(256)
@@ -250,6 +255,8 @@ class GameScene: SKScene {
     let minYVelocity = 960
     let maxYVelocity = 1280
     let enemyPhysicsBodyCircleOfRadius = CGFloat(64)
+    let velocityMultiplicationFactorOfNormalEnemies = 1
+    let velocityMultiplicationFactorOfRedPenguins = 2
     
     func createEnemy(forceBomb: ForceBomb = .random) {
         let enemy: SKSpriteNode
@@ -261,6 +268,8 @@ class GameScene: SKScene {
         } else if forceBomb == .always {
             enemyType = bombEnemyType
         }
+        
+        var velocityMultiplicationFactor = velocityMultiplicationFactorOfNormalEnemies
         
         if enemyType == bombEnemyType {
             enemy = SKSpriteNode()
@@ -287,6 +296,11 @@ class GameScene: SKScene {
                 emitter.position = CGPoint(x: sliceFuseXPosition, y: sliceFuseYPosition)
                 enemy.addChild(emitter)
             }
+        } else if enemyType == redPenguinEnemyType {
+            enemy = SKSpriteNode(imageNamed: "red_penguin")
+            run(SKAction.playSoundFileNamed("launch.caf", waitForCompletion: false))
+            enemy.name = "red_enemy"
+            velocityMultiplicationFactor = velocityMultiplicationFactorOfRedPenguins
         } else {
             enemy = SKSpriteNode(imageNamed: "penguin")
             run(SKAction.playSoundFileNamed("launch.caf", waitForCompletion: false))
@@ -312,7 +326,7 @@ class GameScene: SKScene {
         let randomYVelocity = Int.random(in: minYVelocity...maxYVelocity)
         
         enemy.physicsBody = SKPhysicsBody(circleOfRadius: enemyPhysicsBodyCircleOfRadius)
-        enemy.physicsBody?.velocity = CGVector(dx: randomXVelocity, dy: randomYVelocity)
+        enemy.physicsBody?.velocity = CGVector(dx: randomXVelocity * velocityMultiplicationFactor, dy: randomYVelocity * velocityMultiplicationFactor)
         enemy.physicsBody?.angularVelocity = randomAngularVelocity
         enemy.physicsBody?.collisionBitMask = 0
         
@@ -348,7 +362,7 @@ class GameScene: SKScene {
                 if node.position.y < -140 {
                     node.removeAllActions()
                     
-                    if node.name == "enemy" {
+                    if node.name == "enemy" || node.name == "red_enemy" {
                         node.name = ""
                         substractLife()
                         
