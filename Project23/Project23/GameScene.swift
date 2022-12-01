@@ -243,6 +243,8 @@ class GameScene: SKScene {
     let maxLowerXVelocity = 5
     let minBiggestXVelocity = 8
     let maxBiggestXVelocity = 15
+    let minYVelocity = 24
+    let maxYVelocity = 32
     
     func createEnemy(forceBomb: ForceBomb = .random) {
         let enemy: SKSpriteNode
@@ -302,7 +304,7 @@ class GameScene: SKScene {
             randomXVelocity = -Int.random(in: minBiggestXVelocity...maxBiggestXVelocity)
         }
         
-        let randomYVelocity = Int.random(in: 24...32)
+        let randomYVelocity = Int.random(in: minYVelocity...maxYVelocity)
         
         enemy.physicsBody = SKPhysicsBody(circleOfRadius: 64)
         enemy.physicsBody?.velocity = CGVector(dx: randomXVelocity * 40, dy: randomYVelocity * 40)
