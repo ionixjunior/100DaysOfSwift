@@ -234,6 +234,8 @@ class GameScene: SKScene {
     let startYPosition = -128
     let minAngularVelocity = CGFloat(-3)
     let maxAngularVelocity = CGFloat(3)
+    let sliceFuseXPosition = 76
+    let sliceFuseYPosition = 64
     
     func createEnemy(forceBomb: ForceBomb = .random) {
         let enemy: SKSpriteNode
@@ -268,7 +270,7 @@ class GameScene: SKScene {
             }
             
             if let emitter = SKEmitterNode(fileNamed: "sliceFuse") {
-                emitter.position = CGPoint(x: 76, y: 64)
+                emitter.position = CGPoint(x: sliceFuseXPosition, y: sliceFuseYPosition)
                 enemy.addChild(emitter)
             }
         } else {
