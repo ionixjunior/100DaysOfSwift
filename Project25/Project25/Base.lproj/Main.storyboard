@@ -23,12 +23,23 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="A3F-or-CeN">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageView" id="A3F-or-CeN">
                                 <rect key="frame" x="10" y="10" width="145" height="145"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VYi-eR-PZ2">
                                     <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1000" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="893-m2-dIh">
+                                            <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="893-m2-dIh" firstAttribute="centerY" secondItem="VYi-eR-PZ2" secondAttribute="centerY" id="2Fr-sv-quR"/>
+                                        <constraint firstItem="893-m2-dIh" firstAttribute="leading" secondItem="VYi-eR-PZ2" secondAttribute="leading" id="PZZ-Nc-Rss"/>
+                                        <constraint firstItem="893-m2-dIh" firstAttribute="centerX" secondItem="VYi-eR-PZ2" secondAttribute="centerX" id="QjR-e4-4Ir"/>
+                                        <constraint firstItem="893-m2-dIh" firstAttribute="top" secondItem="VYi-eR-PZ2" secondAttribute="top" id="aWo-su-3b0"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
                             </collectionViewCell>
                         </cells>
