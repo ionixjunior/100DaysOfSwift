@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UICollectionViewController, UINavigationControllerDelegate {
+class ViewController: UICollectionViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     var images = [UIImage]()
 
     override func viewDidLoad() {
@@ -11,7 +11,10 @@ class ViewController: UICollectionViewController, UINavigationControllerDelegate
     }
     
     @objc func cameraTapped() {
-        
+        let picker = UIImagePickerController()
+        picker.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
