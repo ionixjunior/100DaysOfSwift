@@ -12,7 +12,11 @@ class ViewController: UICollectionViewController, UINavigationControllerDelegate
         super.viewDidLoad()
         
         title = "Selfie Share"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showConnectionPromptTapped))
+        navigationItem.leftBarButtonItems = [
+            UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showConnectionPromptTapped)),
+            UIBarButtonItem(title: "Devices", style: .plain, target: self, action: #selector(showConnectedDevicesTapped))
+        ]
+        
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(cameraTapped)),
             UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(sendMessageTapped))
@@ -41,6 +45,25 @@ class ViewController: UICollectionViewController, UINavigationControllerDelegate
         let mcBrowser = MCBrowserViewController(serviceType: "hws-project25", session: mcSession)
         mcBrowser.delegate = self
         present(mcBrowser, animated: true)
+    }
+    
+    @objc func showConnectedDevicesTapped() {
+        guard let mcSession = mcSession else { return }
+        
+        var message = ""
+        
+        if mcSession.connectedPeers.count > 0 {
+            message = "Here is the list of connected devices:\n"
+            for peers in mcSession.connectedPeers {
+                message += "\n- \(peers.displayName)"
+            }
+        } else {
+            message = "No devices connected."
+        }
+        
+        let alert = UIAlertController(title: "Connected devices", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alert, animated: true)
     }
     
     @objc func cameraTapped() {
