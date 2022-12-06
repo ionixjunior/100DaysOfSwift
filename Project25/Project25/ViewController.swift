@@ -51,7 +51,25 @@ class ViewController: UICollectionViewController, UINavigationControllerDelegate
     }
     
     @objc func sendMessageTapped() {
-        
+        let alert = UIAlertController(title: "Send your message", message: nil, preferredStyle: .alert)
+        alert.addTextField()
+        alert.addAction(UIAlertAction(title: "Send", style: .default) {
+            [weak self] _ in
+            guard let text = alert.textFields?.first?.text else { return }
+            guard let mcSession = self?.mcSession else { return }
+            
+            let textData = Data(text.utf8)
+            
+            do {
+                try mcSession.send(textData, toPeers: mcSession.connectedPeers, with: .reliable)
+            } catch {
+                let alert = UIAlertController(title: "Send error", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default))
+                self?.present(alert, animated: true)
+            }
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alert, animated: true)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -127,7 +145,17 @@ class ViewController: UICollectionViewController, UINavigationControllerDelegate
             if let image = UIImage(data: data) {
                 self?.images.insert(image, at: 0)
                 self?.collectionView.reloadData()
+                return
             }
+            
+            let text = String(decoding: data, as: UTF8.self)
+            let alert = UIAlertController(title: "Message from \(peerID.displayName)", message: text, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Reply", style: .default) {
+                [weak self] _ in
+                self?.sendMessageTapped()
+            })
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+            present(alert, animated: true)
         }
     }
     
