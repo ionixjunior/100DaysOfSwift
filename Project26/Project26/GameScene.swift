@@ -7,10 +7,24 @@ class GameScene: SKScene {
     
     var motionManager: CMMotionManager?
     
+    var scoreLabel: SKLabelNode!
+    var score = 0 {
+        didSet {
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
+    
     override func didMove(to view: SKView) {
         loadBackground()
         loadLevel()
         createPlayer()
+        
+        scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+        scoreLabel.horizontalAlignmentMode = .left
+        scoreLabel.position = CGPoint(x: 16, y: 16)
+        scoreLabel.zPosition = 2
+        addChild(scoreLabel)
+        score = 0
         
         physicsWorld.gravity = .zero
         
