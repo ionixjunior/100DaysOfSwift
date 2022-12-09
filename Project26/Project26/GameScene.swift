@@ -17,7 +17,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView) {
         loadBackground()
-        loadLevel()
+        loadLevel(levelNumber: 1)
         createPlayer()
         
         scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
@@ -42,9 +42,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(background)
     }
     
-    func loadLevel() {
-        guard let levelURL = Bundle.main.url(forResource: "level1", withExtension: "txt") else { fatalError("Could not find level1.txt in the app bundle.") }
-        guard let levelString = try? String(contentsOf: levelURL) else { fatalError("Could not load level1.txt from the app bundle.") }
+    func loadLevel(levelNumber: Int) {
+        let levelName = "level\(levelNumber)"
+        guard let levelURL = Bundle.main.url(forResource: levelName, withExtension: "txt") else { fatalError("Could not find \(levelName).txt in the app bundle.") }
+        guard let levelString = try? String(contentsOf: levelURL) else { fatalError("Could not load \(levelName).txt from the app bundle.") }
         
         let lines = levelString.components(separatedBy: "\n")
         
