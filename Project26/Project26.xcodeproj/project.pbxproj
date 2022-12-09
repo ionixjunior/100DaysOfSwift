@@ -16,6 +16,7 @@
 		7A53179F294099E100EFA2CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A53179D294099E100EFA2CF /* LaunchScreen.storyboard */; };
 		7A5317A629409ABA00EFA2CF /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7A5317A529409ABA00EFA2CF /* level1.txt */; };
 		7A5317A829409D9E00EFA2CF /* CollisionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5317A729409D9E00EFA2CF /* CollisionTypes.swift */; };
+		7A81C4A729434F7B00485A60 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7A81C4A629434F7B00485A60 /* level2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		7A53179E294099E100EFA2CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A5317A529409ABA00EFA2CF /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
 		7A5317A729409D9E00EFA2CF /* CollisionTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionTypes.swift; sourceTree = "<group>"; };
+		7A81C4A629434F7B00485A60 /* level2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				7A53179D294099E100EFA2CF /* LaunchScreen.storyboard */,
 				7A5317A529409ABA00EFA2CF /* level1.txt */,
 				7A5317A729409D9E00EFA2CF /* CollisionTypes.swift */,
+				7A81C4A629434F7B00485A60 /* level2.txt */,
 			);
 			path = Project26;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 			files = (
 				7A5317A629409ABA00EFA2CF /* level1.txt in Resources */,
 				7A53179A294099E000EFA2CF /* Main.storyboard in Resources */,
+				7A81C4A729434F7B00485A60 /* level2.txt in Resources */,
 				7A531791294099E000EFA2CF /* GameScene.sks in Resources */,
 				7A53179C294099E100EFA2CF /* Assets.xcassets in Resources */,
 				7A53179F294099E100EFA2CF /* LaunchScreen.storyboard in Resources */,
