@@ -15,9 +15,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    var levelNumber = 1
+    
     override func didMove(to view: SKView) {
         loadBackground()
-        loadLevel(levelNumber: 1)
+        loadLevel(levelNumber: levelNumber)
         createPlayer()
         
         scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
