@@ -193,7 +193,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             node.removeFromParent()
             score += 1
         } else if node.name == "finish" {
-            print("finish the game")
+            physicsWorld.speed = 0
+            
+            let labelFinish = SKLabelNode(fontNamed: "Chalkduster")
+            labelFinish.text = "Level up!"
+            labelFinish.horizontalAlignmentMode = .center
+            labelFinish.position = CGPoint(x: 512, y: 384)
+            labelFinish.fontSize = 120
+            labelFinish.zPosition = 2
+            labelFinish.xScale = 2
+            labelFinish.yScale = 2
+            addChild(labelFinish)
+            
+            let scale = SKAction.scale(to: 1, duration: 0.2)
+            let actions = SKAction.sequence([scale])
+            labelFinish.run(actions)
         }
     }
 }
