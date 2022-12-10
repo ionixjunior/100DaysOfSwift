@@ -26,6 +26,10 @@ class ViewController: UIViewController {
         switch currentDrawType {
         case 0:
             drawRectangle()
+            
+        case 1:
+            drawCircle()
+            
         default:
             break
         }
@@ -35,11 +39,26 @@ class ViewController: UIViewController {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
         let image = renderer.image {
             context in
-            let rectangle = CGRect(x: 0, y: 0, width: 512, height: 512)
+            let rectangle = CGRect(x: 0, y: 0, width: 512, height: 512).insetBy(dx: 5, dy: 5)
             context.cgContext.setFillColor(UIColor.red.cgColor)
             context.cgContext.setStrokeColor(UIColor.black.cgColor)
             context.cgContext.setLineWidth(10)
             context.cgContext.addRect(rectangle)
+            context.cgContext.drawPath(using: .fillStroke)
+        }
+        
+        imageView.image = image
+    }
+    
+    func drawCircle() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        let image = renderer.image {
+            context in
+            let rectangle = CGRect(x: 0, y: 0, width: 512, height: 512).insetBy(dx: 5, dy: 5)
+            context.cgContext.setFillColor(UIColor.red.cgColor)
+            context.cgContext.setStrokeColor(UIColor.black.cgColor)
+            context.cgContext.setLineWidth(10)
+            context.cgContext.addEllipse(in: rectangle)
             context.cgContext.drawPath(using: .fillStroke)
         }
         
