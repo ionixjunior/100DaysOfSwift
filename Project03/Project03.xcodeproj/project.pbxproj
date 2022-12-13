@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A26002229488B4400BC51C9 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A26002129488B4400BC51C9 /* UIImageExtension.swift */; };
 		7A965BDF28E63CB6004CFB8D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A965BDE28E63CB6004CFB8D /* DetailViewController.swift */; };
 		7AA8D46C28E45A2A00E0D15B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8D46B28E45A2A00E0D15B /* AppDelegate.swift */; };
 		7AA8D46E28E45A2A00E0D15B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8D46D28E45A2A00E0D15B /* SceneDelegate.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A26002129488B4400BC51C9 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		7A965BDE28E63CB6004CFB8D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7AA8D46828E45A2A00E0D15B /* Project03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA8D46B28E45A2A00E0D15B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A26002029488B3600BC51C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A26002129488B4400BC51C9 /* UIImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		7AA8D45F28E45A2A00E0D15B = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 		7AA8D46A28E45A2A00E0D15B /* Project03 */ = {
 			isa = PBXGroup;
 			children = (
+				7A26002029488B3600BC51C9 /* Extensions */,
 				7AA8D46B28E45A2A00E0D15B /* AppDelegate.swift */,
 				7AA8D46D28E45A2A00E0D15B /* SceneDelegate.swift */,
 				7AA8D46F28E45A2A00E0D15B /* ViewController.swift */,
@@ -314,6 +325,7 @@
 			files = (
 				7AA8D47028E45A2A00E0D15B /* ViewController.swift in Sources */,
 				7AC8C5B328E7B49B000B4683 /* Picture.swift in Sources */,
+				7A26002229488B4400BC51C9 /* UIImageExtension.swift in Sources */,
 				7AA8D46C28E45A2A00E0D15B /* AppDelegate.swift in Sources */,
 				7AC8C5B528E7B5AA000B4683 /* PictureLoader.swift in Sources */,
 				7AA8D46E28E45A2A00E0D15B /* SceneDelegate.swift in Sources */,
