@@ -41,7 +41,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
                 paragraphStyle.alignment = NSTextAlignment.center
                 
                 let attributes: [NSAttributedString.Key: Any] = [
-                    .font: UIFont.systemFont(ofSize: 100),
+                    .font: UIFont(name: "impact", size: 100) as Any,
                     .foregroundColor: UIColor.white,
                     .paragraphStyle: paragraphStyle
                 ]
@@ -72,7 +72,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
                 paragraphStyle.alignment = NSTextAlignment.center
                 
                 let attributes: [NSAttributedString.Key: Any] = [
-                    .font: UIFont.systemFont(ofSize: 100),
+                    .font: UIFont(name: "impact", size: 100) as Any,
                     .foregroundColor: UIColor.white,
                     .paragraphStyle: paragraphStyle
                 ]
