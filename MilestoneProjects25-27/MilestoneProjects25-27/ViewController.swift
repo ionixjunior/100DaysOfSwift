@@ -39,7 +39,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     func requestTopText() {
         let alert = UIAlertController(title: "Enter the top text", message: nil, preferredStyle: .alert)
         alert.addTextField()
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel) { [weak self] _ in
+            self?.requestBottomText()
+        })
         alert.addAction(UIAlertAction(title: "Add", style: .default) { [weak self] _ in
             guard let text = alert.textFields?.first?.text else { return }
             guard let image = self?.imageView.image else { return }
