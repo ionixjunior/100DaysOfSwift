@@ -10,7 +10,9 @@ class ViewController: UIViewController {
     }
 
     @objc func addTapped() {
-        
+        let controller = UIImagePickerController()
+        controller.allowsEditing = true
+        present(controller, animated: true)
     }
 }
 
