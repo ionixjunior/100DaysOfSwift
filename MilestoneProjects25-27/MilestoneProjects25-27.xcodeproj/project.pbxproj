@@ -24,6 +24,7 @@
 		7A0A6FF5295319B100ADEB55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A0A6FF8295319B100ADEB55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A0A6FFA295319B100ADEB55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A35053D2953CDFD002CE5F4 /* impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = impact.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 				7A0A6FF5295319B100ADEB55 /* Assets.xcassets */,
 				7A0A6FF7295319B100ADEB55 /* LaunchScreen.storyboard */,
 				7A0A6FFA295319B100ADEB55 /* Info.plist */,
+				7A35053D2953CDFD002CE5F4 /* impact.ttf */,
 			);
 			path = "MilestoneProjects25-27";
 			sourceTree = "<group>";
