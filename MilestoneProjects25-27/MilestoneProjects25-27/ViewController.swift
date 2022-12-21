@@ -1,6 +1,7 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -8,6 +9,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         title = "Meme generator"
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+        
+        shareButton.isHidden = true
     }
 
     @objc func addTapped() {

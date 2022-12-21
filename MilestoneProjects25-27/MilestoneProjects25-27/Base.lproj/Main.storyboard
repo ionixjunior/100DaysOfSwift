@@ -23,6 +23,12 @@
                                     <constraint firstAttribute="height" constant="252" id="Ive-Kj-Qor"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMQ-2M-zXe">
+                                <rect key="frame" x="16" y="363" width="361" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Share"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -35,6 +41,7 @@
                     <navigationItem key="navigationItem" id="p8E-AJ-qeh"/>
                     <connections>
                         <outlet property="imageView" destination="Bz7-RL-jF7" id="VAY-92-hPp"/>
+                        <outlet property="shareButton" destination="dMQ-2M-zXe" id="M2E-2f-awz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
