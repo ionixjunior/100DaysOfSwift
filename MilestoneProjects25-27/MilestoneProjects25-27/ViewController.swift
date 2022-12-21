@@ -43,7 +43,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
                 let attributes: [NSAttributedString.Key: Any] = [
                     .font: UIFont(name: "impact", size: 100) as Any,
                     .foregroundColor: UIColor.white,
-                    .paragraphStyle: paragraphStyle
+                    .paragraphStyle: paragraphStyle,
+                    .strokeColor: UIColor.black,
+                    .strokeWidth: -2
                 ]
                 
                 let attributedString = NSAttributedString(string: text, attributes: attributes)
@@ -74,7 +76,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
                 let attributes: [NSAttributedString.Key: Any] = [
                     .font: UIFont(name: "impact", size: 100) as Any,
                     .foregroundColor: UIColor.white,
-                    .paragraphStyle: paragraphStyle
+                    .paragraphStyle: paragraphStyle,
+                    .strokeColor: UIColor.black,
+                    .strokeWidth: -2
                 ]
                 
                 let attributedString = NSAttributedString(string: text, attributes: attributes)
