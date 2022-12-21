@@ -11,12 +11,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
         
         shareButton.isHidden = true
+        shareButton.addTarget(self, action: #selector(shareButtonTapped), for: .touchUpInside)
     }
 
     @objc func addTapped() {
         let controller = UIImagePickerController()
         controller.allowsEditing = true
         controller.delegate = self
+        present(controller, animated: true)
+    }
+    
+    @objc func shareButtonTapped() {
+        guard let image = imageView.image else { return }
+        let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         present(controller, animated: true)
     }
     
@@ -64,7 +71,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     func requestBottomText() {
         let alert = UIAlertController(title: "Enter the bottom text", message: nil, preferredStyle: .alert)
         alert.addTextField()
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel) { [weak self] _ in
+            self?.shareButton.isHidden = false
+        })
         alert.addAction(UIAlertAction(title: "Add", style: .default) { [weak self] _ in
             guard let text = alert.textFields?.first?.text else { return }
             guard let image = self?.imageView.image else { return }
@@ -89,6 +98,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
             }
             
             self?.imageView.image = imageWithText
+            self?.shareButton.isHidden = false
         })
         self.present(alert, animated: true)
     }
