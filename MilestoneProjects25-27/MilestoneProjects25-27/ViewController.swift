@@ -31,6 +31,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         guard let image = info[.editedImage] as? UIImage else { return }
         imageView.image = image
         picker.dismiss(animated: true) {
+            self.shareButton.isHidden = true
             self.requestTopText()
         }
     }
