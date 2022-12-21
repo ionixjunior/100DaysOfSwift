@@ -43,7 +43,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
             self?.requestBottomText()
         })
         alert.addAction(UIAlertAction(title: "Add", style: .default) { [weak self] _ in
-            guard let text = alert.textFields?.first?.text else { return }
+            guard let text = alert.textFields?.first?.text?.uppercased() else { return }
             guard let image = self?.imageView.image else { return }
             
             let renderer = UIGraphicsImageRenderer(size: image.size)
@@ -78,7 +78,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
             self?.shareButton.isHidden = false
         })
         alert.addAction(UIAlertAction(title: "Add", style: .default) { [weak self] _ in
-            guard let text = alert.textFields?.first?.text else { return }
+            guard let text = alert.textFields?.first?.text?.uppercased() else { return }
             guard let image = self?.imageView.image else { return }
             
             let renderer = UIGraphicsImageRenderer(size: image.size)
