@@ -15,10 +15,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cCi-Hm-VAH">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cCi-Hm-VAH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="20g-Cx-3yQ"/>
+                            <constraint firstItem="cCi-Hm-VAH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="43g-pf-hbz"/>
+                            <constraint firstItem="cCi-Hm-VAH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UbN-8H-FSQ"/>
+                            <constraint firstItem="cCi-Hm-VAH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h0G-ew-7a7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cho-X1-cmM"/>
+                    <connections>
+                        <outlet property="secret" destination="cCi-Hm-VAH" id="p8v-7U-x2Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,6 +62,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
