@@ -16,6 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRq-Nq-r5o">
+                                <rect key="frame" x="136.33333333333334" y="408.66666666666669" width="120.66666666666666" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Authenticate"/>
+                                <connections>
+                                    <action selector="authenticateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cqQ-IL-86z"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cCi-Hm-VAH">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -29,7 +37,9 @@
                         <constraints>
                             <constraint firstItem="cCi-Hm-VAH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="20g-Cx-3yQ"/>
                             <constraint firstItem="cCi-Hm-VAH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="43g-pf-hbz"/>
+                            <constraint firstItem="NRq-Nq-r5o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ODD-yD-7PO"/>
                             <constraint firstItem="cCi-Hm-VAH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UbN-8H-FSQ"/>
+                            <constraint firstItem="NRq-Nq-r5o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cYg-oS-V8l"/>
                             <constraint firstItem="cCi-Hm-VAH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h0G-ew-7a7"/>
                         </constraints>
                     </view>
