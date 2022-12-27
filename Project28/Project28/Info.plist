@@ -21,5 +21,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSFaceIDUsageDescription</key>
+	<string>We need to use Face ID to identify yourself.</string>
 </dict>
 </plist>
