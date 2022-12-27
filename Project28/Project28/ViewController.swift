@@ -39,5 +39,18 @@ class ViewController: UIViewController {
 
     @IBAction func authenticateTapped(_ sender: Any) {
     }
+    
+    func unlockSecretMessage() {
+        secret.isHidden = false
+        secret.text = KeychainWrapper.standard.string(forKey: "SecretMessage") ?? ""
+    }
+    
+    func saveSecretMessage() {
+        guard secret.isHidden == false else { return }
+        
+        KeychainWrapper.standard.set(secret.textStorage, forKey: "SecretMessage")
+        secret.resignFirstResponder()
+        secret.isHidden = true
+    }
 }
 
