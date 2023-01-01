@@ -14,6 +14,8 @@
 		7A9E3F592961EA98002F333F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9E3F572961EA98002F333F /* Main.storyboard */; };
 		7A9E3F5B2961EA99002F333F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A9E3F5A2961EA99002F333F /* Assets.xcassets */; };
 		7A9E3F5E2961EA99002F333F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9E3F5C2961EA99002F333F /* LaunchScreen.storyboard */; };
+		7A9E3F652961EB84002F333F /* BuildingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9E3F642961EB84002F333F /* BuildingNode.swift */; };
+		7A9E3F672961EBE8002F333F /* CollisionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9E3F662961EBE8002F333F /* CollisionTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		7A9E3F582961EA98002F333F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A9E3F5A2961EA99002F333F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A9E3F5D2961EA99002F333F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A9E3F642961EB84002F333F /* BuildingNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingNode.swift; sourceTree = "<group>"; };
+		7A9E3F662961EBE8002F333F /* CollisionTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 		7A9E3F4C2961EA98002F333F /* Project29 */ = {
 			isa = PBXGroup;
 			children = (
+				7A9E3F642961EB84002F333F /* BuildingNode.swift */,
 				7A9E3F4D2961EA98002F333F /* AppDelegate.swift */,
 				7A9E3F4F2961EA98002F333F /* GameScene.sks */,
 				7A9E3F532961EA98002F333F /* GameScene.swift */,
@@ -64,6 +69,7 @@
 				7A9E3F572961EA98002F333F /* Main.storyboard */,
 				7A9E3F5A2961EA99002F333F /* Assets.xcassets */,
 				7A9E3F5C2961EA99002F333F /* LaunchScreen.storyboard */,
+				7A9E3F662961EBE8002F333F /* CollisionTypes.swift */,
 			);
 			path = Project29;
 			sourceTree = "<group>";
@@ -141,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A9E3F542961EA98002F333F /* GameScene.swift in Sources */,
+				7A9E3F652961EB84002F333F /* BuildingNode.swift in Sources */,
 				7A9E3F562961EA98002F333F /* GameViewController.swift in Sources */,
+				7A9E3F672961EBE8002F333F /* CollisionTypes.swift in Sources */,
 				7A9E3F4E2961EA98002F333F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
