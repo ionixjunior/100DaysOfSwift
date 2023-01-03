@@ -7,6 +7,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var player2: SKSpriteNode!
     var banana: SKSpriteNode!
     var currentPlayer = 1
+    var wind: Wind!
     
     override func didMove(to view: SKView) {
         backgroundColor = UIColor(hue: 0.669, saturation: 0.99, brightness: 0.67, alpha: 1)
@@ -15,7 +16,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         physicsWorld.contactDelegate = self
         
-        let wind = Wind(direction: WindDirection.allCases.randomElement()!, strength: CGFloat.random(in: 1...10))
+        wind = Wind(direction: WindDirection.allCases.randomElement()!, strength: CGFloat.random(in: 1...10))
         physicsWorld.gravity = CGVector(dx: wind.dxValue, dy: physicsWorld.gravity.dy)
     }
     

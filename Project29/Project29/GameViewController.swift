@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var velocityLabel: UILabel!
     @IBOutlet weak var playerNumber: UILabel!
     @IBOutlet weak var launchButton: UIButton!
+    @IBOutlet weak var windDescription: UILabel!
     
     var currentGame: GameScene?
     
@@ -43,6 +44,10 @@ class GameViewController: UIViewController {
         
         angleChanged(self)
         velocityChanged(self)
+        
+        if let windDescription = currentGame?.wind.description {
+            show(windDescription: windDescription)
+        }
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -87,5 +92,9 @@ class GameViewController: UIViewController {
         velocitySlider.isHidden = false
         velocityLabel.isHidden = false
         launchButton.isHidden = false
+    }
+    
+    func show(windDescription text: String) {
+        windDescription.text = text
     }
 }
