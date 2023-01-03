@@ -16,6 +16,8 @@
 		7A9E3F5E2961EA99002F333F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9E3F5C2961EA99002F333F /* LaunchScreen.storyboard */; };
 		7A9E3F652961EB84002F333F /* BuildingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9E3F642961EB84002F333F /* BuildingNode.swift */; };
 		7A9E3F672961EBE8002F333F /* CollisionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9E3F662961EBE8002F333F /* CollisionTypes.swift */; };
+		7AF105112963B32B0014AB8F /* hitPlayer.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7AF1050F2963B32B0014AB8F /* hitPlayer.sks */; };
+		7AF105122963B32B0014AB8F /* hitBuilding.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7AF105102963B32B0014AB8F /* hitBuilding.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		7A9E3F5D2961EA99002F333F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A9E3F642961EB84002F333F /* BuildingNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingNode.swift; sourceTree = "<group>"; };
 		7A9E3F662961EBE8002F333F /* CollisionTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionTypes.swift; sourceTree = "<group>"; };
+		7AF1050F2963B32B0014AB8F /* hitPlayer.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitPlayer.sks; sourceTree = "<group>"; };
+		7AF105102963B32B0014AB8F /* hitBuilding.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitBuilding.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 				7A9E3F5A2961EA99002F333F /* Assets.xcassets */,
 				7A9E3F5C2961EA99002F333F /* LaunchScreen.storyboard */,
 				7A9E3F662961EBE8002F333F /* CollisionTypes.swift */,
+				7AF105102963B32B0014AB8F /* hitBuilding.sks */,
+				7AF1050F2963B32B0014AB8F /* hitPlayer.sks */,
 			);
 			path = Project29;
 			sourceTree = "<group>";
@@ -134,8 +140,10 @@
 			files = (
 				7A9E3F592961EA98002F333F /* Main.storyboard in Resources */,
 				7A9E3F502961EA98002F333F /* GameScene.sks in Resources */,
+				7AF105112963B32B0014AB8F /* hitPlayer.sks in Resources */,
 				7A9E3F5B2961EA99002F333F /* Assets.xcassets in Resources */,
 				7A9E3F5E2961EA99002F333F /* LaunchScreen.storyboard in Resources */,
+				7AF105122963B32B0014AB8F /* hitBuilding.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
