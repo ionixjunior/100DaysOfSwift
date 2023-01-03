@@ -14,6 +14,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createPlayers()
         
         physicsWorld.contactDelegate = self
+        
+        let wind = Wind(direction: WindDirection.allCases.randomElement()!, strength: CGFloat.random(in: 1...10))
+        physicsWorld.gravity = CGVector(dx: wind.dxValue, dy: physicsWorld.gravity.dy)
     }
     
     func createBuildings() {
