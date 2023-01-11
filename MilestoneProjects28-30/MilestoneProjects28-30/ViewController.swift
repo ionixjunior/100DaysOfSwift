@@ -23,12 +23,17 @@ class ViewController: UIViewController {
                     xPosition += 130
                 }
                 
-                let card = UIView(frame: CGRect(x: xPosition, y: yPosition, width: 120, height: 170))
+                let card = UIButton(frame: CGRect(x: xPosition, y: yPosition, width: 120, height: 170))
                 card.backgroundColor = UIColor.gray
                 card.layer.cornerRadius = 10
+                card.addTarget(self, action: #selector(cardTapped), for: .touchUpInside)
                 view.addSubview(card)
             }
         }
     }
 
+    @objc func cardTapped(_ sender: UIButton) {
+        let animationOptions: UIView.AnimationOptions = [.transitionFlipFromLeft]
+        UIView.transition(with: sender, duration: 0.5, options: animationOptions, animations: nil, completion: nil)
+    }
 }
