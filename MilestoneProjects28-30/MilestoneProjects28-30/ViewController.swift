@@ -6,24 +6,33 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let screenRect = UIScreen.main.bounds
-        let screenWidth = screenRect.size.width
-        let screenHeight = screenRect.size.height
+        let screenWidth = Int(screenRect.size.width)
+        let screenHeight = Int(screenRect.size.height)
         
-        var xPosition = (Int(screenWidth) - 1040) / 2
-        var yPosition = (Int(screenHeight) - 720) / 2
+        let cardContentWidth = 120
+        let cardContentHeight = 170
+        let spaceBetweenCards = 10
+        let numberOfRows = 4
+        let numberOfColumns = 8
+        let cardContainerWidth = screenWidth - ((cardContentWidth + spaceBetweenCards) * numberOfColumns)
+        let cardContainerHeight = screenHeight - ((cardContentHeight + spaceBetweenCards) * numberOfRows)
+        var xPosition = cardContainerWidth / 2
+        var yPosition = cardContainerHeight / 2
+        let rangeOfRows = 1...numberOfRows
+        let rangeOfColumns = 1...numberOfColumns
         
-        for row in 1...4 {
-            if row != 1 {
-                yPosition += 180
-                xPosition = (Int(screenWidth) - 1040) / 2
+        for row in rangeOfRows {
+            if row != rangeOfRows.first {
+                yPosition += cardContentHeight + spaceBetweenCards
+                xPosition = cardContainerWidth / 2
             }
             
-            for column in 1...8 {
-                if column != 1 {
-                    xPosition += 130
+            for column in rangeOfColumns {
+                if column != rangeOfColumns.first {
+                    xPosition += cardContentWidth + spaceBetweenCards
                 }
                 
-                let card = UIButton(frame: CGRect(x: xPosition, y: yPosition, width: 120, height: 170))
+                let card = UIButton(frame: CGRect(x: xPosition, y: yPosition, width: cardContentWidth, height: cardContentHeight))
                 card.backgroundColor = UIColor.gray
                 card.layer.cornerRadius = 10
                 card.addTarget(self, action: #selector(cardTapped), for: .touchUpInside)
