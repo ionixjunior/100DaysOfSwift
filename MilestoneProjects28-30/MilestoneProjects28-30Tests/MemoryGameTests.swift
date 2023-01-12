@@ -24,4 +24,31 @@ final class MemoryGameTests: XCTestCase {
         
         XCTAssertNotEqual(memoryGame.cards, self.cards)
     }
+    
+    func testFlipCardShouldReturnNextWhenFlipTheFirstCard() throws {
+        let memoryGame = MemoryGame(cards: cards)
+        
+        let result = memoryGame.flipCardFrom(position: 1)
+        
+        XCTAssertTrue(FlipResult.Next == result)
+    }
+    
+    func testFlipCardShouldReturnMatchWhenFlipTheSecondCard() throws {
+        let memoryGame = MemoryGame(cards: cards)
+        _ = memoryGame.flipCardFrom(position: 1)
+        
+        let result = memoryGame.flipCardFrom(position: 2)
+        
+        XCTAssertTrue(FlipResult.Match == result)
+    }
+    
+    func testFlipCardShouldReturnDoesNotMatchWhenFlipTheSecondCard() throws {
+        let memoryCard = MemoryGame(cards: cards)
+        memoryCard.start()
+        _ = memoryCard.flipCardFrom(position: 1)
+        
+        let result = memoryCard.flipCardFrom(position: 2)
+        
+        XCTAssertTrue(FlipResult.DoesNotMatch == result)
+    }
 }
