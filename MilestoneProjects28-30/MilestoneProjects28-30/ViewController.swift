@@ -1,6 +1,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var memoryGame: MemoryGame!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,8 @@ class ViewController: UIViewController {
         cards.append(Card(name: "Fox", group: 15))
         cards.append(Card(name: "Rabbit", group: 16))
         cards.append(Card(name: "Rabbit", group: 16))
+        
+        memoryGame = MemoryGame(cards: cards)
         
         let screenRect = UIScreen.main.bounds
         let screenWidth = Int(screenRect.size.width)
