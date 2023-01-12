@@ -57,6 +57,7 @@ class ViewController: UIViewController {
         var yPosition = cardContainerHeight / 2
         let rangeOfRows = 1...numberOfRows
         let rangeOfColumns = 1...numberOfColumns
+        var cardPosition = 1
         
         for row in rangeOfRows {
             if row != rangeOfRows.first {
@@ -69,16 +70,18 @@ class ViewController: UIViewController {
                     xPosition += cardContentWidth + spaceBetweenCards
                 }
                 
-                let card = UIButton(frame: CGRect(x: xPosition, y: yPosition, width: cardContentWidth, height: cardContentHeight))
+                let card = UICardButton(frame: CGRect(x: xPosition, y: yPosition, width: cardContentWidth, height: cardContentHeight))
                 card.backgroundColor = UIColor.gray
                 card.layer.cornerRadius = 10
                 card.addTarget(self, action: #selector(cardTapped), for: .touchUpInside)
+                card.position = cardPosition
                 view.addSubview(card)
+                cardPosition += 1
             }
         }
     }
 
-    @objc func cardTapped(_ sender: UIButton) {
+    @objc func cardTapped(_ sender: UICardButton) {
         let animationOptions: UIView.AnimationOptions = [.transitionFlipFromLeft]
         UIView.transition(with: sender, duration: 0.5, options: animationOptions, animations: nil, completion: nil)
     }
