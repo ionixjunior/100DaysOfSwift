@@ -80,9 +80,28 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    var flippedCards = [UICardButton]()
 
     @objc func cardTapped(_ sender: UICardButton) {
+        flippedCards.append(sender)
+        let result = memoryGame.flipCardFrom(position: sender.position)
+        
         let animationOptions: UIView.AnimationOptions = [.transitionFlipFromLeft]
         UIView.transition(with: sender, duration: 0.5, options: animationOptions, animations: nil, completion: nil)
+        
+        if result.flipResult == FlipResult.DoesNotMatch {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                UIView.transition(with: self.flippedCards.first!, duration: 0.5, options: animationOptions, animations: nil, completion: nil)
+                UIView.transition(with: self.flippedCards.last!, duration: 0.5, options: animationOptions, animations: nil, completion: nil)
+                self.flippedCards.removeAll(keepingCapacity: true)
+            }
+        }
+        
+        if result.flipResult == FlipResult.Match {
+            flippedCards.first?.isUserInteractionEnabled = false
+            flippedCards.last?.isUserInteractionEnabled = false
+            flippedCards.removeAll(keepingCapacity: true)
+        }
     }
 }
