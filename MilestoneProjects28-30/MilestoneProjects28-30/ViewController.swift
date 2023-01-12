@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         cards.append(Card(name: "Rabbit", group: 16))
         
         memoryGame = MemoryGame(cards: cards)
+        memoryGame.start()
         
         let screenRect = UIScreen.main.bounds
         let screenWidth = Int(screenRect.size.width)
