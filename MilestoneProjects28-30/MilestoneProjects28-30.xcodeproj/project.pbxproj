@@ -17,6 +17,8 @@
 		7AA19B5B296F66C400B3BCD5 /* MilestoneProjects28_30UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA19B5A296F66C400B3BCD5 /* MilestoneProjects28_30UITests.swift */; };
 		7AA19B5D296F66C400B3BCD5 /* MilestoneProjects28_30UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA19B5C296F66C400B3BCD5 /* MilestoneProjects28_30UITestsLaunchTests.swift */; };
 		7AE22CD62970B0130023CAFC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE22CD52970B0130023CAFC /* Card.swift */; };
+		7AE22CD82970B08C0023CAFC /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE22CD72970B08C0023CAFC /* MemoryGame.swift */; };
+		7AE22CDA2970B0C60023CAFC /* MemoryGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE22CD92970B0C60023CAFC /* MemoryGameTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		7AA19B5A296F66C400B3BCD5 /* MilestoneProjects28_30UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects28_30UITests.swift; sourceTree = "<group>"; };
 		7AA19B5C296F66C400B3BCD5 /* MilestoneProjects28_30UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects28_30UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7AE22CD52970B0130023CAFC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		7AE22CD72970B08C0023CAFC /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
+		7AE22CD92970B0C60023CAFC /* MemoryGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 				7AA19B44296F66C400B3BCD5 /* LaunchScreen.storyboard */,
 				7AA19B47296F66C400B3BCD5 /* Info.plist */,
 				7AE22CD52970B0130023CAFC /* Card.swift */,
+				7AE22CD72970B08C0023CAFC /* MemoryGame.swift */,
 			);
 			path = "MilestoneProjects28-30";
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				7AA19B50296F66C400B3BCD5 /* MilestoneProjects28_30Tests.swift */,
+				7AE22CD92970B0C60023CAFC /* MemoryGameTests.swift */,
 			);
 			path = "MilestoneProjects28-30Tests";
 			sourceTree = "<group>";
@@ -263,6 +269,7 @@
 			files = (
 				7AA19B3E296F66C300B3BCD5 /* ViewController.swift in Sources */,
 				7AA19B3A296F66C300B3BCD5 /* AppDelegate.swift in Sources */,
+				7AE22CD82970B08C0023CAFC /* MemoryGame.swift in Sources */,
 				7AA19B3C296F66C300B3BCD5 /* SceneDelegate.swift in Sources */,
 				7AE22CD62970B0130023CAFC /* Card.swift in Sources */,
 			);
@@ -272,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AE22CDA2970B0C60023CAFC /* MemoryGameTests.swift in Sources */,
 				7AA19B51296F66C400B3BCD5 /* MilestoneProjects28_30Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
