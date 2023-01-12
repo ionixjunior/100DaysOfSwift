@@ -30,7 +30,7 @@ final class MemoryGameTests: XCTestCase {
         
         let result = memoryGame.flipCardFrom(position: 1)
         
-        XCTAssertTrue(FlipResult.Next == result)
+        XCTAssertTrue(FlipResult.Next == result.flipResult)
     }
     
     func testFlipCardShouldReturnMatchWhenFlipTheSecondCard() throws {
@@ -39,7 +39,7 @@ final class MemoryGameTests: XCTestCase {
         
         let result = memoryGame.flipCardFrom(position: 2)
         
-        XCTAssertTrue(FlipResult.Match == result)
+        XCTAssertTrue(FlipResult.Match == result.flipResult)
     }
     
     func testFlipCardShouldReturnDoesNotMatchWhenFlipTheSecondCard() throws {
@@ -49,6 +49,6 @@ final class MemoryGameTests: XCTestCase {
         
         let result = memoryCard.flipCardFrom(position: 2)
         
-        XCTAssertTrue(FlipResult.DoesNotMatch == result)
+        XCTAssertTrue(FlipResult.DoesNotMatch == result.flipResult)
     }
 }
