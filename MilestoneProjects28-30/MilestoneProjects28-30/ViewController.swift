@@ -81,6 +81,12 @@ class ViewController: UIViewController {
                 cardPosition += 1
             }
         }
+        
+        var cardIndex = 0
+        for card in view.subviews.compactMap({ $0 as? UICardButton }) {
+            card.accessibilityIdentifier = "card_\(memoryGame.cards[cardIndex].group)"
+            cardIndex += 1
+        }
     }
     
     var flippedCards = [UICardButton]()
