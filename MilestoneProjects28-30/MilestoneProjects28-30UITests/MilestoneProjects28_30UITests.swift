@@ -15,7 +15,7 @@ final class MilestoneProjects28_30UITests: XCTestCase {
         app = nil
     }
 
-    func testFlipAllCorrectCards() throws {
+    func testFlipAllPairs() throws {
         let numberOfCards = 32
         let numberOfPairs = numberOfCards / 2
         
