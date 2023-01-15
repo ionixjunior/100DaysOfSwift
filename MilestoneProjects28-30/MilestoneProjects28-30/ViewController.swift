@@ -6,6 +6,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(red: 0.03, green: 0.49, blue: 0.40, alpha: 1.00)
         
         var cards = [Card]()
         cards.append(Card(image: UIImage(named: "giraffe")!, group: 1))
