@@ -75,6 +75,7 @@ class ViewController: UIViewController {
                 let card = UICardButton(frame: CGRect(x: xPosition, y: yPosition, width: cardContentWidth, height: cardContentHeight))
                 card.backgroundColor = UIColor.gray
                 card.layer.cornerRadius = 10
+                card.layer.masksToBounds = true
                 card.titleLabel?.font = UIFont.systemFont(ofSize: 30)
                 card.addTarget(self, action: #selector(cardTapped), for: .touchUpInside)
                 card.setImage(closedCardImage, for: .normal)
