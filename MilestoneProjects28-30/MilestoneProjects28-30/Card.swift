@@ -1,5 +1,7 @@
+import UIKit
+
 struct Card: Equatable {
-    let name: String
+    let image: UIImage
     let group: Int
     
     static func == (lhs: Card, rhs: Card) -> Bool {
