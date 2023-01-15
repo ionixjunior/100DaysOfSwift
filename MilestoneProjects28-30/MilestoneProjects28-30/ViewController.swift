@@ -100,13 +100,16 @@ class ViewController: UIViewController {
         let animationOptions: UIView.AnimationOptions = [.transitionFlipFromLeft]
         UIView.transition(with: sender, duration: 0.5, options: animationOptions, animations: nil, completion: nil)
         sender.setTitle(result.card.name, for: .normal)
+        sender.setImage(nil, for: .normal)
         
         if result.flipResult == FlipResult.DoesNotMatch {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 UIView.transition(with: self.flippedCards.first!, duration: 0.5, options: animationOptions, animations: nil, completion: nil)
                 UIView.transition(with: self.flippedCards.last!, duration: 0.5, options: animationOptions, animations: nil, completion: nil)
                 self.flippedCards.first?.setTitle("", for: .normal)
+                self.flippedCards.first?.setImage(self.closedCardImage, for: .normal)
                 self.flippedCards.last?.setTitle("", for: .normal)
+                self.flippedCards.last?.setImage(self.closedCardImage, for: .normal)
                 self.flippedCards.removeAll(keepingCapacity: true)
             }
         }
