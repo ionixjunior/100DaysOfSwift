@@ -2,6 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var memoryGame: MemoryGame!
+    var closedCardImage = UIImage(named: "card")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +77,7 @@ class ViewController: UIViewController {
                 card.layer.cornerRadius = 10
                 card.titleLabel?.font = UIFont.systemFont(ofSize: 30)
                 card.addTarget(self, action: #selector(cardTapped), for: .touchUpInside)
+                card.setImage(closedCardImage, for: .normal)
                 card.position = cardPosition
                 view.addSubview(card)
                 cardPosition += 1
