@@ -7,6 +7,7 @@ final class MilestoneProjects28_30UITests: XCTestCase {
         continueAfterFailure = false
         app = XCUIApplication()
         app.launch()
+        XCUIDevice.shared.orientation = .landscapeLeft
     }
 
     override func tearDownWithError() throws {
